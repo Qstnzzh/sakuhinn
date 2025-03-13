@@ -1,0 +1,197 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\USER\\Downloads\\base_project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|c:\\users\\user\\downloads\\base_project\\assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\enemy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\score.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\destroyarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\destroyarea.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\emitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\emitter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\bullet.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\spaceship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\spaceship.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\explosion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\titlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\titlemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|C:\\Users\\USER\\Downloads\\base_project\\assets\\scripts\\background.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1C90613E-FB57-1B56-17F2-2F979D06947D}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\background.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Score.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Score.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Score.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Score.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Score.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAgwDcAAAABAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Explosion.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Explosion.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Explosion.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Explosion.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Explosion.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAgAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.719Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Enemy.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Enemy.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Enemy.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Enemy.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Enemy.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAowDsAAAA2AAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Emitter.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Emitter.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Emitter.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Emitter.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Emitter.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.72Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Bullet.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Bullet.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Bullet.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Bullet.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Bullet.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Spaceship.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Spaceship.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Spaceship.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Spaceship.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Spaceship.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACcAAAAFAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.721Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\GameManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\GameManager.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\GameManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\GameManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T12:12:16.78Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DestroyArea.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\DestroyArea.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\DestroyArea.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\DestroyArea.cs",
+              "RelativeToolTip": "Assets\\Scripts\\DestroyArea.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Player.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Player.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAEIAAAAMAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.822Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TitleManager.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\TitleManager.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\TitleManager.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\TitleManager.cs",
+              "RelativeToolTip": "Assets\\Scripts\\TitleManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Background.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Background.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Background.cs",
+              "ToolTip": "C:\\Users\\USER\\Downloads\\base_project\\Assets\\Scripts\\Background.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Background.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAAAAAAA",
+              "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAPBSURBVEhL7VRNbBNXEJ798a6x4rUwsRNCUqTaB2REEUgVFVWlVVUJ9cKB4q24VeoBIQ5FcEAQVWoOvaWuOCSHgoTKCW1yqFREG4sEIyVyiQKoCikQ1mkcWybOgmNvnJ\u002B1vfs6s4QcUCu11yqftfu8u9/MvDff9x5s4/8PbnOE2dlZuSbXuqfyU/Lo81EwFg2oN\u002BogSRLEw3EazeEvh03ilqxSZKGyELn8y2XA0bydvG2FoqHua1PX5OvZ6zYoUDS\u002BMmzi8nQjUHKRiSnGmA4MdBBB50RO5zhO53le93G\u002B5CYV/K4/iVxdcAUdWpCk5AIIKdEVdfycYhXW85q5uYLpwrT6wnpx8v7Cfc2sm5G6XYeQPwSSKIHIi96FzL7TH50eoORpI518WHio3jHuwPLacmZPaM\u002BM\u002Bq6qPTWfRh4UH5g8xw8hfyj3dS6DkQAv6y/Vylrl7Pif49Amt8HBzoP2oe5DxWhb1OaQWbSKsNHcMANuQHF451ipVto/kZ\u002BAFXsFXObuL1vlnru5u8pqcxWwAwrj2DGM\u002BwNTZwQqEP0kqs5X5lWaOc4EThw4kQ9IgfOtVusHbNdQtVEd4nhu8vDew2Z9o/5be6BdSXQk3p8pz1CRH0\u002B9d2rwzIdnPnBcJ/xk6Ukek5/nBG6kMlZZ81bwuPQYJJ8EXUoXBHyBTGewcxhnklUUxRP1DT7HH8J4VXtlOswBWZABNTLPfXzOwInYE/MT9Gzj/5zRa3ixnsjUguX1Zdit7Ib15vq9YDA48HZyAjmtXC3HCtVCe7FaBNvBXIy1X8lciT0zn8nYZnqWkRqLfxuPUIxXoOW2wHVdQLe8FvQf8MYtY8aY1n\u002BvH9AYgG3Rbv5\u002BM3Xx54s96dk05elmwL4jd1GMVwDF9MQtr5RhrjJHr/4WKLDFAz/SFeqaObr3qBeDjpnpCHaMqDHViu2KUYss1CDNeEYio9sR\u002B6L7gHpKy6YlX/rpUuLIO0cg3BaGRqMB\u002BXqeNp2JGlHbBs2qyeHmiz4qPYLaRm341he3fsXiPVezV\u002BP4Loez/z7XlzO2ChxPHIel1SW4MXWDWqSh9VRqF8/wEvByeZBAGqTkxJd5WXccJ0Pf0V1LqJdlWuYFcEHG5DYX5grEI3gbLfs8qy6uLJ7M5rNadb0aaTpN2BnYCX7RDz7B5204dEZf76e933hR/wFbZ9Ho9GiMCSw1uTAZH58bByyIORmEdoQgEU2QfQf7P\u002Bsf2KT/a2ydRbZsF9FNF3DZGjkDNaFWaVyL03Dpmm\u002BHj86ZbWzjbQD8BfQkxxdaIgF3AAAAAElFTkSuQmCC",
+              "WhenOpened": "2024-10-14T12:12:16.823Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

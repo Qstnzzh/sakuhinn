@@ -1,0 +1,661 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b7af7014ebc84544b11119f4c14af49, type: 3}
+  m_Name: SampleWaveData
+  m_EditorClassIdentifier: 
+  _waveDatas:
+  - enemyDatas:
+    - pos: {x: -2.2, y: 0, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -2.2, y: 0, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -2.2, y: 0, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -2.2, y: 0, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -2.2, y: 0.9419174, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -2.2, y: 0.9419174, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -2.2, y: 0.9419174, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -2.2, y: 0.9419174, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -1.2, y: 1, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -1.2, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -1.2, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -1.2, y: 1, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -3.2, y: 1, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -3.2, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -3.2, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -3.2, y: 1, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -2.2000003, y: 1.8100269, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -2.2000003, y: 1.8100269, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -2.2000003, y: 1.8100269, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -2.2000003, y: 1.8100269, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -1.2000003, y: 1.8681097, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -1.2000003, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -1.2000003, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -1.2000003, y: 1.8681097, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -3.2000003, y: 1.8681097, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -3.2000003, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -3.2000003, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -3.2000003, y: 1.8681097, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -2.2000003, y: 2.6781368, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -2.2000003, y: 2.6781368, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -2.2000003, y: 2.6781368, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -2.2000003, y: 2.6781368, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -1.2000003, y: 2.73622, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -1.2000003, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -1.2000003, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -1.2000003, y: 2.73622, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -3.2000003, y: 2.73622, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -3.2000003, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -3.2000003, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -3.2000003, y: 2.73622, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -2.2000003, y: 3.546247, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -2.2000003, y: 3.546247, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -2.2000003, y: 3.546247, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -2.2000003, y: 3.546247, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -1.2000003, y: 3.60433, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -1.2000003, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -1.2000003, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -1.2000003, y: 3.60433, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -3.2000003, y: 3.60433, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: -3.2000003, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -3.2000003, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -3.2000003, y: 3.60433, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 2.4800003, y: 0, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 2.4800003, y: 0, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 2.4800003, y: 0, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 2.4800003, y: 0, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 2.4800003, y: 0.9419174, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 2.4800003, y: 0.9419174, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 2.4800003, y: 0.9419174, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 2.4800003, y: 0.9419174, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 3.4800003, y: 1, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 3.4800003, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 3.4800003, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 3.4800003, y: 1, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 1.4800003, y: 1, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 1.4800003, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 1.4800003, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 1.4800003, y: 1, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 2.48, y: 1.8100269, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 2.48, y: 1.8100269, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 2.48, y: 1.8100269, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 2.48, y: 1.8100269, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 3.48, y: 1.8681097, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 3.48, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 3.48, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 3.48, y: 1.8681097, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 1.48, y: 1.8681097, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 1.48, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 1.48, y: 1.8681097, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 1.48, y: 1.8681097, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 2.48, y: 2.6781368, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 2.48, y: 2.6781368, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 2.48, y: 2.6781368, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 2.48, y: 2.6781368, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 3.48, y: 2.73622, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 3.48, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 3.48, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 3.48, y: 2.73622, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 1.48, y: 2.73622, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 1.48, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 1.48, y: 2.73622, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 1.48, y: 2.73622, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 2.48, y: 3.546247, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 2.48, y: 3.546247, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 2.48, y: 3.546247, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 2.48, y: 3.546247, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 3.48, y: 3.60433, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 3.48, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 3.48, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 3.48, y: 3.60433, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 1.48, y: 3.60433, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.3
+      canShot: 0
+      speed: 1
+      hp: 4
+      shotDatas:
+      - pos: {x: 1.48, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 1.48, y: 3.60433, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 1.48, y: 3.60433, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    name: Wave 2
+    pos: {x: 0, y: 0, z: 0}
+  - enemyDatas:
+    - pos: {x: 0, y: 0, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 0, y: 0, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 0, y: 0, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 0, y: 0, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 1, y: 1, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 1, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 1, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 1, y: 1, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -1, y: 1, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: -1, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -1, y: 1, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -1, y: 1, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 2, y: 2, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 2, y: 2, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 2, y: 2, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 2, y: 2, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -2, y: 2, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: -2, y: 2, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -2, y: 2, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -2, y: 2, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    name: Wave 3
+    pos: {x: 0, y: 0, z: 0}
+  - enemyDatas:
+    - pos: {x: 0, y: 3.5, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 0, y: 3.5, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 0, y: 3.5, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 0, y: 3.5, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: 1, y: 4.5, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 1, y: 4.5, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: 1, y: 4.5, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: 1, y: 4.5, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -1, y: 4.5, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 1
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: -1, y: 4.5, z: 0}
+        rot: {x: -0, y: -0, z: 160}
+      - pos: {x: -1, y: 4.5, z: 0}
+        rot: {x: -0, y: -0, z: 180}
+      - pos: {x: -1, y: 4.5, z: 0}
+        rot: {x: 0, y: 0, z: 199.99998}
+    - pos: {x: -6, y: 1.509588, z: 0}
+      rot: {x: -0, y: -0, z: 90}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: -6, y: 1.509588, z: 0}
+        rot: {x: 0, y: 0, z: 270}
+    - pos: {x: -7, y: 0.50960517, z: 0}
+      rot: {x: -0, y: -0, z: 90}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: -7, y: 0.50960517, z: 0}
+        rot: {x: 0, y: 0, z: 270}
+    - pos: {x: -5, y: 2.5095994, z: 0}
+      rot: {x: -0, y: -0, z: 90}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: -5, y: 2.5095994, z: 0}
+        rot: {x: 0, y: 0, z: 270}
+    - pos: {x: -7.999999, y: -0.44512105, z: 0}
+      rot: {x: -0, y: -0, z: 90}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: -7.999999, y: -0.44512105, z: 0}
+        rot: {x: 0, y: 0, z: 270}
+    - pos: {x: 7.999999, y: -0.94512177, z: 0}
+      rot: {x: 0, y: 0, z: 270}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 7.999999, y: -0.94512177, z: 0}
+        rot: {x: -0, y: 0, z: 90}
+    - pos: {x: 5, y: 2.05488, z: 0}
+      rot: {x: 0, y: 0, z: 270}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 5, y: 2.05488, z: 0}
+        rot: {x: -0, y: 0, z: 90}
+    - pos: {x: 7, y: 0.054879904, z: 0}
+      rot: {x: 0, y: 0, z: 270}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 7, y: 0.054879904, z: 0}
+        rot: {x: -0, y: 0, z: 90}
+    - pos: {x: 6, y: 1.054879, z: 0}
+      rot: {x: 0, y: 0, z: 270}
+      scale: {x: 1, y: 1, z: 1}
+      shotDelay: 0.5
+      canShot: 1
+      speed: 1
+      hp: 10
+      shotDatas:
+      - pos: {x: 6, y: 1.054879, z: 0}
+        rot: {x: -0, y: 0, z: 90}
+    name: Wave 4
+    pos: {x: 0, y: 3.5, z: 0}
+  - enemyDatas:
+    - pos: {x: 0, y: 4.629549, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 3, y: 3, z: 3}
+      shotDelay: 2
+      canShot: 1
+      speed: 1
+      hp: 100
+      shotDatas:
+      - pos: {x: -0.025416613, y: 3.7399697, z: 0}
+        rot: {x: -0, y: -0, z: 160.00003}
+      - pos: {x: -0.025416613, y: 3.7399693, z: 0}
+        rot: {x: 0, y: 0, z: 180.00002}
+      - pos: {x: -0.025416613, y: 3.7399693, z: 0}
+        rot: {x: 0, y: 0, z: 200.00002}
+      - pos: {x: -0.025417, y: 3.73997, z: 0}
+        rot: {x: -0, y: -0, z: 140.00002}
+      - pos: {x: -0.025417, y: 3.73997, z: 0}
+        rot: {x: -0, y: -0, z: 120.000015}
+      - pos: {x: -0.025417, y: 3.73997, z: 0}
+        rot: {x: -0, y: -0, z: 100.00001}
+      - pos: {x: -0.025417, y: 3.739969, z: 0}
+        rot: {x: -0, y: 0, z: 219.99998}
+      - pos: {x: -0.025417, y: 3.739969, z: 0}
+        rot: {x: -0, y: 0, z: 239.99998}
+      - pos: {x: -0.025417, y: 3.739969, z: 0}
+        rot: {x: -0, y: 0, z: 260}
+    - pos: {x: 2, y: 6.629549, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 3, y: 3, z: 3}
+      shotDelay: 2
+      canShot: 1
+      speed: 1
+      hp: 100
+      shotDatas:
+      - pos: {x: 1.9745834, y: 5.7399697, z: 0}
+        rot: {x: -0, y: -0, z: 160.00003}
+      - pos: {x: 1.9745834, y: 5.7399693, z: 0}
+        rot: {x: 0, y: 0, z: 180.00002}
+      - pos: {x: 1.9745834, y: 5.7399693, z: 0}
+        rot: {x: 0, y: 0, z: 200.00002}
+      - pos: {x: 1.974583, y: 5.73997, z: 0}
+        rot: {x: -0, y: -0, z: 140.00002}
+      - pos: {x: 1.974583, y: 5.73997, z: 0}
+        rot: {x: -0, y: -0, z: 120.000015}
+      - pos: {x: 1.974583, y: 5.73997, z: 0}
+        rot: {x: -0, y: -0, z: 100.00001}
+      - pos: {x: 1.974583, y: 5.7399693, z: 0}
+        rot: {x: -0, y: 0, z: 219.99998}
+      - pos: {x: 1.974583, y: 5.7399693, z: 0}
+        rot: {x: -0, y: 0, z: 239.99998}
+      - pos: {x: 1.974583, y: 5.7399693, z: 0}
+        rot: {x: -0, y: 0, z: 260}
+    - pos: {x: -2, y: 6.629549, z: 0}
+      rot: {x: -0, y: 0, z: 0}
+      scale: {x: 3, y: 3, z: 3}
+      shotDelay: 2
+      canShot: 1
+      speed: 1
+      hp: 100
+      shotDatas:
+      - pos: {x: -2.0254166, y: 5.7399697, z: 0}
+        rot: {x: -0, y: -0, z: 160.00003}
+      - pos: {x: -2.0254166, y: 5.7399693, z: 0}
+        rot: {x: 0, y: 0, z: 180.00002}
+      - pos: {x: -2.0254166, y: 5.7399693, z: 0}
+        rot: {x: 0, y: 0, z: 200.00002}
+      - pos: {x: -2.025417, y: 5.73997, z: 0}
+        rot: {x: -0, y: -0, z: 140.00002}
+      - pos: {x: -2.025417, y: 5.73997, z: 0}
+        rot: {x: -0, y: -0, z: 120.000015}
+      - pos: {x: -2.025417, y: 5.73997, z: 0}
+        rot: {x: -0, y: -0, z: 100.00001}
+      - pos: {x: -2.025417, y: 5.7399693, z: 0}
+        rot: {x: -0, y: 0, z: 219.99998}
+      - pos: {x: -2.025417, y: 5.7399693, z: 0}
+        rot: {x: -0, y: 0, z: 239.99998}
+      - pos: {x: -2.025417, y: 5.7399693, z: 0}
+        rot: {x: -0, y: 0, z: 260}
+    name: Wave 5
+    pos: {x: 0, y: 4.629549, z: 0}

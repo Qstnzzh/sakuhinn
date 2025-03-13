@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="0Sample.cpp" />
+    <ClCompile Include="1MoveButtonUp.cpp" />
+    <ClCompile Include="2MoveButtonDown.cpp" />
+    <ClCompile Include="3MoveButtonLeft.cpp" />
+    <ClCompile Include="4MoveButtonRight.cpp" />
+    <ClCompile Include="5MoveButtonUpperLeft.cpp" />
+    <ClCompile Include="6MoveButtonUpperRight.cpp" />
+    <ClCompile Include="7MoveButtonLowerLeft.cpp" />
+    <ClCompile Include="8MoveButtonLowerRight.cpp" />
+    <ClCompile Include="9ChangeMark.cpp" />
+    <ClCompile Include="10ChangeButton.cpp" />
+    <ClCompile Include="11ClearButton.cpp" />
+    <ClCompile Include="12Lineupmark.cpp" />
+    <ClCompile Include="13MarbleBreak.cpp" />
+    <ClCompile Include="14PushCounter.cpp" />
+    <ClCompile Include="15RandomMark.cpp" />
+    <ClCompile Include="16RandomPositionMark.cpp" />
+    <ClCompile Include="20ButtonFlipOnTouch.cpp" />
+    <ClCompile Include="17Counter.cpp" />
+    <ClCompile Include="21ButtonTouchItAcceleration.cpp" />
+    <ClCompile Include="18MarbleWeight.cpp" />
+    <ClCompile Include="19PositionSwap.cpp" />
+    <ClCompile Include="22KnockDownAndBreak.cpp" />
+    <ClCompile Include="24DodgeMark.cpp" />
+    <ClCompile Include="23Fallmark.cpp" />
+    <ClCompile Include="26AcceleReflectionMark.cpp" />
+    <ClCompile Include="28MatchMark.cpp" />
+    <ClCompile Include="30PushButtonDelete.cpp" />
+    <ClCompile Include="32BoundButton.cpp" />
+    <ClCompile Include="34FastTouchMark.cpp" />
+    <ClCompile Include="SpeedTouchSameMark.cpp" />
+    <ClCompile Include="27ChangeSpeedReflectionMark.cpp" />
+    <ClCompile Include="33DialLock.cpp" />
+    <ClCompile Include="35RandomMarbleBreak.cpp" />
+    <ClCompile Include="25ReflectionMark.cpp" />
+    <ClCompile Include="37WobbleSideways.cpp" />
+    <ClCompile Include="36SameDelete.cpp" />
+    <ClCompile Include="31PushButtonDeleteMarble.cpp" />
+    <ClCompile Include="FastTouchToButton.cpp" />
+    <ClCompile Include="HowManyTimeTouchIt.cpp" />
+    <ClCompile Include="UntilFivePress.cpp" />
+    <ClCompile Include="AlignSpeedTouch.cpp" />
+    <ClCompile Include="29MoveButtonFigureEight.cpp" />
+  </ItemGroup>
+</Project>
