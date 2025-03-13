@@ -1,0 +1,92 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Scripts": [
+  	"Canvas/HeliScript/Profile/AvatarTargetModel.hs",
+    "Canvas/HeliScript/Profile/ProfController.hs",
+    "Canvas/HeliScript/Profile/ProfileModel.hs"
+  ],
+  "Layout": [
+  {
+    "Name": "avatar_target",
+    "Show": false,
+    "Z": 2,
+    "Components": [
+      "AvatarTargetModel",
+      "ProfController",
+      "ProfileModel"
+    ],
+    "AutoLoading":false,
+    "Gui": [
+    {
+	    "Comment": "背景：前景のターゲットイメージは切り替わるためこいつをベースとする",
+      "Name": "avatar_target_base_btn",
+      "Language": "",
+      "Portrait": "",
+      "Anchor": "LT",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ 0, 0],
+      "Size":[ 128, 128],
+      "Z": 2,
+      "Pivot":[0.5, 0.5]
+    },
+    {
+      "Comment": "前景：ターゲット画像１",
+      "Name": "avatar_target_image_1",
+      "Type": "image",
+      "Show": true,
+      "Anchor": "LT",
+      "Pos":[ 0, 0],
+      "Size":[ 128, 128],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "ParamImage": {
+        "Uri": "gui2023/profile/prof_target_01.png"
+      },
+      "Toggle":[
+        {"Name":"avatar_target_image_1_toggle","State":false}
+      ]
+    },
+    {
+      "Comment": "前景：ターゲット画像２",
+      "Name": "avatar_target_image_2",
+      "Type": "image",
+      "Show": true,
+      "Anchor": "LT",
+      "Pos":[ 0, 0],
+      "Size":[ 128, 128],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "ParamImage": {
+        "Uri": "gui2023/profile/prof_target_02.png"
+      },
+      "Toggle":[
+        {"Name":"avatar_target_image_2_toggle","State":false}
+      ]
+    },
+    {
+      "Comment": "プロフィールボタン",
+      "Name": "profile_btn",
+      "Type": "button",
+      "Show": true,
+      "Anchor": "LT",
+      "Pos":[ 0, 0],
+      "Size":[ 128, 32],
+      "Language": "_en",
+      "Z": 3,
+      "Pivot":[ 0.0, 1.0],
+      "ParamButton": {
+        "FileName": "gui2023/profile/prof_btn_profile.png"
+      },
+      "Toggle":[
+        {"Name":"avatar_profile_toggle","State":false}
+      ],
+      "GUIAction" :[
+        
+      ]
+    }
+    ]
+  }
+  ]
+}

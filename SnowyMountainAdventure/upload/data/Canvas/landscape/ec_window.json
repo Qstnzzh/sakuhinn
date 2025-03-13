@@ -1,0 +1,1505 @@
+{
+  "Version": 0,
+  "Z": 6,
+  "Scripts": [
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/EC/ECController.hs",
+    "Canvas/HeliScript/EC/ECData.hs",
+    "Canvas/HeliScript/EC/ECModel.hs",
+    "Canvas/HeliScript/EC/ECView.hs",
+    "Canvas/HeliScript/EC/ECViewModel.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "ec_window_item",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "ECController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "ec_detail_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[1000,500],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_detail_base.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[315,-165],
+          "Size":[30,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_item_thumbnail",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-185,-35],
+          "Size":[250,250],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/noimage.png"
+          }
+        },
+        {
+          "Name": "ec_item_name_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,-150],
+          "Size":[330,25],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 15,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "商品名が入ります商品名が入ります20文字"
+          }
+        },
+        {
+          "Name": "ec_item_price_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,-115],
+          "Size":[330,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 18,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "￥123,456 (税込)"
+          }
+        },
+        {
+          "Name": "ec_item_descript_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,-15],
+          "Size":[330,150],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 14,
+            "Alignment":"LT",
+            "OverflowWrap": true,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。ここに200文字の商品説明文が入ります。"
+          }
+        },
+        {
+          "Name": "ec_detail_quantity",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[45,105],
+          "Size":[240,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_detail_quantity.png"
+          }
+        },
+        {
+          "Name": "ec_item_count_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,105],
+          "Size":[60,28],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 16,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123"
+          }
+        },
+        {
+          "Name": "ec_btn_add",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[145,105],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_add.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_reduce",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[180,105],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_reduce.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_add_cart",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[45,150],
+          "Size":[220,55],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_add_cart.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_buy_now",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[235,150],
+          "Size":[220,55],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_buy_now.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "ec_window_cart_base",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "ECViewModel",
+        "ECModel",
+        "ECController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "ec_cart_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[1000,500],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_cart_base.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[315,-220],
+          "Size":[30,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_title_shopping_cart",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-195,-210],
+          "Size":[240,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_title_shopping_cart.png"
+          }
+        },
+        {
+          "Name": "ec_txt_empty_cart",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-20],
+          "Size":[256,16],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_txt_empty_cart.png"
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": true
+            }
+          ]
+        },
+        {
+          "Name": "ec_btn_continue_shopping",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,30],
+          "Size":[200,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_continue_shopping.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": true
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "separate_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,140],
+          "Size":[640,1],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_white.png"
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "ec_label_total",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[63,160],
+          "Size":[104,13],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_label_total.png"
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "ec_total_price_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[230,160],
+          "Size":[180,24],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 18,
+            "Alignment":"RM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "￥123,456 (税込)"
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "ec_btn_purchase",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[260,205],
+          "Size":[200,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_purchase.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_cart_page_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,205],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 14,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "0"
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "ec_page_back",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-40,205],
+          "Size":[30,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_before_page.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_page_next",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[40,205],
+          "Size":[30,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_next_page.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_EC_Cart_Empty_Exist",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "ec_window_cart_item_list",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "ECController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "ec_item_thumbnail_0",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-285,-160],
+          "Size":[60,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/noimage.png"
+          }
+        },
+        {
+          "Name": "ec_item_name_text_0",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,-174],
+          "Size":[250,20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "商品名が入ります商品名が入ります20文字"
+          }
+        },
+        {
+          "Name": "ec_item_price_text_0",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,-150],
+          "Size":[250,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 17,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "￥123,456 (税込)"
+          }
+        },
+        {
+          "Name": "ec_detail_quantity_0",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,-160],
+          "Size":[240,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_detail_quantity.png"
+          }
+        },
+        {
+          "Name": "ec_item_count_text_0",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,-160],
+          "Size":[60,28],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 16,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123"
+          }
+        },
+        {
+          "Name": "ec_btn_add_0",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,-160],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false},
+            {"Name": "Toggle_EC_Soldout_0","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_add.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_reduce_0",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[235,-160],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false},
+            {"Name": "Toggle_EC_Soldout_0","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_reduce.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_soldout_0",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[218,-160],
+          "Size":[56,14],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false},
+            {"Name": "Toggle_EC_Soldout_0","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_soldout.png"
+          }
+        },
+        {
+          "Name": "ec_btn_delete_0",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[290,-160],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_0","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_delete.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_item_thumbnail_1",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-285,-95],
+          "Size":[60,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/noimage.png"
+          }
+        },
+        {
+          "Name": "ec_item_name_text_1",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,-109],
+          "Size":[250,20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "商品名が入ります商品名が入ります20文字"
+          }
+        },
+        {
+          "Name": "ec_item_price_text_1",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,-85],
+          "Size":[250,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 17,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "￥123,456 (税込)"
+          }
+        },
+        {
+          "Name": "ec_detail_quantity_1",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,-95],
+          "Size":[240,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_detail_quantity.png"
+          }
+        },
+        {
+          "Name": "ec_item_count_text_1",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,-95],
+          "Size":[60,28],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 16,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123"
+          }
+        },
+        {
+          "Name": "ec_btn_add_1",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,-95],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false},
+            {"Name": "Toggle_EC_Soldout_1","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_add.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_reduce_1",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[235,-95],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false},
+            {"Name": "Toggle_EC_Soldout_1","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_reduce.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_soldout_1",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[218,-95],
+          "Size":[56,14],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false},
+            {"Name": "Toggle_EC_Soldout_1","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_soldout.png"
+          }
+        },
+        {
+          "Name": "ec_btn_delete_1",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[290,-95],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_1","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_delete.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_item_thumbnail_2",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-285,-30],
+          "Size":[60,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/noimage.png"
+          }
+        },
+        {
+          "Name": "ec_item_name_text_2",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,-44],
+          "Size":[250,20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "商品名が入ります商品名が入ります20文字"
+          }
+        },
+        {
+          "Name": "ec_item_price_text_2",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,-20],
+          "Size":[250,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 17,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "￥123,456 (税込)"
+          }
+        },
+        {
+          "Name": "ec_detail_quantity_2",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,-30],
+          "Size":[240,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_detail_quantity.png"
+          }
+        },
+        {
+          "Name": "ec_item_count_text_2",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,-30],
+          "Size":[60,28],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 16,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123"
+          }
+        },
+        {
+          "Name": "ec_btn_add_2",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,-30],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false},
+            {"Name": "Toggle_EC_Soldout_2","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_add.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_reduce_2",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[235,-30],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false},
+            {"Name": "Toggle_EC_Soldout_2","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_reduce.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_soldout_2",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[218,-30],
+          "Size":[56,14],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false},
+            {"Name": "Toggle_EC_Soldout_2","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_soldout.png"
+          }
+        },
+        {
+          "Name": "ec_btn_delete_2",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[290,-30],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_2","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_delete.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_item_thumbnail_3",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-285,35],
+          "Size":[60,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/noimage.png"
+          }
+        },
+        {
+          "Name": "ec_item_name_text_3",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,21],
+          "Size":[250,20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "商品名が入ります商品名が入ります20文字"
+          }
+        },
+        {
+          "Name": "ec_item_price_text_3",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,45],
+          "Size":[250,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 17,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "￥123,456 (税込)"
+          }
+        },
+        {
+          "Name": "ec_detail_quantity_3",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,35],
+          "Size":[240,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_detail_quantity.png"
+          }
+        },
+        {
+          "Name": "ec_item_count_text_3",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,35],
+          "Size":[60,28],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 16,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123"
+          }
+        },
+        {
+          "Name": "ec_btn_add_3",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,35],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false},
+            {"Name": "Toggle_EC_Soldout_3","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_add.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_reduce_3",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[235,35],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false},
+            {"Name": "Toggle_EC_Soldout_3","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_reduce.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_soldout_3",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[218,35],
+          "Size":[56,14],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false},
+            {"Name": "Toggle_EC_Soldout_3","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_soldout.png"
+          }
+        },
+        {
+          "Name": "ec_btn_delete_3",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[290,35],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_3","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_delete.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_item_thumbnail_4",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-285,100],
+          "Size":[60,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/noimage.png"
+          }
+        },
+        {
+          "Name": "ec_item_name_text_4",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,86],
+          "Size":[250,20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "商品名が入ります商品名が入ります20文字"
+          }
+        },
+        {
+          "Name": "ec_item_price_text_4",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,110],
+          "Size":[250,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 17,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "￥123,456 (税込)"
+          }
+        },
+        {
+          "Name": "ec_detail_quantity_4",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,100],
+          "Size":[240,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_detail_quantity.png"
+          }
+        },
+        {
+          "Name": "ec_item_count_text_4",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[135,100],
+          "Size":[60,28],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false}
+          ],
+          "ParamText": {
+            "FontSize": 16,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123"
+          }
+        },
+        {
+          "Name": "ec_btn_add_4",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,100],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false},
+            {"Name": "Toggle_EC_Soldout_4","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_add.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_btn_reduce_4",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[235,100],
+          "Size":[50,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false},
+            {"Name": "Toggle_EC_Soldout_4","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_reduce.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "ec_soldout_4",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[218,100],
+          "Size":[56,14],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false},
+            {"Name": "Toggle_EC_Soldout_4","State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/ec/ec_soldout.png"
+          }
+        },
+        {
+          "Name": "ec_btn_delete_4",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[290,100],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_EC_Cart_ECItem_4","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/ec/ec_btn_delete.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "Z": 2,
+  "Layout": [
+    {
+      "Name": "mainmenu_setting_help",
+      "Show": false,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "config_guide",
+          "Type": "image",
+          "Platform": "_sp",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,230],
+          "Size":[1000,2000],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/help/setting_help_po.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingHelpShow",
+              "State": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

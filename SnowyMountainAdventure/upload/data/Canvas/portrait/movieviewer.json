@@ -1,0 +1,221 @@
+{
+    "Version": 1,
+    "Z": 1,
+    "Layout": [
+        {
+            "Name": "movieviewer_po",
+            "Show": false,
+            "Z": 75,
+            "AutoLoading":false,
+            "Gui": [
+              {
+                "Name": "movie_bg",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 4096, 8192],
+                "Z": 1,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName":         "gui/common/common_movie_bg.png",
+                  "OnCursorFileName": "gui/common/common_movie_bg.png",
+                  "DownFileName":     "gui/common/common_movie_bg.png"
+                }
+              },
+              {
+                "Name": "movie_closebutton",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ -64, 0],
+                "Size":[ 128, 128],
+                "Z": 3,
+                "Pivot":[ 0.5, 0.0],
+                "Anchor":"RT",
+                "ParamButton": {
+                  "FileName": "gui/comic/comic_closebutton.png",
+                  "OnCursorFileName": "gui/comic/comic_closebutton.png",
+                  "DownFileName": "gui/comic/comic_closebutton.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageCount"},"Value":0},
+                  {"Index" : {"Name" : "MaxPage"},"Value":0},
+                  {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+                  {"Func" : {"Name" : "CloseAllLayer"}},
+                  {"Flag" : {"Name" : "SetShowHUD","Enable":true}},
+                  {"Flag" : {"Name" : "SetShowSetting","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowRoolURL","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowConfigURLTextBox","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowPageTextList","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowMovieViewerUI","Enable":false}}
+                ]
+              },
+              {
+                "Name": "VideoPlayerTexture",
+                "Type": "image",
+                "Show": true,
+                "Pos":[ 0, -55],
+                "Size":[ 1024, 575],
+                "Z": 2,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamImage": {
+                  "Uri": "gui/clear.png"
+                }
+              },
+              {
+                "Name": "VideoPlayerCurrentTime",
+                "Type": "text",
+                "Show": true,
+                "Pos":[ -496, 330 ],
+                "Size":[160, 128],
+                "Z": 3,
+                "Pivot":[ 0.0, 0.5],
+                "Anchor":"CM",
+                "ParamText": {
+                  "FontSize": 30,
+                  "FontFamily": "BIZUDPGothic",
+                  "Color":[ 1.0, 1.0, 1.0, 1.0],
+                  "Text": "00:00:00"
+                },
+                "Toggle":[
+                  {"Name":"Show_SeekBar","State":false}
+                ]
+              },
+              {
+                "Name": "VideoPlayerTotalTime",
+                "Type": "text",
+                "Show": true,
+                "Pos":[ 346, 330 ],
+                "Size":[150, 128],
+                "Z": 3,
+                "Pivot":[ 0.0, 0.5],
+                "Anchor":"CM",
+                "ParamText": {
+                  "FontSize": 30,
+                  "FontFamily": "BIZUDPGothic",
+                  "Color":[ 1.0, 1.0, 1.0, 1.0],
+                  "Text": "00:00:00"
+                },
+                "Toggle":[
+                  {"Name":"Show_SeekBar","State":false}
+                ]
+              },
+              {
+                "Name": "hud_movie_play",
+                "Type": "button",
+                "Show": false,
+                "Pos":[ 0, -20 ],
+                "Size":[192,192],
+                "Z": 3,
+                "Pivot":[ 0.5, 1.0],
+                "Anchor":"CB",
+                "ParamButton": {
+                  "FileName":         "gui/common/common_movie_play.png",
+                  "OnCursorFileName": "gui/common/common_movie_play.png",
+                  "DownFileName":     "gui/common/common_movie_play_down.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "MovieViewerPlayPauseToggle"}},
+                  {"SetShowGUI" : {"Name" : "hud_movie_play","Show" : false}},
+                  {"SetShowGUI" : {"Name" : "hud_movie_pause","Show" : true}},
+                  {"String":{"Name":"ToggleChange","Value":"Toggle_movie_playing"}}
+                ],
+                "Toggle":[
+                  {"Name":"Toggle_movie_playing","State":false},
+                  {"Name":"Show_SeekBar","State":false}
+                ]
+              },
+              {
+                "Name": "hud_movie_pause",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, -20 ],
+                "Size":[192,192],
+                "Z": 3,
+                "Pivot":[ 0.5, 1.0],
+                "Anchor":"CB",
+                "ParamButton": {
+                  "FileName":         "gui/common/common_movie_pause.png",
+                  "OnCursorFileName": "gui/common/common_movie_pause.png",
+                  "DownFileName":     "gui/common/common_movie_pause_down.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "MovieViewerPlayPauseToggle"}},
+                  {"SetShowGUI" : {"Name" : "hud_movie_play","Show" : true}},
+                  {"SetShowGUI" : {"Name" : "hud_movie_pause","Show" : false}},
+                  {"String":{"Name":"ToggleChange","Value":"Toggle_movie_playing"}}
+                ],
+                "Toggle":[
+                  {"Name":"Toggle_movie_playing","State":true},
+                  {"Name":"Show_SeekBar","State":false}
+                ]
+              },
+              {
+                "Name": "hud_movie_forward",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 208, -20 ],
+                "Size":[192,192],
+                "Z": 3,
+                "Pivot":[ 0.5, 1.0],
+                "Anchor":"CB",
+                "ParamButton": {
+                  "FileName":         "gui/common/common_movie_forward.png",
+                  "OnCursorFileName": "gui/common/common_movie_forward.png",
+                  "DownFileName":     "gui/common/common_movie_forward_down.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "MovieViewerForward"}}
+                ],
+                "Toggle":[
+                  {"Name":"Show_SeekBar","State":false}
+                ]
+              },
+              {
+                "Name": "hud_movie_rewind",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ -208, -20 ],
+                "Size":[192,192],
+                "Z": 3,
+                "Pivot":[ 0.5, 1.0],
+                "Anchor":"CB",
+                "ParamButton": {
+                  "FileName":         "gui/common/common_movie_rewind.png",
+                  "OnCursorFileName": "gui/common/common_movie_rewind.png",
+                  "DownFileName":     "gui/common/common_movie_rewind_down.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "MovieViewerRewind"}}
+                ],
+                "Toggle":[
+                  {"Name":"Show_SeekBar","State":false}
+                ]
+              },
+              {
+                "Name": "hud_movie_Slider",
+                "Type": "Slider",
+                "Show": true,
+                "Pos":[ -512, 240],
+                "Size":[ 1024, 11],
+                "Z": 80,
+                "Pivot":[ 0.0, 0.5],
+                "Anchor":"CM",
+                "ParamSlider": {
+                  "Base": "gui/config/setting/config_setting_barbase.png",
+                  "Front": "gui/config/setting/config_setting_bar.png",
+                  "OnName": "gui/config/setting/config_setting_slider_on.png",
+                  "OnSize": [44,44],
+                  "OffName": "gui/config/setting/config_setting_slider_off.png",
+                  "OffSize": [44,44],
+                  "DriveField": "MovieViewer"
+                },
+                "Toggle":[
+                  {"Name":"Show_SeekBar","State":false}
+                ]
+              }
+            ]
+          }
+    ]
+}

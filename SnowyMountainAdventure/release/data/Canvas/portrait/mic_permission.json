@@ -1,0 +1,84 @@
+{
+  "Version": 0,
+  "Z": 0,
+  "Layout": [
+    {
+      "Name": "mic_block_info_layer",
+      "Show": false,
+      "Z": 0,
+      "Gui": [
+        {
+          "Name": "mic_permision_back_img",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[1024,1024],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/mic_permission/mic_access_base_po.png"
+          }
+        },
+        {
+          "Name": "mic_block_text_img",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[-5,0],
+          "Size":[951,1024],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/mic_permission/mic_access_txt_block_po.png"
+          }
+        },
+        {
+          "Name": "mic_permission_close_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[420,-427],
+          "Size":[100,100],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "mic_block_info_layer","Show" : false}}
+          ]
+        },
+        {
+          "Name": "mic_permission_back_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-11,1],
+          "Size":[963,957],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    }
+  ]
+}

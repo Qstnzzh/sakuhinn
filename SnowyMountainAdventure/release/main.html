@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<meta name="viewport" content="user-scalable=no">
+		<title>Vket Cloud</title>
+		<script>window.g_OverWriteEnvironment = 'production'</script>
+		<script src="https://cdn.vket.com/heliport/common/heliport-2.4.0.js"></script>
+	</head>
+
+	<style>
+		html {
+			touch-action: manipulation;
+		}
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#canvas {
+			position: absolute;
+			outline: none;
+		}
+
+		#status {
+			position: absolute;
+			left: 400px;
+			top: 10px;
+			right: 0;
+			bottom: 0;
+			width: 400px;
+			height: 40px;
+			color: #ffffff;
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 4;
+			display: none;
+		}
+
+		#log {
+			position: absolute;
+			left: 400px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 400px;
+			height: 40px;
+			color: #ffffff;
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 4;
+			display: none;
+		}
+
+    /*縦画面用デバッグ表示*/
+		@media (max-aspect-ratio: 1/1.1) {
+			#status {
+				left: 40vw;
+				top: 15vh;
+				height: 25px;
+				font-size: 130%;
+				display: none;
+      }
+			#log {
+				left: 40vw;
+				top: 17vh;
+				height: 61px;
+				font-size: 130%;
+				display: none;
+      }
+    }
+
+		#GUIdebugTab {
+			position: absolute;
+			right: 400px;
+			top: 32px;
+			right: 0;
+			bottom: 0;
+			width: 400px;
+			height: 24px;
+			color: #ffffff;
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 4;
+			visibility: hidden;
+		}
+
+		#GUIdebug {
+			position: absolute;
+			right: 400px;
+			top: 56px;
+			right: 0;
+			bottom: 0;
+			width: 400px;
+			height: 600px;
+			color: #ffffff;
+			background-color: rgba(0, 0, 0, 0.4);
+			z-index: 4;
+			visibility: hidden;
+			overflow:auto;
+		}
+
+		#video0 {
+			display:none;
+		}
+
+		.room {
+			display: grid;
+			grid-template-columns: 50% 30%;
+			gap: 8px;
+			margin: 0 8px;
+			z-index: 5;
+		}
+
+		.room .remote-streams {
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		.room .msg {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		.room .username {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		#username-text {
+			color: #ffffff;
+			font-size: 30px;
+			background: transparent;
+			border: none;
+      		outline: none;
+			resize: none;
+		}
+		
+		.room .channelname {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		#channelname-text {
+			font-size: 16px;
+		}
+		
+		.room .textchat {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		#textchat-text {
+			font-size: 16px;
+			background: transparent;
+			border: none;
+      		outline: none;
+			resize: none;
+		}
+		
+		.room .textchat_long {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		#textchat_long-text {
+			font-size: 16px;
+			background: transparent;
+			border: none;
+      		outline: none;
+			resize: none;
+		}
+
+		.room .worldkeyword {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		#worldkeyword-text {
+			color: #ffffff;
+			font-size: 16px;
+			background: transparent;
+			border: none;
+      		outline: none;
+			resize: none;
+		}
+		
+		.room .communitykeyword {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+		}
+
+		#communitykeyword-text {
+			color: #ffffff;
+			font-size: 16px;
+			background: transparent;
+			border: none;
+      		outline: none;
+			resize: none;
+		}
+
+		.room .intro {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+			overflow-x: visible;
+		}
+
+		#intro-input-text {
+			color: #ffffff;
+			font-size: 35px;
+			background: transparent;
+			border: none;
+      		outline: none;
+			resize: none;
+		}
+
+		.room .configurl {
+			position: absolute;
+			left: 200px;
+			top: 60px;
+			right: 0;
+			bottom: 0;
+			width: 200px;
+			height: 40px;
+			z-index: 6;
+			visibility: hidden;
+			overflow-x: visible;
+		}
+
+		#configurl-text {
+			font-size: 26px;
+		}
+
+		#__ss_modal{
+			background-color: rgba(0, 0, 0, 0.6);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			visibility: hidden;
+		}
+		#__ss_modal-dialog{
+			background-color: #f2f1f6;
+			width: 80vmin;
+			height: 24vmin;
+			font-size: 3.8vmin;
+			box-sizing: border-box;
+			border-radius: 4vmin;
+			position: relative;
+			padding: 4vmin;
+			font-family:sans-seif;
+		}
+		#__ss_modal-dialog-text{
+			font-size: 3.8vmin;
+			margin: 0;
+			font-family: sans-serif ;
+		}
+		#__ss_modal-dialog-btn_open_ss{
+			font-size: 4vmin;
+			color: #277ade;
+			position: absolute;
+			bottom: 4vmin;
+			right: 10vmin;
+			text-decoration: none;
+			font-weight: bold;
+			font-family: sans-serif ;
+		}
+		#__ss_modal-dialog-btn_close{
+			font-size: 5vmin;
+			background-color: transparent;
+			border: none;
+			outline: none;
+			padding: 0;
+			appearance: none;
+			color: #a9a9a9;
+			position: absolute;
+			top: 3.5vmin;
+			right: 4.5vmin;
+		}
+	</style>
+
+	<body>
+		<canvas id="canvas" tabindex=-1></canvas>
+		<div id="status"></div>
+		<div id="log"></div>
+		<div id="GUIdebugTab">GUIdebugTab</div>
+		<div id="GUIdebug">GUIdebug</div>
+
+		<video id="video0" autoPictureInPicture=false disablePictureInPicture controlslist="nodownload" crossOrigin="Anonymous" playsinline></video>
+
+		<div class="room">
+			<audio id="js-local-stream"></audio>
+			<div class="remote-streams" id="js-remote-streams"></div>
+
+			<div class="msg" id="msg">
+				<input type="text" id="js-local-text">
+			</div>
+			<div class="username" id="username">
+				<input type="text" id="username-text">
+			</div>
+			<div class="channelname" id="channelname">
+				<input type="text" id="channelname-text">
+			</div>
+			<div class="textchat" id="textchat">
+				<textarea id="textchat-text"></textarea>
+			</div>
+			<div class="textchat_long" id="textchat_long">
+				<textarea id="textchat_long-text"></textarea>
+			</div>
+			<div class="worldkeyword" id="worldkeyword">
+				<input type="text" id="worldkeyword-text">
+			</div>
+			<div class="communitykeyword" id="communitykeyword">
+				<input type="text" id="communitykeyword-text">
+			</div>
+			<div class="intro" id="intro">
+				<textarea type="text" id="intro-input-text"></textarea>
+			</div>
+			<div class="configurl" id="configurl">
+				<textarea id="configurl-text"></textarea>
+			</div>
+		</div>
+
+		<div id="__ss_modal">
+			<div id="__ss_modal-dialog">
+				<p id="__ss_modal-dialog-text">スクリーンショットを表示しますか？</p>
+				<a id="__ss_modal-dialog-btn_open_ss" href="ss.html" target="_blank">表示</a>
+				<button id="__ss_modal-dialog-btn_close">×</button>
+			</div>
+		</div>
+
+		<script src="//cdn.webrtc.ecl.ntt.com/skyway-latest.js"></script>
+
+		<script type="text/javascript" src="data/heliodor_pre.js"></script>
+		<script type="text/javascript" src="data/heliodor_room.js"></script>
+		<script type="text/javascript" src="data/heliodor.js"></script>
+		<script type="text/javascript" src="data/heliodor_vketaccount.js"></script>
+		<script type="text/javascript" src="data/heliodor_front.js"></script>
+		<script type="text/javascript" src="data/heliodor_chatgpt.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+		<script type="text/javascript" src="data/heliodor_post.js"></script>
+	</body>
+</html>

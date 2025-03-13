@@ -1,0 +1,714 @@
+{
+  "Version": 0,
+  "Z": 2,
+  "Scripts": [
+    "Canvas/HeliScript/WorldInfoDialog/WorldInfoDialog.hs"
+  ],
+  "Layout":[
+    {
+      "Name": "worldinfo_descript_text_dialog",
+      "Show": false,
+      "Z": 3,
+      "Components":[
+        "WorldInfoDialog"
+      ],
+      "Mask":{
+        "URI":"gui/clear.png",
+        "Show":false,
+        "Pos":[ 0, 135],
+        "Size":[ 340, 160],
+        "Z": 0,
+        "Pivot":[ 0.5, 0.5],
+        "Anchor": "CM",
+        "Color":[ 0.0, 0.0, 0.0, 0.0],
+        "Vertical":true,
+        "FreeSlide":false
+      },
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "world_descript_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 0, 375],
+          "Size":[ 340, 640],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LT",
+            "OverflowWrap":true,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          }
+        },
+        {
+          "Name": "grab_bg",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 0, 375],
+          "Size":[ 340, 640],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui/clear.png"
+          }
+        }
+      ]
+    },
+    {
+      "Comment": "ワールド詳細ダイアログ",
+      "Name": "world_info_dialog",
+      "Show": false,
+      "Z": 2,
+      "Components": [
+      "WorldInfoDialog"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Comment": "モーダル透明ボタン:押すと閉じます",
+          "Name": "popup_background",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": false,
+          "Pos":[0,0],
+          "Size":[2048,2048],
+          "Z": -1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/NoButton.png"
+          }
+        },
+        {
+          "Comment": "背景:ワールド詳細",
+          "Name": "world_detail_base",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 0, -7],
+          "Size":[ 626, 626],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_detail_base.png"
+          }
+        },
+        {
+          "Comment": "タイトル:ワールド詳細",
+          "Name": "world_dialog_title_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -18, -247],
+          "Size":[ 305, 16],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 14,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ワールド名ワールド名ワールド名ワールド名"
+          }
+        },
+        {
+          "Comment": "ボタン:閉じる",
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 155, -247],
+          "Size":[ 30, 30],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction" :[
+            {"SetShowLayer" : {"Name" : "world_info_dialog","Show" : false}}
+          ]
+        },
+        {
+          "Comment": "ワールドサムネイル",
+          "Name": "world_thumbnail",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 0, -129],
+          "Size":[ 340, 200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_thumbnail.png"
+          }
+        },
+        {
+          "Comment": "ボタン:いいね",
+          "Name": "world_btn_good",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 147, -201],
+          "Size":[ 60, 60],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_btn_good.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "world_btn_good_base",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[147,-188],
+          "Size":[60,15],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_World_Detail_Is_Official","State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_btn_good_base.png"
+          }
+        },
+        {
+          "Comment": "いいね数",
+          "Name": "world_dialog_good_count",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[147,-188],
+          "Size":[ 50, 16],
+          "Z": 4,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_World_Detail_Is_Official","State":false}
+          ],
+          "ParamText": {
+            "FontSize": 10,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "1234"
+          }
+        },
+        {
+          "Comment": "ワールド情報背景",
+          "Name": "world_detail_info_base",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 0, -45],
+          "Size":[ 341, 21],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/modal.png"
+          }
+        },
+        {
+          "Comment": "見出し：公開",
+          "Name": "world_label_open",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -134, -45],
+          "Size":[ 51, 12],
+          "Z": 5,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_label_opendate.png"
+          }
+        },
+        {
+          "Comment": "公開日",
+          "Name": "world_dialog_date_info_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -50, -45],
+          "Size":[ 128, 16],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          }
+        },
+        {
+          "Comment": "見出し：更新",
+          "Name": "world_label_update",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -10, -45],
+          "Size":[ 51, 12],
+          "Z": 5,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_label_update.png"
+          }
+        },
+        {
+          "Comment": "更新日",
+          "Name": "world_dialog_date_update_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 85, -45],
+          "Size":[ 128, 16],
+          "Z": 5,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 12,
+            "Alignment":"LM",
+            "FontFamily": "BIZUDPGothic",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          }
+        },
+        {
+          "Comment": "アイコン：ワールド閲覧数",
+          "Name": "world_visit_icon",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 110, -44],
+          "Size":[ 22, 11],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_World_Detail_Is_Official","State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_visit_icon.png"
+          }
+        },
+        {
+          "Comment": "ワールド閲覧数",
+          "Name": "world_dialog_view_count",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 150, -42],
+          "Size":[ 64, 16],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_World_Detail_Is_Official","State":false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "999999"
+          }
+        },
+        {
+          "Comment":"制作者",
+          "Name": "world_label_creator",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -144, -22],
+          "Size":[ 51, 12],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_label_creator.png"
+          }
+        },
+        {
+          "Comment":"クリエータフレーム１",
+          "Name": "world_creator_frame1",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -89, 1],
+          "Size":[ 162, 40],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_1","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_frame_creator.png"
+          }
+        },
+        {
+          "Comment":"クリエータ名１",
+          "Name": "world_creator_name1",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -89, 1],
+          "Size":[ 128, 16],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_1","State":false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "クリエータ１"
+          }
+        },
+        {
+          "Comment":"クリエータフレーム2",
+          "Name": "world_creator_frame2",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 89, 1],
+          "Size":[ 162, 40],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_2","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_frame_creator.png"
+          }
+        },
+        {
+          "Comment":"クリエータ名2",
+          "Name": "world_creator_name2",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 89, 1],
+          "Size":[ 128, 16],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_2","State":false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "クリエータ２"
+          }
+        },
+        {
+          "Comment":"クリエータフレーム３",
+          "Name": "world_creator_frame3",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -89, 35],
+          "Size":[ 162, 40],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_3","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_frame_creator.png"
+          }
+        },
+        {
+          "Comment":"クリエータ名３",
+          "Name": "world_creator_name3",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -89, 35],
+          "Size":[ 128, 16],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_3","State":false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "クリエータ３"
+          }
+        },
+        {
+          "Comment":"クリエータフレーム4",
+          "Name": "world_creator_frame4",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 89, 35],
+          "Size":[ 162, 40],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_4","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_frame_creator.png"
+          }
+        },
+        {
+          "Comment":"クリエータ名4",
+          "Name": "world_creator_name4",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 89, 35],
+          "Size":[ 128, 16],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_WorldInfo_Creater_4","State":false}
+          ],
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "クリエータ４"
+          }
+        },
+        {
+          "Comment":"ボタン：他のスペースに移動",
+          "Name": "world_btn_transition",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": false,
+          "Pos":[ 0, 200],
+          "Size":[ 138, 26],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_btn_transition.png"
+          },
+          "Toggle":[
+            {"Name":"world_btn_transition_toggle","State":true}
+            ]
+        },
+        {
+          "Comment":"フェースブックアイコン",
+          "Name": "common_btn_facebook",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -154, 236],
+          "Size":[ 32, 32],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_facebook.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment":"LINEアイコン",
+          "Name": "common_btn_line",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -111, 236],
+          "Size":[ 32, 32],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_line.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment":"Twitterアイコン",
+          "Name": "common_btn_twitter",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ -69, 236],
+          "Size":[ 32, 32],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_twitter.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment":"通報を起動する︙ボタン",
+          "Name": "report_show_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 152, 234],
+          "Size":[ 35, 35],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_btn_detail.png"
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleChange","Value":"world_report_btn_base_toggle"}},
+            {"String":{"Name":"ToggleChange","Value":"world_report_btn_text_toggle"}}
+          ],
+          "Toggle":[
+            {"Name":"report_button_show_toggle","State":false}
+          ]
+        },
+        {
+          "Comment":"通報ボタン背景",
+          "Name": "world_report_btn_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 168, 237],
+          "Size":[ 128, 64],
+          "Z": 3,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_report_base.png"
+          },
+          "GUIAction": [],
+          "Toggle":[
+            {"Name":"world_report_btn_base_toggle","State":false}
+            ]
+        },
+        {
+          "Comment":"通報ボタン前景：ボタン機能はない",
+          "Name": "world_report_btn_text",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 195, 237],
+          "Size":[ 128, 16],
+          "Z": 4,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_report.png"
+          },
+          "GUIAction": [],
+          "Toggle":[
+            {"Name":"world_report_btn_text_toggle","State":false}
+            ]
+        }
+      ]
+    }
+    ]
+}

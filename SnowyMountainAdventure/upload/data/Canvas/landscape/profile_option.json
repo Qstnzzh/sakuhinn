@@ -1,0 +1,1010 @@
+{
+  "Version": 1,
+  "Z": 3,
+  "Scripts":[
+  	"Canvas/HeliScript/Profile/AvatarTargetModel.hs",
+    "Canvas/HeliScript/Profile/ProfController.hs",
+    "Canvas/HeliScript/Profile/ProfileModel.hs",
+    "Canvas/HeliScript/Profile/ProfRejector.hs",
+    "Canvas/HeliScript/Profile/ProfRejectorController.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "prof_option_layer",
+      "Components":[
+        "ProfRejector"
+      ],
+      "Show": false,
+      "Z": 5,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_back_img",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[215,229],
+          "Size":[240,305],
+          "Z": 4,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_base.png"
+          }
+        },
+        {
+          "Name": "prof_option_back_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[206,233],
+          "Size":[103,165],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment":"報告ボタン",
+          "Name": "prof_option_btn_report",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,165],
+          "Size":[176,22],
+          "Z": 5,
+          "Pivot":[0.25,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_option_btn_report.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle":[
+            {"Name":"prof_report_toggle","State":true}
+          ],
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_layer","Show" : false}}
+          ]
+        },
+        {
+          "Comment":"キックボタン",
+          "Name": "prof_option_btn_exit",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,195],
+          "Size":[176,22],
+          "Z": 5,
+          "Pivot":[0.25,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_option_btn_exit.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle":[
+            {"Name":"prof_room_admin_toggle","State":false}
+          ],
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_forced_exit_dialog","Show" : true}}
+          ]
+        },
+        {
+          "Comment":"BANボタン",
+          "Name": "prof_option_btn_no_entry",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,224],
+          "Size":[176,22],
+          "Z": 5,
+          "Pivot":[0.25,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_option_btn_no_entry.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle":[
+            {"Name":"prof_room_admin_toggle","State":false}
+          ],
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_no_entry_dialog","Show" : true}}
+          ]
+        },
+        {
+          "Comment":"一次ブロックボタン",
+          "Name": "prof_option_btn_temporary_block",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,256],
+          "Size":[176,22],
+          "Z": 5,
+          "Pivot":[0.25,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_option_btn_temporary_block.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle":[
+            {"Name":"temporary_block_toggle","State":true}
+          ],
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_temporary_block_dialog","Show" : true}}
+          ]
+        },
+        {
+          "Comment":"一次ブロック解除ボタン",
+          "Name": "prof_option_btn_temporary_unblock",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,256],
+          "Size":[176,22],
+          "Z": 5,
+          "Pivot":[0.25,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_option_btn_temporary_unblock.png"
+          },
+          "Toggle":[
+            {"Name":"temporary_unblock_toggle","State":false}
+          ],
+          "GUIAction": [
+          ]
+        },
+        {
+          "Comment":"ブロックボタン(ゲスト時は見えない)",
+          "Name": "prof_option_btn_block",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[200,286],
+          "Size":[176,22],
+          "Z": 5,
+          "Pivot":[0.25,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_option_btn_block.png"
+          },
+          "Toggle":[
+            {"Name":"block_loginuser_toggle","State":false}
+          ],
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_block_dialog","Show" : true}}
+          ]
+          
+        }
+      ]
+    },
+    {
+      "Comment":"強制退室ダイアログ",
+      "Name": "prof_option_forced_exit_dialog",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 6,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment": "対象プレイヤー名",
+          "Name": "prof_name_text",
+          "Type": "text",
+          "Show": true,
+          "Pos":[ 0, -30],
+          "Size":[ 400, 150],
+          "Z": 7,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"CM",
+          "ParamText": {
+            "Alignment":"CM",
+            "FontSize": 13,
+            "FontFamily": "BIZUDPGothic",
+            "LineSpace": 1.5,
+            "Color":[ 1.0, 1.0, 1.0, 1.0],
+            "OverflowWrap":true,
+            "Text": "[プレイヤー名]"
+          }
+        },
+        {
+          "Name": "prof_option_txt_exit_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[512,16],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_exit.png"
+          }
+        },
+        {
+          "Name": "prof_option_cancel_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[-62,85],
+          "Size":[192,24],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_forced_exit_dialog","Show" : false}}
+          ]
+        },
+        {
+          "Name": "prof_option_forced_exit_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[62,85],
+          "Size":[144,36],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_btn_forced_exit.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_forced_exit_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_forced_exit_completed","Show" : true}}
+          ]
+        }
+      ]
+    },
+    {
+      "Comment":"入室禁止ダイアログ",
+      "Name": "prof_option_no_entry_dialog",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 6,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment": "対象プレイヤー名",
+          "Name": "prof_name_text",
+          "Type": "text",
+          "Show": true,
+          "Pos":[ 0, -50],
+          "Size":[ 400, 150],
+          "Z": 7,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"CM",
+          "ParamText": {
+            "Alignment":"CM",
+            "FontSize": 13,
+            "FontFamily": "BIZUDPGothic",
+            "LineSpace": 1.5,
+            "Color":[ 1.0, 1.0, 1.0, 1.0],
+            "OverflowWrap":true,
+            "Text": "[プレイヤー名]"
+          }
+        },
+        {
+          "Name": "prof_option_txt_no_entry_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,10],
+          "Size":[320,80],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_no_entry.png"
+          }
+        },
+        {
+          "Name": "prof_option_cancel_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[-62,85],
+          "Size":[192,24],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_no_entry_dialog","Show" : false}}
+          ]
+        },
+        {
+          "Name": "prof_option_no_entry_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[62,85],
+          "Size":[144,36],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_btn_no_entry.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_no_entry_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_no_entry_completed","Show" : true}}
+          ]
+        }
+      ]
+    },
+    {
+      "Comment":"一次ブロックダイアログ",
+      "Name": "prof_option_temporary_block_dialog",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 6,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment": "対象プレイヤー名",
+          "Name": "prof_name_text",
+          "Type": "text",
+          "Show": true,
+          "Pos":[ 0, -50],
+          "Size":[ 400, 150],
+          "Z": 7,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"CM",
+          "ParamText": {
+            "Alignment":"CM",
+            "FontSize": 13,
+            "FontFamily": "BIZUDPGothic",
+            "LineSpace": 1.5,
+            "Color":[ 1.0, 1.0, 1.0, 1.0],
+            "OverflowWrap":true,
+            "Text": "[プレイヤー名]"
+          }
+        },
+        {
+          "Name": "prof_option_txt_temporary_block_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[360,90],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_temporary_block.png"
+          }
+        },
+        {
+          "Name": "prof_option_cancel_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[-62,85],
+          "Size":[150,24],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_temporary_block_dialog","Show" : false}}
+          ]
+        },
+        {
+          "Name": "prof_option_temporary_block_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[62,85],
+          "Size":[125,31],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_btn_temporary_block.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_temporary_block_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_temporary_block_completed","Show" : true}}
+          ]
+        }
+      ]
+    },
+    {
+      "Comment":"完全ブロックダイアログ",
+      "Name": "prof_option_block_dialog",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 6,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment": "対象プレイヤー名",
+          "Name": "prof_name_text",
+          "Type": "text",
+          "Show": true,
+          "Pos":[ 0, -50],
+          "Size":[ 400, 150],
+          "Z": 7,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"CM",
+          "ParamText": {
+            "Alignment":"CM",
+            "FontSize": 13,
+            "FontFamily": "BIZUDPGothic",
+            "LineSpace": 1.5,
+            "Color":[ 1.0, 1.0, 1.0, 1.0],
+            "OverflowWrap":true,
+            "Text": "[プレイヤー名]"
+          }
+        },
+        {
+          "Name": "prof_option_txt_block_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[360,90],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_block.png"
+          }
+        },
+        {
+          "Name": "prof_option_cancel_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[-62,85],
+          "Size":[150,24],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_block_dialog","Show" : false}}
+          ]
+        },
+        {
+          "Name": "prof_option_block_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[62,85],
+          "Size":[125,31],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/profile/prof_btn_block.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_block_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_block_completed","Show" : true}}
+          ]
+        }
+      ]
+    },
+    
+    {
+      "Comment":"強制退室完了メッセージ",
+      "Name": "prof_option_forced_exit_completed",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 7,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_model_bk",
+          "Type": "button",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[4096,4096],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM"
+        },
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "prof_option_txt_exit_complete_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,15],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_exit_complete.png"
+          }
+        },
+        {
+          "Name": "prof_option_close_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,85],
+          "Size":[128,32],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_txt_close.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_forced_exit_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_forced_exit_completed","Show" : false}}
+          ]
+        }
+      ]
+    },
+    {
+      "Comment":"入室禁止完了メッセージ",
+      "Name": "prof_option_no_entry_completed",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 7,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_model_bk",
+          "Type": "button",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[4096,4096],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM"
+        },
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "prof_option_txt_exit_completed_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,15],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_no_entry_complete.png"
+          }
+        },
+        {
+          "Name": "prof_option_close_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,85],
+          "Size":[128,32],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_txt_close.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_no_entry_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_no_entry_completed","Show" : false}}
+          ]
+        }
+      ]
+    },
+    {
+      "Comment":"一次ブロック完了メッセージ",
+      "Name": "prof_option_temporary_block_completed",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 7,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_model_bk",
+          "Type": "button",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[4096,4096],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM"
+        },
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "prof_option_temporary_block_completed_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[320,20],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_temporary_block_complete.png"
+          }
+        },
+        {
+          "Name": "prof_option_close_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,85],
+          "Size":[128,32],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_txt_close.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_temporary_block_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_temporary_block_completed","Show" : false}}
+          ]
+        }
+      ]
+    },
+    {
+      "Comment":"完全ブロック完了メッセージ(モーダル)",
+      "Name": "prof_option_block_completed",
+      "Show": false,
+      "Components":[
+        "ProfRejectorController"
+      ],
+      "Z": 7,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "prof_option_dialog_model_bk",
+          "Type": "button",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[4096,4096],
+          "Z": 6,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM"
+        },
+        {
+          "Name": "prof_option_dialog_bg_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[480,313],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "prof_option_dialog_bg_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-1,1],
+          "Size":[258,219],
+          "Z": 7,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "prof_option_block_completed_img",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[160,20],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/profile/prof_option_txt_block_complete.png"
+          }
+        },
+        {
+          "Name": "prof_option_close_btn",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[0,85],
+          "Size":[128,32],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_txt_close.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "prof_option_block_dialog","Show" : false}},
+            {"SetShowLayer" : {"Name" : "prof_option_block_completed","Show" : false}}
+          ]
+        }
+      ]
+    }
+  ]
+}

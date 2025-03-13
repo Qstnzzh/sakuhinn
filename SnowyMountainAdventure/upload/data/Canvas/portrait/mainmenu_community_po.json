@@ -1,0 +1,1431 @@
+{
+  "Version": 0,
+  "Z": 2,
+  "Scripts":[
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/MainMenu/CommunityMenu/CommunityMenuController.hs",
+    "Canvas/HeliScript/MainMenu/CommunityMenu/CommunityMenuData.hs",
+    "Canvas/HeliScript/MainMenu/CommunityMenu/CommunityMenuModel.hs",
+    "Canvas/HeliScript/MainMenu/CommunityMenu/CommunityMenuView.hs",
+    "Canvas/HeliScript/MainMenu/CommunityMenu/CommunityMenuViewModel.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "mainmenu_community_base",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "CommunityMenuViewModel",
+        "CommunityMenuModel",
+        "CommunityMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "community_btn_following_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-425,-515],
+          "Size":[530,132],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_following_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[419, 77]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_Following_Folower",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "Toggle_Community_Following_Folower"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "community_btn_following_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-425,-515],
+          "Size":[530,132],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_following_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[419, 77]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_Following_Folower",
+              "State": true
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "community_btn_followers_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-515],
+          "Size":[530,132],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_followers_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[419, 77]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_Following_Folower",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "Toggle_Community_Following_Folower"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "Toggle_Community_Following_Folower"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "community_btn_followers_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[0,-515],
+          "Size":[530,132],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_followers_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[419, 77]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_Following_Folower",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "community_btn_sort_all_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-440,-400],
+          "Size":[480,120],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_sort_all_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[328, 70]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_All_Mutual",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "Toggle_Community_All_Mutual"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "community_btn_sort_all_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-440,-400],
+          "Size":[480,120],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_sort_all_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[328, 70]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_All_Mutual",
+              "State": true
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "community_btn_sort_mutual_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-100,-400],
+          "Size":[480,120],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_sort_mutual_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[328, 70]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_All_Mutual",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "Toggle_Community_All_Mutual"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "Toggle_Community_All_Mutual"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "community_btn_sort_mutual_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-100,-400],
+          "Size":[480,120],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_btn_sort_mutual_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[328, 70]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_All_Mutual",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "community_search_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[560,-400],
+          "Size":[60,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/world/world_search_btn_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_search_frame",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[440,-400],
+          "Size":[480,120],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/world/world_search_frame_po.png"
+          }
+        },
+        {
+          "Name": "community_search_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[415,-400],
+          "Size":[240,60],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 17,
+            "Alignment":"LM",
+            "Color":[0.0,0.0,0.0,1.0],
+            "Text": ""
+          }
+        },
+        {
+          "Name": "community_page_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,880],
+          "Size":[70,70],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 30,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "0"
+          }
+        },
+        {
+          "Name": "community_page_back",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-100,880],
+          "Size":[70,70],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_before_page.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_page_next",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,880],
+          "Size":[70,70],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_next_page.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "mainmenu_community_user_list",
+      "Show": false,
+      "Z": 1,
+      "Components":[
+        "CommunityMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "community_list_base_0",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-305,-240],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_0",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-490,-240],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_0",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,-260],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_0",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,-200],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_0",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-40,-155],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_1",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[305,-240],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_1",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[120,-240],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_1",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,-260],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_1",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,-200],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_1",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[570,-155],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_2",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-305,0],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_2",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-490,0],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_2",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,-20],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_2",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-40,85],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_id_text_2",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,40],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_list_base_3",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[305,0],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_3",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[120,0],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_3",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,-20],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_3",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,40],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_3",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[570,85],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_4",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-305,240],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_4",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-490,240],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_4",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,220],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_4",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,280],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_4",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-40,325],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_5",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[305,240],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_5",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[120,240],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_5",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,220],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_5",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,280],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_5",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[570,325],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_6",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-305,480],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_6",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-490,480],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_6",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,460],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_6",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,520],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_6",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-40,565],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_7",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[305,480],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_7",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[120,480],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_7",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,460],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_7",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,520],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_7",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[570,565],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_8",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-305,720],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_8",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-490,720],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_8",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,700],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_8",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,760],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_8",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-40,805],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_list_base_9",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[305,720],
+          "Size":[1028,257],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "ClickAreaSize":[596,221],
+            "FileName": "gui2023/menu/community/community_list_base_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "community_icon_9",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[120,720],
+          "Size":[200,200],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_avatar_icon.png"
+          }
+        },
+        {
+          "Name": "community_name_text_9",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,700],
+          "Size":[360,90],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前が入ります名前が入ります名前が入りま"
+          }
+        },
+        {
+          "Name": "community_id_text_9",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[410,760],
+          "Size":[360,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 32,
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "ID:hogehoge"
+          }
+        },
+        {
+          "Name": "community_icon_mutual_9",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[570,805],
+          "Size":[60,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/community/community_icon_mutual_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "mainmenu_community_account",
+      "Show": false,
+      "Z": 2,
+      "Components":[
+        "CommunityMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "popup_background",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,250],
+          "Size":[1230,1400],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_LoginButton",
+              "State": false
+            }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/popup_background.png"
+          }
+        },
+        {
+          "Name": "config_vketaccount_login_textimage",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[1120,140],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/community/mypage_txt_login_community_po.png"
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_LoginButton",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_vketaccount_signup_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,300],
+          "Size":[320,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_signup_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_LoginButton",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_vketaccount_login_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,300],
+          "Size":[320,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_login_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_Community_LoginButton",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        }
+      ]
+    }
+  ]
+}

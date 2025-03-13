@@ -1,0 +1,799 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Scripts": [
+    "Canvas/HeliScript/HUD/HUDController.hs",
+
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/Profile/ProfController.hs",
+    "Canvas/HeliScript/WorldInfoDialog/WorldInfoDialog.hs",
+    "Canvas/HeliScript/Action/ActionPalette.hs",
+    "Canvas/HeliScript/Achievement/AchievementViewModel.hs",
+    "Canvas/HeliScript/MicrophoneChecker/MicrophonePermissionChecker.hs"
+  ],
+  "Layout": [
+  {
+    "Name": "HUD",
+    "Show": false,
+    "Z": 1,
+    "Components": [
+      "HUDController",
+
+      "ProfController",
+      "WorldInfoDialog",
+      "ActionPalette",
+      "AchievementViewModel",
+      "MicrophonePermissionChecker"
+    ],
+    "Gui": [
+    {
+      "Name": "profiletext",
+      "Type": "html",
+      "Pos":[ 9, 23],
+      "Size":[ 192, 192],
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamHTML": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic"
+      }
+    },  
+    {
+      "Name": "hud_movekey",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ 20, -64],
+      "Size":[ 288, 288],
+
+      "Z": 1,
+      "Pivot":[ 0.0, 1.0],
+      "Anchor":"LB",
+      "ParamImage": {
+        "Uri": "gui2023/hud/hud_movekey.png"
+      },
+      "Toggle":[
+        {"Name":"PC_Only","State":false}
+      ]
+    },
+    {
+      "Name": "hud_moveguide",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ 0, 0],
+      "Size":[ 723, 45],
+      "Z": 1,
+      "Pivot":[ 0.0, 1.0],
+      "Anchor":"LB",
+      "ParamImage": {
+        "Uri": "gui2023/hud/hud_guide.png"
+      },
+      "Toggle":[
+        {"Name":"PC_Only","State":false}
+      ]
+    },
+
+    {
+      "Name": "hud_movestick_base",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ 178, -178],
+      "Size":[ 521, 521],
+      "Z": 1,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"LB",
+      "ParamImage": {
+        "Uri": "gui2023/hud/hud_top_handle_base.png"
+      },
+      "Toggle":[
+        {"Name":"PC_Only","State":true}
+      ]
+    },
+    {
+      "Name": "hud_movestick_cursor",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ 178, -178],
+      "Size":[ 192, 192],
+      "Z": 2,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"LB",
+      "ParamImage": {
+        "Uri": "gui2023/hud/hud_top_handle.png"
+      },
+      "Toggle":[
+        {"Name":"PC_Only","State":true}
+      ]
+    },
+    {
+      "Name": "hud_camera",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -36, 0],
+      "Size":[ 128, 128],
+      "Z": 1,
+      "Pivot":[ 1.0, 0.5],
+      "Anchor":"RM",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_camera.png"
+      },
+      "GUIAction" :[
+        {"String":{"Name":"ToggleChange","Value":"Toggle_MoveKeyOnly"}},
+        {"String":{"Name":"ToggleDefault","Value":"Toggle_TextChatArea"}},
+        {"SetShowLayer" : {"Name" : "genericwindow_common_middle","Show":false}},
+        {"SetShowLayer" : {"Name" : "genericwindow_seekbar_middle","Show":false}},
+        {"Flag" : {"Name" : "SetTextChatMode","Enable":false}},
+        {"Func":{"Name":"PhotoModeToggle"}},
+        {"SetShowLayer" : {"Name" : "camera_layer","Show":true}}
+        
+      ],
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ]
+    },
+    {
+      "Name": "hud_window_mode_01",
+      "Type": "button",
+      "Show": true,
+      "Pos":[-110, 425],
+      "Size":[254, 254],
+      "Z": 2,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RT",
+      "ParamButton": {
+        "FileName": "gui2023/movie/movie_btn_window_mode_01.png"
+      },
+      "GUIAction" :[],
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_Window_Icon_Animation","State":true},
+        {"Name":"Toggle_Generic_Window_Icon","State":false}
+      ]
+    },
+    {
+      "Name": "hud_window_mode_02",
+      "Type": "button",
+      "Show": true,
+      "Pos":[-110, 425],
+      "Size":[254, 254],
+      "Z": 1,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RT",
+      "ParamButton": {
+        "FileName": "gui2023/movie/movie_btn_window_mode_02.png"
+      },
+      "GUIAction" :[],
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_Window_Icon_Animation","State":false},
+        {"Name":"Toggle_Generic_Window_Icon","State":false}
+      ]
+    },
+    {
+      "Name": "hud_jump",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -28, -4],
+      "Size":[ 254, 254],
+      "Z": 1,
+      "Pivot":[ 1.0, 1.0],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_jump.png"
+      },
+      "GUIAction" :[
+        {"Flag" : {"Name" : "SetRunJump","Enable":true}}
+      ],
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"PC_Only","State":true}
+      ]
+    },
+    {
+      "Name": "hud_viewmode_fps",
+      "Type": "button",
+      "Show": false,
+      "Pos":[ -354, 36],
+      "Size":[ 256, 128],
+      "Z": 1,
+      "Pivot":[ 1.0, 0.0],
+      "Anchor":"RT",
+      "Toggle":[
+        {"Name":"viewmode","State":false},
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_viewmode_fps.png"
+      },
+      "GUIAction" :[
+        {"Func" : {"Name" : "FPSTPSToggle"}},
+        {"Flag" : {"Name" : "FPSMode","Enable":false}},
+        {"SetShowGUI" : {"Name" : "hud_viewmode_tps","Show" : false}},
+        {"SetShowGUI" : {"Name" : "hud_viewmode_fps","Show" : true}},
+        {"String":{"Name":"ToggleChange","Value":"viewmode"}}
+      ]
+    },
+    {
+      "Name": "hud_viewmode_tps",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -354, 36],
+      "Size":[ 256, 128],
+      "Z": 1,
+      "Pivot":[ 1.0, 0.0],
+      "Anchor":"RT",
+      "Toggle":[
+        {"Name":"viewmode","State":true},
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_viewmode_tps.png"
+      },
+      "GUIAction" :[
+        {"Func" : {"Name" : "FPSTPSToggle"}},
+        {"Flag" : {"Name" : "FPSMode","Enable":true}},
+        {"SetShowGUI" : {"Name" : "hud_viewmode_tps","Show" : true}},
+        {"SetShowGUI" : {"Name" : "hud_viewmode_fps","Show" : false}},
+        {"String":{"Name":"ToggleChange","Value":"viewmode"}}
+      ]
+    },
+    {
+      "Name": "hud_cart",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -310, 158],
+      "Size":[ 137, 137],
+      "Z": 1,
+      "Pivot":[ 1.0, 0.0],
+      "Anchor":"RT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_Use_EC","State":false}
+      ],
+      "ParamButton": {
+          "FileName": "gui2023/hud/hud_cart_po.png"
+      },
+      "GUIAction" :[]
+    },
+    {
+      "Name": "hud_ec_badge",
+      "Type": "image",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[-320,185],
+      "Size":[56,56],
+      "Z": 2,
+      "Pivot":[0.5,0.5],
+      "Anchor": "RT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_Use_EC","State":false},
+        {"Name":"Toggle_Use_EC_Badge","State":false}
+      ],
+      "ParamImage": {
+        "Uri": "gui2023/ec/ec_badge.png"
+      }
+    },
+    {
+      "Name": "hud_ec_badge_text",
+      "Type": "text",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[-320,185],
+      "Size":[68,68],
+      "Z": 3,
+      "Pivot":[0.5,0.5],
+      "Anchor": "RT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_Use_EC","State":false},
+        {"Name":"Toggle_Use_EC_Badge","State":false}
+      ],
+      "ParamText": {
+        "FontSize": 34,
+        "Alignment":"CM",
+        "Color":[0.0,0.0,0.0,1.0],
+        "Text": "99"
+      }
+    },
+    {
+      "Name": "hud_config",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ 18, 100],
+      "Size":[ 254, 254],
+      "Z": 1,
+      "Pivot":[ 1.0, 0.0],
+      "Anchor":"RT",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_menu.png"
+      },
+      "GUIAction" :[
+        {"SetShowLayer" : {"Name" : "mainmenu_side_home","Show" : true}},
+        
+        {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Event_On_Off"}},
+        {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_World_On_Off"}},
+        {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Community_On_Off"}},
+        {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Setting_On_Off"}}
+      ],
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ]
+    },
+    {
+      "Comment": "ボタン：テキストチャット",
+      "Name": "hud_open_textchat",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -115, -36],
+      "Size":[ 128, 128],
+      "Z": 1,
+      "Pivot":[ 0.5, 1.0],
+      "Anchor":"CB",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_txt_chat.png"
+      },
+      "GUIAction" :[
+        {"SetShowLayer" : {"Name" : "mainmenu_side_home","Show" : false}},
+        {"String":{"Name":"ToggleDefault","Value":"Toggle_OpenClose_TextChat"}},
+        {"String":{"Name":"ToggleChange","Value":"Toggle_OpenClose_TextChat"}},
+        {"SetShowLayer" : {"Name" : "action_list","Show" : false}}
+      ],
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_OpenClose_TextChat","State":true}
+      ]
+    },
+    {
+      "Comment": "テキストチャット：連打対策の反応しないボタン",
+      "Name": "hud_open_textchat_on",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -115, -36],
+      "Size":[ 128, 128],
+      "Z": 1,
+      "Pivot":[ 0.5, 1.0],
+      "Anchor":"CB",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_txt_chat.png"
+      },
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_OpenClose_TextChat","State":false}
+      ]
+    },
+    {
+      "Comment": "ボイスチャット背景",
+      "Name": "hud_voicechat_bg_s_po",
+      "Type": "image",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[ 361, 230],
+      "Size":[ 1024, 256],
+      "Z": 0,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name": "Toggle_voicechat_bg_s", "State": true}
+      ],
+      "ParamImage": {
+        "Uri": "gui2023/voicechat/hud_voicechat_bg_s_po.png"
+      }
+    },
+    {
+      "Name": "hud_voice_off",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[ 107, 230],
+      "Size":[ 250, 250],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"voicechat","State":true},
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_voice_off.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": [
+        {"Flag" : {"Name" : "MicOn","Enable":true}},
+        {"String":{"Name":"ToggleChange","Value":"voicechat"}}
+      ]
+    },
+    {
+      "Name": "hud_voice_on",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 107, 230],
+      "Size":[ 250, 250],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"voicechat","State":false},
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_voice_on.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": [
+        {"Flag" : {"Name" : "MicOn","Enable":false}},
+        {"String":{"Name":"ToggleChange","Value":"voicechat"}}
+      ]
+    },
+    {
+      "Comment": "ボタン：マイク不許可",
+      "Name": "hud_usermic_disabled",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 107, 230],
+      "Size":[ 250, 250],
+      "Z": 15,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"mic_disabled","State":true},
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_usermic_disabled.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": [
+      ]
+    },
+    {
+      "Name": "hud_voicechat_notjonining",
+      "Type": "text",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 382, 230],
+      "Size":[ 396, 80],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_ConnectingRoom","State":true}
+      ],
+      "ParamText": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic",
+        "Alignment":"LM",
+        "OverflowWrap":true,
+        "Color":[1.0,1.0,1.0,1.0],
+        "Text": ""
+      }
+    },
+    {
+      "Name": "hud_voicechat_joining",
+      "Type": "image",
+      "Platform": "",
+      "Language": "_en",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 272, 191],
+      "Size":[ 160, 40],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_ConnectingRoom","State":false}
+      ],
+      "ParamImage": {
+        "Uri": "gui2023/voicechat/hud_voicechat_joining.png"
+      }
+    },
+    {
+      "Name": "hud_voicechat_channelname",
+      "Type": "text",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 394, 235],
+      "Size":[ 404, 40],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_ConnectingRoom","State":false}
+      ],
+      "ParamText": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic",
+        "Alignment":"LM",
+        "Color":[1.0,1.0,1.0,1.0],
+        "Text": "ランダムボイスチャット"
+      }
+    },
+    {
+      "Name": "hud_voicechat_groupname",
+      "Type": "text",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 394, 275],
+      "Size":[ 404, 40],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_ConnectingRoom","State":false},
+        { "Name": "Toggle_VCC_VCh_Single_Multiple", "State": false}
+      ],
+      "ParamText": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic",
+        "Alignment":"LM",
+        "Color":[1.0,1.0,1.0,1.0],
+        "Text": "チャンネル01"
+      }
+    },
+    {
+      "Name": "hud_voicechat_arrow_down",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 422, 230],
+      "Size":[ 494, 123],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name": "Toggle_voicechat_arrow_down", "State": false}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/voicechat/hud_voicechat_arrow_down.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": [
+        {"SetShowLayer" : {"Name" : "mainmenu_side_home","Show" : false}},
+        {"SetShowLayer" : {"Name" : "action_list","Show" : false}}
+      ]
+    },
+    {
+      "Name": "hud_voicechat_arrow_up",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": false,
+      "Pos":[ 422, 230],
+      "Size":[ 494, 123],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name": "Toggle_voicechat_arrow_up", "State": false}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/voicechat/hud_voicechat_arrow_up.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": []
+    },
+    {
+      "Name": "hud_voicechat_arrow_right",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[ 422, 230],
+      "Size":[ 494, 123],
+      "Z": 13,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name": "Toggle_voicechat_arrow_right", "State": true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/voicechat/hud_voicechat_arrow_right.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": [
+        {"SetShowLayer" : {"Name" : "mainmenu_side_home","Show" : false}},
+        {"SetShowLayer" : {"Name" : "action_list","Show" : false}}
+      ]
+    },
+    {
+      "Name": "invite_friend_btn",
+      "Type": "button",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ -367, -1],
+      "Size":[ 512, 128],
+      "Z": 1,
+      "Pivot":[ 0.0, 0.0],
+      "Anchor":"RT",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_invite.png"
+      },
+      "GUIAction" :[
+        {"SetShowLayer" : {"Name" : "invite_friend","Show" : true}}
+      ],
+       "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ]
+    },
+    {
+      "Name": "current_space_info",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -336, -1],
+      "Size":[ 1024, 128],
+      "Z": 1,
+      "Pivot":[ 0.0, 0.0],
+      "Anchor":"LT",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_space_info_po.png"
+      },
+      "Toggle" :[
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ]
+    },
+    {
+      "Name": "current_space_name_text",
+      "Type": "text",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[ 370, 82],
+      "Size":[ 528, 53],
+      "Z": 2,
+      "Pivot":[0.5,0.5],
+      "Anchor": "LT",
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true},
+        {"Name":"Toggle_ConnectingRoom","State":false}
+      ],
+      "ParamText": {
+        "FontSize": 35,
+        "FontFamily": "BIZUDPGothic",
+        "Alignment":"LM",
+        "Color":[1.0,1.0,1.0,1.0],
+        "Text": ""
+      }
+    },
+    {
+      "Name": "hud_emote_pal_on",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -397, -36],
+      "Size":[ 128, 128],
+      "Z": 2,
+      "Pivot":[ 1.0, 1.0],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_emote.png",
+        "OnCursorFileName": "gui2023/hud/hud_emote.png",
+        "DownFileName": "gui2023/hud/hud_emote.png"
+      },
+      "GUIAction" :[
+        {"String" : {"Name" : "ToggleChange","Value" : "action_palette_toggle"}},
+        {"SetShowLayer" : {"Name" : "action_palette","Show" : true}},
+        {"Func" : {"Name" : "StartLayerAnimation","Param":"action_palette,Begin,500"}}
+      ],
+      "Toggle":[
+        {"Name":"action_palette_toggle","State":true}
+        ]
+    },
+    {
+      "Name": "hud_emote_pal_off",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -397, -36],
+      "Size":[ 128, 128],
+      "Z": 2,
+      "Pivot":[ 1.0, 1.0],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_emote.png"
+      },
+      "GUIAction" :[
+        {"String" : {"Name" : "ToggleChange","Value" : "action_palette_toggle"}},
+        {"Func" : {"Name" : "StartLayerAnimation","Param":"action_palette,End,500"}}
+      ],
+      "Toggle":[
+        {"Name":"action_palette_toggle","State":false}
+        ]
+    },
+    {
+      "Name": "hud_dash_off",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[ -36, -274],
+      "Size":[ 128, 128],
+      "Z": 1,
+      "Pivot":[ 1, 1],
+      "Anchor": "RB",
+      "Toggle":[
+        {"Name":"Toggle_DASH_ON_OFF","State":true},
+        {"Name":"PC_Only","State":true},
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_dash_off.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": [
+        {"Flag" : {"Name" : "PlayerDash","Enable":true}},
+        {"String" : {"Name" : "ToggleDefault","Value" : "Toggle_DASH_ON_OFF"}},
+        {"String" : {"Name" : "ToggleChange","Value" : "Toggle_DASH_ON_OFF"}}
+      ]
+    },
+    {
+      "Name": "hud_dash_on",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[ -36, -274],
+      "Size":[ 128, 128],
+      "Z": 1,
+      "Pivot":[ 1, 1],
+      "Anchor": "RB",
+      "Toggle":[
+        {"Name":"Toggle_DASH_ON_OFF","State":false},
+        {"Name":"PC_Only","State":true},
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ],
+      "ParamButton": {
+        "FileName": "gui2023/hud/hud_dash_on.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": [
+        {"Flag" : {"Name" : "PlayerDash","Enable":false}},
+        {"String" : {"Name" : "ToggleDefault","Value" : "Toggle_DASH_ON_OFF"}}
+      ]
+    }
+    ]
+  }
+  ]
+}

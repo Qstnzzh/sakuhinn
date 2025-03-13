@@ -1,0 +1,192 @@
+{
+    "Version": 1,
+    "Z": 1,
+    "Layout": [
+      {
+        "Name": "loading",
+        "Show": false,
+        "Z": 10,
+        "Gui": [
+          {
+            "Name": "loading_base",
+            "Type": "button",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui2023/loading/loading_base.png",
+              "OnCursorFileName": "gui2023/loading/loading_base.png",
+              "DownFileName": "gui2023/loading/loading_base.png"
+            }
+          },
+          {
+            "Name": "loading_bar",
+            "Type": "loading",
+            "Show": true,
+            "Pos":[0, 680],
+            "Size":[ 896, 28],
+            "Z": 2,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamLoadingBar": {
+              "BaseFileNameUri": "gui2023/loading/loading_barbase_po.png",
+              "BarFileNameUri": "gui2023/loading/loading_bar_po.png",
+              "NumberFileNameUri": "gui/number0.png",
+              "NumberOffset":[ -10, 30]
+            }
+          },
+          {
+            "Name":"loading_sound_on_on",
+            "Type":"button",
+            "Show":true,
+            "Pos":[200, 850],
+            "Size":[ 200, 200],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "Toggle" : [
+              { "Name": "Toggle_MuteMasterSound", "State": true }
+            ],
+            "ParamButton": {
+              "FileName": "gui2023/loading/loading_sound_off_on_on.png",
+              "OnCursorFileName": "gui2023/loading/loading_sound_off_on_on.png",
+              "DownFileName": "gui2023/loading/loading_sound_off_on_on.png"
+            }
+          },
+          {
+            "Name":"loading_sound_on",
+            "Type":"button",
+            "Show":true,
+            "Pos":[200, 850],
+            "Size":[ 200, 200],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "Toggle" : [
+              { "Name": "Toggle_MuteMasterSound", "State": false }
+            ],
+            "ParamButton": {
+              "FileName": "gui2023/loading/loading_sound_on.png",
+              "OnCursorFileName": "gui2023/loading/loading_sound_on.png",
+              "DownFileName": "gui2023/loading/loading_sound_on.png"
+            },
+            "GUIAction" :[
+              {"Master" : {"Volume":-1.0,"VolumeSliderToggle":true,"VolumeMuteFlag":false}},
+              {"SetShowGUI" : {"Name" : "loading_sound_on_on","Show" : true}},
+              {"SetShowGUI" : {"Name" : "loading_sound_on","Show" : false}},
+              {"SetShowGUI" : {"Name" : "loading_sound_off_on","Show" : false}},
+              {"SetShowGUI" : {"Name" : "loading_sound_off","Show" : true}},
+              {"String" : {"Name" : "ToggleChange","Value":"Toggle_MuteMasterSound"}},
+              {"Func" : {"Name" : "MuteMasterSoundLoadingToggle"}}
+            ]
+          },
+          {
+            "Name":"loading_sound_off_on",
+            "Type":"button",
+            "Show":false,
+            "Pos":[350, 850],
+            "Size":[ 200, 200],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "Toggle" : [
+              { "Name": "Toggle_MuteMasterSound", "State": false }
+            ],
+            "ParamButton": {
+              "FileName": "gui2023/loading/loading_sound_off_on.png",
+              "OnCursorFileName": "gui2023/loading/loading_sound_off_on.png",
+              "DownFileName": "gui2023/loading/loading_sound_off_on.png"
+            }
+          },
+          {
+            "Name":"loading_sound_off",
+            "Type":"button",
+            "Show":true,
+            "Pos":[350, 850],
+            "Size":[ 200, 200],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "Toggle" : [
+              { "Name": "Toggle_MuteMasterSound", "State": true }
+            ],
+            "ParamButton": {
+              "FileName": "gui2023/loading/loading_sound_off.png",
+              "OnCursorFileName": "gui2023/loading/loading_sound_off.png",
+              "DownFileName": "gui2023/loading/loading_sound_off.png"
+            },
+            "GUIAction" :[
+              {"Master" : {"Volume":0.0,"VolumeSliderToggle":false,"VolumeMuteFlag":true}},
+              {"SetShowGUI" : {"Name" : "loading_sound_on_on","Show" : false}},
+              {"SetShowGUI" : {"Name" : "loading_sound_on","Show" : true}},
+              {"SetShowGUI" : {"Name" : "loading_sound_off_on","Show" : true}},
+              {"SetShowGUI" : {"Name" : "loading_sound_off","Show" : false}},
+              {"String" : {"Name" : "ToggleChange","Value":"Toggle_MuteMasterSound"}},
+              {"Func" : {"Name" : "MuteMasterSoundLoadingToggle"}}
+            ]
+          },
+          {
+            "Name":"loading_sound_text",
+            "Type":"image",
+            "Show":true,
+            "Platform": "",
+            "Language": "_en",
+            "Portrait": "",
+            "Pos":[-150,850],
+            "Size":[ 800, 100],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui2023/loading/loading_sound_text.png"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "loading_guid",
+        "Show": false,
+        "Z": 10,
+        "Gui": [
+          {
+            "Name": "loading_guid",
+            "Type": "image",
+            "Platform": "_sp",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[0, -40],
+            "Size":[ 818, 1638],
+            "Z": 2,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui2023/loading/loading_help_po.png"
+            }
+          }
+        ]
+      },
+      {
+        "Name": "StartEffect",
+        "Show": false,
+        "Z": 70,
+        "Gui": [
+          {
+            "Name": "Sprite",
+            "Type": "image",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/white.png"
+            }
+          }
+        ]
+      }
+    ]
+}

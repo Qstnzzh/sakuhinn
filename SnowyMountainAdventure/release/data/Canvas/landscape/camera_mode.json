@@ -1,0 +1,708 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Scripts":[
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/PhotoModeCamera/PhotoModeCameraViewModel.hs",
+    "Canvas/HeliScript/PhotoModeCamera/PhotoModeCameraView.hs",
+    "Canvas/HeliScript/PhotoModeCamera/PhotoModeCameraModel.hs",
+    "Canvas/HeliScript/PhotoModeCamera/PhotoModeCameraController.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "camera_layer",
+      "Show": false,
+      "Z": 2,
+      "Components":[
+        "PhotoModeCameraController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "cameraframe_image",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "RaycastTarget":false,
+          "Pos": [0,0],
+          "Size": [705,352],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_Photo_Movie","State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/camera/camera_frame.png"
+          }
+        },
+        {
+          "Name": "camera_reset_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [35,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [ ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_reset.png",
+            "FileName": "gui2023/camera/camera_btn_reset.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_reset.png"
+          },
+          "GUIAction": [ 
+            {"Func":{"Name":"ResetPhotoModeCamera"}}
+          ]
+        },
+        {
+          "Name": "camera_FrontBack_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [95,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [ 
+            {"Name":"Toggle_Photo_MoveDir","State":true}
+          ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_frontback.png",
+            "FileName": "gui2023/camera/camera_btn_frontback.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_frontback.png"
+          },
+          "GUIAction": [
+            {"Func":{"Name":"PhotoModeMoveRotateToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_Photo_MoveDir"}}
+          ]
+        },
+        {
+          "Name": "camera_UpDown_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": false,
+          "Pos": [95,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            {"Name":"Toggle_Photo_MoveDir","State":false}
+            ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_updown.png",
+            "FileName": "gui2023/camera/camera_btn_updown.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_updown.png"
+          },
+          "GUIAction": [ 
+            {"Func":{"Name":"PhotoModeMoveRotateToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_Photo_MoveDir"}}
+          ]
+        },
+        {
+          "Name": "nameplate_delete_on_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [154,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [ 
+            {"Name":"Toggle_nameplate_delete","State":true}
+          ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_name_on.png",
+            "FileName": "gui2023/camera/camera_btn_name_on.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_name_on.png"
+          },
+          "GUIAction": [ 
+            {"Func":{"Name":"ShowNamePlateToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_nameplate_delete"}}
+          ]
+        },
+        {
+          "Name": "nameplate_delete_off_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": false,
+          "Pos": [154,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            {"Name":"Toggle_nameplate_delete","State":false}
+            ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_name_off.png",
+            "FileName": "gui2023/camera/camera_btn_name_off.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_name_off.png"
+          },
+          "GUIAction": [ 
+            {"Func":{"Name":"ShowNamePlateToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_nameplate_delete"}}
+          ]
+        },
+        {
+          "Name": "camera_gaze_on_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": false,
+          "Pos": [214,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [ 
+            {"Name":"Toggle_camera_gaze","State":false}
+          ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_gaze_on.png",
+            "FileName": "gui2023/camera/camera_btn_gaze_on.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_gaze_on.png"
+          },
+          "GUIAction": [
+            {"Func":{"Name":"LookCameraToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_camera_gaze"}}
+          ]
+        },
+        {
+          "Name": "camera_gaze_off_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [214,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            {"Name":"Toggle_camera_gaze","State":true}
+            ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_gaze_off.png",
+            "FileName": "gui2023/camera/camera_btn_gaze_off.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_gaze_off.png"
+          },
+          "GUIAction": [ 
+            {"Func":{"Name":"LookCameraToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_camera_gaze"}}
+          ]
+        },
+        {
+          "Name": "camera_focus_on_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": false,
+          "Pos": [275,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            {"Name":"Toggle_camera_focus","State":false}
+            ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_focus_on.png",
+            "FileName": "gui2023/camera/camera_btn_focus_on.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_focus_on.png"
+          },
+          "GUIAction": [ 
+            {"Func":{"Name":"PhotoFocusToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_camera_focus"}},
+            {"SetShowLayer" : {"Name" : "camera_focus_layer","Show" : false}}
+          ]
+        },
+        {
+          "Name": "camera_focus_off_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [275,37],
+          "Size": [52,52],
+          "Z": 0,
+          "Pivot": [0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            {"Name":"Toggle_camera_focus","State":true}
+            ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_focus_off.png",
+            "FileName": "gui2023/camera/camera_btn_focus_off.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_focus_off.png"
+          },
+          "GUIAction": [ 
+            {"Func":{"Name":"PhotoFocusToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_camera_focus"}},
+            {"SetShowLayer" : {"Name" : "camera_focus_layer","Show" : true}}
+          ]
+        },
+        {
+          "Name": "camera_exit_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-35, 35],
+          "Size":[ 87, 87],
+          "Z": 3,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor": "RT",
+          "Toggle": [ 
+            {"Name":"Toggle_Is_Saved_Video","State":true},
+            {"Name":"Toggle_Record_Start_Stop","State":true}
+          ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_btn_exit.png",
+            "FileName": "gui2023/camera/camera_btn_exit.png",
+            "OnCursorFileName": "gui2023/camera/camera_btn_exit.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "camera_layer","Show":false}},
+            {"Func":{"Name":"PhotoModeToggle"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MoveKeyOnly"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_Photo_MoveDir"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_nameplate_delete"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_camera_gaze"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_ShowPreviewPhoto"}},
+            {"SetShowLayer" : {"Name" : "camera_layer","Show" : false}},
+            {"SetShowLayer" : {"Name" : "camera_focus_layer","Show" : false}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_camera_focus"}}
+          ]
+        },
+
+        {
+          "Name": "camera_shoot_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0, -49],
+          "Size":[ 130, 130],
+          "Z": 1,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor": "CB",
+          "Toggle":[
+            {"Name":"Toggle_Photo_Movie","State":true}
+          ],
+          "ParamButton": {
+            "DownFileName": "gui2023/camera/camera_shoot.png",
+            "FileName": "gui2023/camera/camera_shoot.png",
+            "OnCursorFileName": "gui2023/camera/camera_shoot.png"
+          },
+          "GUIAction": [ 
+            {"Index" : {"Name" : "AudioPlay","Value":0}},
+            {"Func" : {"Name" : "Photoshot"}},
+            {"Func" : {"Name" : "PhotoPreviewToggle"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_ShowPreviewPhoto"}}
+          ]
+        },
+        {
+          "Name": "photo_preview_background",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ 0, 0],
+          "Size":[ 3000, 3000],
+          "Z": 3,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor":"CM",
+          "ParamButton": {
+          },
+          "Toggle":[
+            {"Name":"Toggle_ShowPreviewPhoto","State":false}
+          ],
+          "GUIAction":[
+            {"String":{"Name":"ToggleChange","Value":"Toggle_ShowPreviewPhoto"}},
+            {"Func" : {"Name" : "PhotoPreviewToggle"}}
+          ]
+        },
+        {
+          "Name": "PhotoRenderTexture",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ 0, 0],
+          "Size":[ 1200, 600],
+          "Z": 4,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor":"CM",
+          "ParamButton": {
+            "FileName": "gui/white.png"
+          },
+          "Toggle":[
+            {"Name":"Toggle_ShowPreviewPhoto","State":false}
+          ],
+          "GUIAction":[
+            {"String":{"Name":"ToggleChange","Value":"Toggle_ShowPreviewPhoto"}},
+            {"Func" : {"Name" : "PhotoPreviewToggle"}}
+          ]
+        },
+        {
+          "Name": "camera_photo_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-32,-32],
+          "Size":[65,65],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_Photo_Movie","State":true},
+            {"Name":"Toggle_Record_Start_Stop","State":true},
+            {"Name":"Toggle_Forced_Show_Off_NotReleased","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/hud/hud_photo.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "camera_photo_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-32,-32],
+          "Size":[65,65],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_Photo_Movie","State":false},
+            {"Name":"Toggle_Record_Start_Stop","State":true},
+            {"Name":"Toggle_Forced_Show_Off_NotReleased","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/hud/hud_photo_down.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Comment" : "カメラの説明",
+          "Name": "camera_description",
+          "Type": "image",
+          "Platform": "_sp",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [32,0],
+          "Size": [256,512],
+          "Z": 5,
+          "Pivot": [1.0,0.5],
+          "Anchor": "LM",
+          "ParamImage": {
+            "Uri": "gui2023/camera/camera_description.png"
+          },
+          "Animation":{
+            "State":{
+              "Begin":{
+                "Pos":[256,0]
+              },
+              "End":{
+                "Pos":[256,0]
+              }
+            }
+          }
+        },
+        {
+          "Commnet" : "カメラ説明表示ボタン",
+          "Name": "camera_description_open_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-5,0],
+          "Size":[32,32],
+          "Z": 6,
+          "Pivot":[0,0.5],
+          "Anchor": "LM",
+          "Toggle":[
+            {"Name":"toggle_camera_description_open","State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/camera/camera_description_btn_open.png"
+          },
+          "Animation":{
+            "State":{
+              "Begin":{
+                "Alpha": 1,
+                "Pos":[-5,0]
+              },
+              "End":{
+                "Alpha": 0,
+                "Pos":[-5,0]
+              }
+            }
+          },
+          "GUIAction": [
+            {"Func" : {"Name" : "StartGUIAnimation","Param":"camera_layer,camera_description,End,300"}},
+            {"Func" : {"Name" : "StartGUIAnimation","Param":"camera_layer,camera_description_open_btn,End,320"}},
+            {"Func" : {"Name" : "StartGUIAnimation","Param":"camera_layer,camera_description_close_btn,Begin,320"}},
+            {"String":{"Name":"ToggleChange","Value":"toggle_camera_description_open"}},
+            {"String":{"Name":"ToggleChange","Value":"toggle_camera_description_close"}}
+          ]
+        },
+        {
+          "Commnet" : "カメラ説明非表示ボタン",
+          "Name": "camera_description_close_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[251,0],
+          "Size":[32,32],
+          "Z": 6,
+          "Pivot":[1.0,0.5],
+          "Anchor": "LM",
+          "Toggle":[
+            {"Name":"toggle_camera_description_close","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/camera/camera_description_btn_close.png"
+          },
+          "Animation":{
+            "State":{
+              "Begin":{
+                "Alpha": 0,
+                "Pos":[251,0]
+              },
+              "End":{
+                "Alpha": 1,
+                "Pos":[251,0]
+              }
+            }
+          },
+          "GUIAction": [
+            {"Func" : {"Name" : "StartGUIAnimation","Param":"camera_layer,camera_description,Begin,300"}},
+            {"Func" : {"Name" : "StartGUIAnimation","Param":"camera_layer,camera_description_close_btn,End,320"}},
+            {"Func" : {"Name" : "StartGUIAnimation","Param":"camera_layer,camera_description_open_btn,Begin,320"}},
+            {"String":{"Name":"ToggleChange","Value":"toggle_camera_description_open"}},
+            {"String":{"Name":"ToggleChange","Value":"toggle_camera_description_close"}}
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "camera_focus_layer",
+      "Show": false,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "camera_focus_base",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [144,-20],
+          "Size": [512,128],
+          "Z": -1,
+          "Pivot": [0.0,0.0],
+          "Anchor": "LT",
+          "Toggle": [ ],
+          "ParamImage": {
+            "Uri": "gui2023/camera/camera_focus_status_base.png"
+          }
+        },
+        {
+          "Comment": "フォーカススライダー",
+          "Name": "focus_slider",
+          "Type": "Slider",
+          "Show": true,
+          "Pos": [329,21],
+          "Size": [143,36],
+          "Z": 0,
+          "Pivot": [0.0,0.0],
+          "Anchor":"LT",
+          "Toggle" : [
+            {"Name":"Toggle_FocusSlider","State":true}
+          ],
+          "ParamSlider": {
+            "OnName": "gui2023/camera/camera_focus_bar_slider.png",
+            "OnSize": [27,27],
+            "OffName": "gui2023/camera/camera_focus_bar_slider.png",
+            "OffSize": [27,27],
+            "DriveField": "PhotoModeFocus"
+          }
+        },
+        {
+          "Comment":"フォーカスバー",
+          "Name": "focus_bar",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [275,31],
+          "Size": [253,5],
+          "Z": 0,
+          "Pivot": [0.0,0.0],
+          "Anchor": "LT",
+          "Toggle": [ ],
+          "ParamImage": {
+            "Uri": "gui2023/camera/camera_focus_bar_base.png"
+          }
+        },
+        {
+          "Comment": "ボケ値スライダー",
+          "Name": "bokeh_slider",
+          "Type": "Slider",
+          "Show": true,
+          "Pos": [329,53],
+          "Size": [143,36],
+          "Z": 0,
+          "Pivot": [0.0,0.0],
+          "Anchor":"LT",
+          "Toggle" : [
+          ],
+          "ParamSlider": {
+            "OnName": "gui2023/camera/camera_focus_bar_slider.png",
+            "OnSize": [27,27],
+            "OffName": "gui2023/camera/camera_focus_bar_slider.png",
+            "OffSize": [27,27],
+            "DriveField": "PhotoModeFnum"
+          }
+        },
+        {
+          "Comment" : "ぼかしバー",
+          "Name": "bokeh_bar",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [275,66],
+          "Size": [253,5],
+          "Z": 0,
+          "Pivot": [0.0,0.0],
+          "Anchor": "LT",
+          "Toggle": [ ],
+          "ParamImage": {
+            "Uri": "gui2023/camera/camera_focus_bar_base.png"
+          }
+        },
+        {
+          "Name": "focus_lock_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": false,
+          "Pos": [508,7],
+          "Size": [50,50],
+          "Z": 0,
+          "Pivot": [0.0,0.0],
+          "Anchor": "LT",
+          "Toggle": [ 
+            {"Name":"Toggle_FocusLock","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/camera/camera_focus_lock_on.png",
+            "OnCursorFileName": "gui2023/camera/camera_focus_lock_on.png",
+            "DownFileName": "gui2023/camera/camera_focus_lock_on.png"
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleChange","Value":"Toggle_FocusLock"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_FocusSlider"}},
+            {"Func":{"Name":"PhotoFocusLockToggle"}}
+          ]
+        },
+        {
+          "Name": "focus_lock_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos": [508,7],
+          "Size": [50,50],
+          "Z": 0,
+          "Pivot": [0.0,0.0],
+          "Anchor": "LT",
+          "Toggle": [ 
+            {"Name":"Toggle_FocusLock","State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/camera/camera_focus_lock_off.png",
+            "OnCursorFileName": "gui2023/camera/camera_focus_lock_off.png",
+            "DownFileName": "gui2023/camera/camera_focus_lock_off.png"
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleChange","Value":"Toggle_FocusLock"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_FocusSlider"}},
+            {"Func":{"Name":"PhotoFocusLockToggle"}}
+          ]
+        }
+      ]
+    },
+    {
+      "Name": "record_layer",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "PhotoModeCameraViewModel",
+        "PhotoModeCameraController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "photoframe_image",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show":true,
+          "RaycastTarget":false,
+          "Pos":[0,0],
+          "Size":[700,300],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_Record_Start_Stop","State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/camera/camera_frame.png"
+          }
+        }
+      ]
+    }
+  ]
+}

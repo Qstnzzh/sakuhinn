@@ -1,0 +1,30 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# File Created: 12.09.2024 16:16:44
+
+newmtl Material__1697401496
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\BaiduNetdiskDownload\A???\??,??\??\E_SnowA_02.png
+	map_Kd D:\BaiduNetdiskDownload\A???\??,??\??\E_SnowA_02.png
+
+newmtl Material__1697401495
+	Ns 10.0000
+	Ni 1.5000
+	d 1.0000
+	Tr 0.0000
+	Tf 1.0000 1.0000 1.0000 
+	illum 2
+	Ka 0.5880 0.5880 0.5880
+	Kd 0.5880 0.5880 0.5880
+	Ks 0.0000 0.0000 0.0000
+	Ke 0.0000 0.0000 0.0000
+	map_Ka D:\BaiduNetdiskDownload\A???\??,??\??\E_SnowA_03.png
+	map_Kd D:\BaiduNetdiskDownload\A???\??,??\??\E_SnowA_03.png

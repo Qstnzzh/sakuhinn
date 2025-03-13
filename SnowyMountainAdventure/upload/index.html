@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ja">
+
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Vket Cloud</title>
+	</head>
+
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+		}
+
+		#login {
+			position: absolute;
+			left: 120px;
+			top: 100px;
+			right: 0;
+			bottom: 0;
+			width: 250px;
+			height: 60px;
+			z-index: 1;
+		}
+
+		#logout {
+			position: absolute;
+			left: 120px;
+			top: 200px;
+			right: 0;
+			bottom: 0;
+			width: 250px;
+			height: 60px;
+			z-index: 1;
+		}
+
+		#startbutton0 {
+			position: absolute;
+			left: 120px;
+			top: 300px;
+			right: 0;
+			bottom: 0;
+			width: 250px;
+			height: 60px;
+			z-index: 1;
+		}
+
+		#startbutton1 {
+			position: absolute;
+			left: 120px;
+			top: 400px;
+			right: 0;
+			bottom: 0;
+			width: 250px;
+			height: 60px;
+			z-index: 1;
+		}
+
+		#startbutton2 {
+			position: absolute;
+			left: 120px;
+			top: 500px;
+			right: 0;
+			bottom: 0;
+			width: 250px;
+			height: 60px;
+			z-index: 1;
+		}
+
+		.roomid {
+			position: absolute;
+			left: 400px;
+			top: 500px;
+			right: 0;
+			bottom: 0;
+			width: 350px;
+			height: 60px;
+			z-index: 1;
+		}
+
+		#roomidtext {
+			width: 250px;
+		}
+
+		.room {
+			display: grid;
+			grid-template-columns: 50% 30%;
+			gap: 8px;
+			margin: 0 8px;
+			z-index: 5;
+		}
+
+		.room .myname {
+			z-index: 6;
+		}
+	</style>
+
+	<body>
+		<div id="loginButtons">
+			<button id="login">ログイン</button>
+		</div>
+
+		<button id="logout">ログアウト</button>
+		<button id="startbutton0">空いているルームIDを取得</button>
+		<button id="startbutton1">新規にルームIDを作成</button>
+		<button id="startbutton2">開始</button>
+
+		<div class="roomid">
+			<input type="text" id="roomidtext" value="">
+		</div>
+
+		<div class="worldselectbase">
+			World :
+			<select name="worldselect" id="worldselect">
+				<option value="streamingvideo">StreamingVideo</option>
+			</select>
+		</div>
+
+		<script type="text/javascript" src="heliodor_out.js"></script>
+		<script type="text/javascript" src="data/heliodor_room.js"></script>
+	</body>
+</html>

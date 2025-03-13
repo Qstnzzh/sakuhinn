@@ -1,0 +1,256 @@
+{
+    "Version": 1,
+    "Z": 1,
+    "Layout": [
+        {
+            "Name": "comicviewer",
+            "Show": false,
+            "Z": 75,
+            "AutoLoading":false,
+            "Gui": [
+              {
+                "Name": "comic_bg",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 4096, 4096],
+                "Z": 1,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/comic/comic_bg.png",
+                  "OnCursorFileName": "gui/comic/comic_bg.png",
+                  "DownFileName": "gui/comic/comic_bg.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageCount"},"Value":0},
+                  {"Index" : {"Name" : "MaxPage"},"Value":0},
+                  {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+                  {"Func" : {"Name" : "CloseAllLayer"}},
+                  {"Flag" : {"Name" : "SetShowHUD","Enable":true}},
+                  {"Flag" : {"Name" : "SetShowSetting","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowRoolURL","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowConfigURLTextBox","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowPageTextList","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowMovieViewerUI","Enable":false}}
+                ]
+              },
+              {
+                "Name": "comic_closebutton",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 128, 128],
+                "Z": 3,
+                "Pivot":[ 1.0, 0.0],
+                "Anchor":"RT",
+                "ParamButton": {
+                  "FileName": "gui/comic/comic_closebutton.png",
+                  "OnCursorFileName": "gui/comic/comic_closebutton.png",
+                  "DownFileName": "gui/comic/comic_closebutton.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageCount"},"Value":0},
+                  {"Index" : {"Name" : "MaxPage"},"Value":0},
+                  {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+                  {"Func" : {"Name" : "CloseAllLayer"}},
+                  {"Flag" : {"Name" : "SetShowHUD","Enable":true}},
+                  {"Flag" : {"Name" : "SetShowSetting","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowRoolURL","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowConfigURLTextBox","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowPageTextList","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowMovieViewerUI","Enable":false}}
+                ]
+              },
+              {
+                "Name": "comic_catalog",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ -25, -25],
+                "Size":[ 96, 96],
+                "Z": 3,
+                "Pivot":[ 1.0, 1.0],
+                "Anchor":"RB",
+                "ParamButton": {
+                  "FileName": "gui/comic/catalog_normal.png",
+                  "OnCursorFileName": "gui/comic/catalog_normal.png",
+                  "DownFileName": "gui/comic/catalog_pressed.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "OpenCatalog"}}
+                ]
+              },
+              {
+                "Name": "comic_twitter",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ -25, -145],
+                "Size":[ 96, 96],
+                "Z": 3,
+                "Pivot":[ 1.0, 1.0],
+                "Anchor":"RB",
+                "ParamButton": {
+                  "FileName": "gui/comic/twitter_normal.png",
+                  "OnCursorFileName": "gui/comic/twitter_normal.png",
+                  "DownFileName": "gui/comic/twitter_pressed.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "OpenTweet"}}
+                ]
+              },
+              {
+                "Name": "comic_next",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 64, 128],
+                "Z": 2,
+                "Pivot":[ 0.0, 0.5],
+                "Anchor":"LM",
+                "ParamButton": {
+                  "FileName": "gui/comic/triangle_left_normal.png",
+                  "OnCursorFileName": "gui/comic/triangle_left_normal.png",
+                  "DownFileName": "gui/comic/triangle_left_pressed.png"
+                },
+                "GUIAction" :[
+                  {"Flag" : {"Name" : "SetComicPageTurning","Enable":true}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              },
+              {
+                "Name": "comic_back",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 64, 128],
+                "Z": 2,
+                "Pivot":[ 1.0, 0.5],
+                "Anchor":"RM",
+                "ParamButton": {
+                  "FileName": "gui/comic/triangle_right_normal.png",
+                  "OnCursorFileName": "gui/comic/triangle_right_normal.png",
+                  "DownFileName": "gui/comic/triangle_right_pressed.png"
+                },
+                "GUIAction" :[
+                  {"Flag" : {"Name" : "SetComicPageTurning","Enable":false}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              },
+              {
+                "Name": "ComicList",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 512, 707],
+                "Z": 2,
+                "Pivot":[ 0.0, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/white.png",
+                  "OnCursorFileName": "gui/white.png",
+                  "DownFileName": "gui/white.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageClick","Value":0}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              },
+              {
+                "Name": "ComicList",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 512, 707],
+                "Z": 2,
+                "Pivot":[ 1.0, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/white.png",
+                  "OnCursorFileName": "gui/white.png",
+                  "DownFileName": "gui/white.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageClick","Value":1}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              },
+              {
+                "Name": "ComicList",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 512, 707],
+                "Z": 2,
+                "Pivot":[ 0.0, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/white.png",
+                  "OnCursorFileName": "gui/white.png",
+                  "DownFileName": "gui/white.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageClick","Value":2}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              },
+              {
+                "Name": "ComicList",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 512, 707],
+                "Z": 2,
+                "Pivot":[ 1.0, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/white.png",
+                  "OnCursorFileName": "gui/white.png",
+                  "DownFileName": "gui/white.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageClick","Value":3}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              },
+              {
+                "Name": "ComicList",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 512, 707],
+                "Z": 2,
+                "Pivot":[ 0.0, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/white.png",
+                  "OnCursorFileName": "gui/white.png",
+                  "DownFileName": "gui/white.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageClick","Value":4}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              },
+              {
+                "Name": "ComicList",
+                "Type": "button",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 512, 707],
+                "Z": 2,
+                "Pivot":[ 1.0, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/white.png",
+                  "OnCursorFileName": "gui/white.png",
+                  "DownFileName": "gui/white.png"
+                },
+                "GUIAction" :[
+                  {"Index" : {"Name" : "ComicPageClick","Value":5}},
+                  {"Func" : {"Name" : "SetComicParam"}}
+                ]
+              }
+            ]
+          }
+    ]
+}

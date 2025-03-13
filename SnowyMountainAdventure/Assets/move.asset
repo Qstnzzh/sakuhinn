@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 672909584, guid: aceab675429f9e946b912a758820ab12, type: 3}
+  m_Name: move
+  m_EditorClassIdentifier: 
+  vrm: {fileID: 8549007397814093194, guid: 92fe38359ad0bda4da1e7936a7b39996, type: 3}
+  hrmPng: {fileID: 0}
+  hrmAstc: {fileID: 0}
+  hrmEtc2: {fileID: 0}
+  hrmDxt: {fileID: 0}
+  thumbnail: {fileID: 0}
+  en_thumbnail: {fileID: 0}
+  id: -9790
+  height: 1
+  motions:
+  - hem: {fileID: 8549007397814093194, guid: aaaf79bdf66aff747861c8bf99b57445, type: 3}
+    motionName: Idle
+    loop: 1
+    actions: []
+    isUseAction: 0
+    drawcircleshadow: 1
+    collisiondetection: 1
+  - hem: {fileID: 8549007397814093194, guid: df5228d01c379264eba3e8365620231d, type: 3}
+    motionName: Run
+    loop: 1
+    actions: []
+    isUseAction: 0
+    drawcircleshadow: 1
+    collisiondetection: 1
+  - hem: {fileID: 8549007397814093194, guid: d138a1307fc7f2747ba2d943b4fc6961, type: 3}
+    motionName: JumpUp
+    loop: 0
+    actions: []
+    isUseAction: 0
+    drawcircleshadow: 1
+    collisiondetection: 1
+  - hem: {fileID: 8549007397814093194, guid: 8d2fdba9601fcbf4daa17421b7ee5f2d, type: 3}
+    motionName: JumpAir
+    loop: 0
+    actions: []
+    isUseAction: 0
+    drawcircleshadow: 1
+    collisiondetection: 1
+  - hem: {fileID: 8549007397814093194, guid: 3fe00e19c6830e94a97766b6b72627f3, type: 3}
+    motionName: JumpLand
+    loop: 0
+    actions: []
+    isUseAction: 0
+    drawcircleshadow: 1
+    collisiondetection: 1
+  - hem: {fileID: 8549007397814093194, guid: 7d3db131a007c7f4ab89a3dd27d0a591, type: 3}
+    motionName: Sit
+    loop: 1
+    actions: []
+    isUseAction: 0
+    drawcircleshadow: 1
+    collisiondetection: 1
+  emotions:
+  - hem: {fileID: 8549007397814093194, guid: f9ba2c6f8d3690c4a900785bbf9a8e01, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: afdeeba8109d09240ac0e55ba5ef4a67, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: 282814b6c0a8b9140a73316dc98f07bd, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: 2e3629a4ccb2ece46bed02b8120db32e, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: ef343b8dfc09bfd43a0416c2e85435a9, type: 3}
+    motionName: 
+    loop: 1
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: 6d002dc8b27bfc4418bdbf5f69ebb538, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: fe6c96cce48d9ea43b682ecb98d95d56, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: def92b1d82b2ec2429799a82c4bf8697, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: 7b599aa3f76829242b554e43b1a62dbb, type: 3}
+    motionName: 
+    loop: 0
+    actions: []
+    isUseAction: 0
+  - hem: {fileID: 8549007397814093194, guid: f626de3044307e84db1c1822747a7127, type: 3}
+    motionName: 
+    loop: 1
+    actions: []
+    isUseAction: 0
+  objectOnAvatars:
+  - heoOrHep: {fileID: 8794674264650990340, guid: 20b9d009b429f254683db6346da67fa9,
+      type: 3}
+    audioClip: {fileID: 0}
+    posInEditor: {x: 0.15, y: -0.0655, z: 0}
+    rotateInEditor: {x: -7, y: 90, z: 0}
+    name: hb
+    objecttype: 0
+    target: leftFoot
+  references:
+    version: 1

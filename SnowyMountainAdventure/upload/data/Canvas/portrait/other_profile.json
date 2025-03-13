@@ -1,0 +1,301 @@
+{
+  "Version": 1,
+  "Z": 3,
+    "Scripts": [
+      "Canvas/HeliScript/Profile/AvatarTargetModel.hs",
+      "Canvas/HeliScript/Profile/ProfController.hs",
+      "Canvas/HeliScript/Profile/ProfileModel.hs",
+      "Canvas/HeliScript/Profile/ProfRejector.hs"
+  ],
+  "Layout": [
+  {
+    "Name": "other_profile",
+    "Show": false,
+    "Z": 15,
+    "Components": [
+      "ProfileModel",
+      "ProfController"
+    ],
+    "AutoLoading":false,
+    "Gui": [
+    {
+      "Comment": "背景：これ自体は反応しないがimageだとレイが後ろにも飛ぶため",
+      "Name": "prof_base",
+      "Language": "",
+      "Portrait": "",
+      "Type": "button",
+      "Show": false,
+      "Pos":[ 0, 0],
+      "Size":[ 1176, 1176],
+      "Z": 2,
+      "Pivot":[0.5, 0.5],
+      "Anchor":"CM"
+    },
+    {
+      "Comment": "背景",
+      "Name": "prof_base_img",
+      "Language": "",
+      "Portrait": "",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ 0, 0],
+      "Size":[ 2048, 2048],
+      "Z": 2,
+      "Pivot":[0.5, 0.5],
+      "Anchor":"CM",
+      "RaycastTarget":false,
+      "ParamImage": {
+        "Uri": "gui2023/profile/prof_base_po.png"
+      }
+    },
+    {
+      "Comment": "アバターアイコン",
+      "Name": "prof_avatar_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -400, -400],
+      "Size":[ 250, 250],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamImage": {
+        "Uri": "gui2023/profile/prof_avatar_icon.png"
+      }
+    },
+    {
+      "Name": "prof_name",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -219, -460],
+      "Size":[ 730, 96],
+      "Z": 4,
+      "Pivot":[ 0.0, 0.0],
+      "Anchor":"CM",
+      "ParamText": {
+        "FontSize": 42,
+        "FontFamily": "BIZUDPGothic",
+        "Alignment": "LM",
+        "OverflowWrap": true,
+        "Color":[ 1.0, 1.0, 1.0, 1.0],
+        "Text": "名前が入ります名前が"
+      }
+    },
+    {
+      "Name": "prof_id",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -219, -354],
+      "Size":[ 256, 32],
+      "Z": 4,
+      "Pivot":[ 0.0, 0.0],
+      "Anchor":"CM",
+      "ParamText": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic",
+        "Alignment": "LM",
+        "Color":[ 0.635, 0.639, 0.713, 1.0],
+        "Text": "ID:hogehoge"
+      }
+    },
+    {
+      "Name": "prof_follow_num",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -540, -200],
+      "Size":[ 256, 32],
+      "Z": 4,
+      "Pivot":[ 0.0, 0.0],
+      "Anchor":"CM",
+      "ParamText": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0],
+        "Text": "999フォロー中"
+      },
+    "Toggle":[
+        {"Name":"other_logged_in_toggle","State":false}
+    ]
+    },
+    {
+      "Name": "prof_follower_num",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -277, -200],
+      "Size":[ 256, 32],
+      "Z": 4,
+      "Pivot":[ 0.0, 0.0],
+      "Anchor":"CM",
+      "ParamText": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0],
+        "Text": "999フォロワー"
+      },
+      "Toggle":[
+        {"Name":"other_logged_in_toggle","State":false}
+      ]
+    },
+    {
+      "Comment": "フォロー",
+      "Name": "prof_follow",
+      "Type": "button",
+      "Show": true,
+      "Language": "_en",
+      "Pos":[ 376, -231],
+      "Size":[ 512, 128],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/profile/prof_btn_follow_po.png"
+      },
+      "Toggle":[
+        {"Name":"logged_in_toggle","State":false},
+        {"Name":"other_logged_in_toggle","State":false},
+        {"Name":"profile_followuser_toggle","State":true}
+        ],
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "フォロー解除",
+      "Name": "prof_unfollow",
+      "Type": "button",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ 376, -231],
+      "Size":[ 512, 128],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/profile/prof_btn_unfollow_po.png"
+      },
+      "Toggle":[
+        {"Name":"logged_in_toggle","State":false},
+        {"Name":"other_logged_in_toggle","State":false},
+        {"Name":"profile_followuser_toggle","State":false}
+        ],
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "MyVketを開く",
+      "Name": "prof_open_myvket",
+      "Type": "button",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ -334, -102],
+      "Size":[ 512, 128],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/profile/prof_btn_myvket_po.png"
+      },
+      "Toggle":[
+        {"Name":"other_logged_in_toggle","State":false}
+      ]
+    },
+    {
+      "Comment": "ルーム",
+      "Name": "prof_room",
+      "Type": "button",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ 44, -102],
+      "Size":[ 512, 128],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/profile/prof_btn_room_po.png"
+      },
+      "Toggle":[
+        {"Name":"other_logged_in_toggle","State":false}
+      ],
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "メッセージ",
+      "Name": "prof_message",
+      "Type": "button",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ 376, -103],
+      "Size":[ 512, 128],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/profile/prof_btn_dm_po.png"
+      },
+      "Toggle":[
+        {"Name":"logged_in_toggle","State":false},
+        {"Name":"other_logged_in_toggle","State":false}
+      ],
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "自己紹介",
+      "Name": "prof_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ 0, 218],
+      "Size":[ 1078, 436],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamText": {
+        "FontSize": 30,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0],
+        "LineSpace": 1.5,
+        "OverflowWrap":true,
+        "Text": "ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。ここに自己紹介が入ります。"
+      }
+      
+    },
+    {
+      "Name": "prof_btn_option",
+      "Type": "button",
+      "Platform": "",
+      "Language": "",
+      "Portrait": "",
+      "Show": true,
+      "Pos":[480,480],
+      "Size":[120,120],
+      "Z": 4,
+      "Pivot":[0.5,0.5],
+      "Anchor": "CM",
+      "ParamButton": {
+        "FileName": "gui2023/profile/prof_btn_option_po.png"
+      },
+      "GUIAction": [
+        {"SetShowLayer" : {"Name" : "prof_option_layer","Show" : true}}       
+      ]
+    },
+    {
+      "Comment": "閉じるボタン",
+      "Name": "prof_close",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ 523, -524],
+      "Size":[ 128, 128],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_close_po.png"
+      },
+      "GUIAction" :[
+        {"SetShowLayer" : {"Name" : "other_profile","Show" : false}},
+        {"SetShowLayer" : {"Name" : "prof_option_layer","Show" : false}}
+      ]
+    }
+    ]
+  }
+  ]
+}

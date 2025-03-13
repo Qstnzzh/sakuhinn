@@ -1,0 +1,889 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Scripts":[
+    "Canvas/HeliScript/Action/ActionList.hs",
+    "Canvas/HeliScript/Action/ActionPalette.hs"
+  ],
+  "Layout": [
+  {
+    "Name": "action_list",
+    "Show": false,
+    "Z": 1,
+    "Components":[
+      "EmoteActionList"
+    ],
+    "AutoLoading":false,
+    "Gui": [
+    {
+      "Comment": "アクションリスト背景：これ自体は反応しないがimageだとレイが後ろにも飛ぶため",
+      "Name": "action_list_base",
+      "Language": "",
+      "Portrait": "",
+      "Type": "button",
+      "Show": false,
+      "Pos":[ -307, -569],
+      "Size":[ 441,465],
+      "Z": 1,
+      "Pivot":[0.5, 0],
+      "Anchor":"RB"
+    },
+    {
+      "Comment": "アクションリスト背景",
+      "Name": "action_list_base_img",
+      "Language": "",
+      "Portrait": "",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -307, -592],
+      "Size":[ 512, 512],
+      "Z": 2,
+      "Pivot":[0.5, 0],
+      "Anchor":"RB",
+      "RaycastTarget":false,
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_list_bg.png"
+      }
+    },
+    {
+      "Comment": "ボタン：閉じる",
+      "Name": "action_list_close_btn",
+      "Language": "",
+      "Portrait": "",
+      "Type": "button",
+      "Show": false,
+      "Pos":[ -113, -543],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_close.png"
+      },
+      "GUIAction" :[
+        {"SetShowLayer" : {"Name" : "action_list","Show" : false}}
+      ]
+    },
+    {
+      "Comment": "タイトル：エモートアクション選択",
+      "Name": "action_list_title",
+      "Type": "image",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ -299, -556],
+      "Size":[ 213, 26],
+      "Z": 2,
+      "Pivot":[ 1.0, 0.0],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_emote_title.png"
+      }
+    },
+    {
+      "Comment": "指差し",
+      "Name": "action_emote1",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -414, -498],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "サムズアップ",
+      "Name": "action_emote2",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -204, -498],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "手を振る",
+      "Name": "action_emote3",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -414, -444],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "合掌",
+      "Name": "action_emote4",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -204, -444],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "ダンス",
+      "Name": "action_emote5",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -414, -390],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "OK",
+      "Name": "action_emote6",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -204, -390],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "NG",
+      "Name": "action_emote7",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -414, -336],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "自由枠1",
+      "Name": "action_emote8",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -204, -336],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "自由枠2",
+      "Name": "action_emote9",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -414, -282],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "自由枠3",
+      "Name": "action_emote10",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -204, -282],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      },
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "",
+      "Name": "action_emote11",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -414, -228],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      }
+    },
+    {
+      "Comment": "",
+      "Name": "action_emote12",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -204, -228],
+      "Size":[ 197, 49],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_item_bg.png"
+      }
+    },
+    {
+      "Comment": "エモート1テキスト",
+      "Name": "action_emote1_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -333, -498],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+        
+      }
+    },
+    {
+      "Comment": "エモート2テキスト",
+      "Name": "action_emote2_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -122, -498],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+        
+      }
+    },
+    {
+      "Comment": "エモート3テキスト",
+      "Name": "action_emote3_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -333, -444],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+        
+      }
+    },
+    {
+      "Comment": "エモート4テキスト",
+      "Name": "action_emote4_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -122, -444],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+        
+      }
+    },
+    {
+      "Comment": "エモート5テキスト",
+      "Name": "action_emote5_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -333, -390],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "Comment": "エモート6テキスト",
+      "Name": "action_emote6_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -122, -390],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "Comment": "エモート7テキスト",
+      "Name": "action_emote7_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -333, -336],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "Comment": "エモート8テキスト",
+      "Name": "action_emote8_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -122, -336],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "Comment": "エモート9テキスト",
+      "Name": "action_emote9_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -333, -282],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "Comment": "エモート10テキスト",
+      "Name": "action_emote10_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -122, -282],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0]
+      }
+    },
+    {
+      "Comment": "エモート11テキスト",
+      "Name": "action_emote11_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -333, -228],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0],
+        "Text": ""
+      }
+    },
+    {
+      "Comment": "エモート12テキスト",
+      "Name": "action_emote12_text",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -122, -228],
+      "Size":[ 256, 16],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0],
+        "Text": ""
+      }
+    },
+    {
+      "Comment": "アイコン：指差し",
+      "Name": "action_emote1_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -490, -498],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_point.png"
+      }
+    },
+    {
+      "Comment": "セレクト：指差し",
+      "Name": "action_emote1_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -476, -512],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_1", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：サムズアップ",
+      "Name": "action_emote2_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -280, -498],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_thumbsup.png"
+      }
+    },
+    {
+      "Comment": "セレクト：サムズアップ",
+      "Name": "action_emote2_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -267, -512],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_2", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：手を振る",
+      "Name": "action_emote3_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -490, -444],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_wave.png"
+      }
+    },
+    {
+      "Comment": "セレクト：手を振る",
+      "Name": "action_emote3_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -476, -458],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_3", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：合掌",
+      "Name": "action_emote4_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -280, -444],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_pray.png"
+      }
+    },
+    {
+      "Comment": "セレクト：合掌",
+      "Name": "action_emote4_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -267, -458],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      }
+      ,
+      "Toggle": [
+        { "Name": "Toggle_Emote_4", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：ダンス",
+      "Name": "action_emote5_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -490, -390],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_dance.png"
+      }
+    },
+    {
+      "Comment": "セレクト：ダンス",
+      "Name": "action_emote5_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -476, -404],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_5", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：OK",
+      "Name": "action_emote6_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -280, -390],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_ok.png"
+      }
+    },
+    {
+      "Comment": "セレクト：OK",
+      "Name": "action_emote6_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -267, -404],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_6", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：NG",
+      "Name": "action_emote7_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -490, -336],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_ng.png"
+      }
+    },
+    {
+      "Comment": "セレクト：NG",
+      "Name": "action_emote7_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -476, -350],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_7", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：自由枠1",
+      "Name": "action_emote8_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -280, -336],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_no1.png"
+      }
+    },
+    {
+      "Comment": "セレクト：自由枠1",
+      "Name": "action_emote8_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -267, -350],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_8", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：自由枠2",
+      "Name": "action_emote9_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -490, -282],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_no2.png"
+      }
+    },
+    {
+      "Comment": "セレクト：自由枠2",
+      "Name": "action_emote9_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -476, -296],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_9", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：自由枠3",
+      "Name": "action_emote10_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -280, -282],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_item_no3.png"
+      }
+    },
+    {
+      "Comment": "セレクト：自由枠3",
+      "Name": "action_emote10_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -267, -296],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_select_icon.png"
+      },
+      "Toggle": [
+        { "Name": "Toggle_Emote_10", "State": false}
+      ]
+    },
+    {
+      "Comment": "アイコン：",
+      "Name": "action_emote11_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -490, -228],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB"
+    },
+    {
+      "Comment": "セレクト：",
+      "Name": "action_emote11_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -476, -242],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB"
+    },
+    {
+      "Comment": "アイコン：",
+      "Name": "action_emote12_icon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ -280, -228],
+      "Size":[ 40, 40],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB"
+    },
+    {
+      "Comment": "セレクト：",
+      "Name": "action_emote12_select",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -267, -242],
+      "Size":[ 26, 26],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB"
+    },
+    {
+      "Comment": "決定ボタン",
+      "Name": "action_list_decide",
+      "Type": "button",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ -308, -139],
+      "Size":[ 182, 45],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/action/action_btn_decide.png"
+      },
+      "GUIAction" :[
+        {"SetShowLayer" : {"Name" : "action_list","Show" : false}}
+      ]
+    },
+    {
+      "Comment": "左ページボタン",
+      "Name": "action_list_left_page",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -349, -182],
+      "Size":[ 28, 28],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_before_page.png"
+      }
+    },
+    {
+      "Comment": "右ページボタン",
+      "Name": "action_list_right_page",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -269, -182],
+      "Size":[ 28, 28],
+      "Z": 3,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_next_page.png"
+      }
+    },
+    {
+      "Name": "action_page_num",
+      "Type": "text",
+      "Show": true,
+      "Pos":[ -308, -181],
+      "Size":[ 32, 16],
+      "Z": 4,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"RB",
+      "ParamText": {
+        "FontSize": 13,
+        "FontFamily": "BIZUDPGothic",
+        "Color":[ 1.0, 1.0, 1.0, 1.0],
+        "Alignment":"CM",
+        "Text": "1"
+      }
+    }
+    ]
+  }
+  ]
+}

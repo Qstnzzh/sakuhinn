@@ -1,0 +1,278 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Scripts": [
+    "Canvas/HeliScript/InviteFriend/InviteFriend.hs"
+  ],
+  "Layout": [
+    {
+      "Comment": "コピー完了ダイアログ",
+      "Name": "invite_friend_copied",
+      "Show": false,
+      "Z": 5,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Comment": "モーダル透明ボタン:押すと閉じます",
+          "Name": "invite_link_copy_ok_modal_btn",
+          "Language": "",
+          "Portrait": "",
+          "Type": "button",
+          "Show": true,
+          "Pos":[ 0, 0],
+          "Size":[ 2048, 4096],
+          "Z": 14,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"CM",
+          "ParamButton": {
+            "FileName": "gui2023/modal.png"
+          },
+          "GUIAction":[
+            {"SetShowLayer" : {"Name" : "invite_friend_copied","Show" : false}}
+          ]
+        },
+        {
+          "Comment": "背景画像(黒)ボタン",
+          "Name": "invite_copy_base",
+          "Type": "button",
+          "Show": true,
+          "Pos":[ 0, 0],
+          "Size":[ 512, 512],
+          "Z": 15,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor":"CM",
+          "ParamButton": {
+            "FileName": "gui2023/invite/invite_copy_base_po.png"
+          }
+        },
+        {
+          "Comment": "コピーしました",
+          "Name": "invite_copy_txt",
+          "Type": "image",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[ 0, -50],
+          "Size":[ 512, 32],
+          "Z": 16,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor":"CM",
+          "ParamImage": {
+            "Uri": "gui2023/invite/invite_copy_txt.png"
+          }
+        },
+        {
+          "Comment": "閉じるボタン",
+          "Name": "invite_copy_close",
+          "Type": "button",
+          "Language": "_en",
+          "Show": true,
+          "Pos":[ 0, 73],
+          "Size":[ 512, 128],
+          "Z": 16,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor":"CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_txt_close.png"
+          },
+          "GUIAction":[
+            {"SetShowLayer" : {"Name" : "invite_friend_copied","Show" : false}}
+          ]
+        }
+      ]
+    },
+  {
+    "Comment": "友達招待ダイアログ",
+    "Name": "invite_friend",
+    "Show": false,
+    "Z": 4,
+    "Components":[
+      "InviteFriend"
+    ],
+    "AutoLoading":false,
+    "Gui": [
+    {
+      "Comment": "モーダル透明ボタン：モーダルのため背景に例を飛ばさないため",
+      "Name": "invite_base_transparent_btn",
+      "Language": "",
+      "Portrait": "",
+      "Type": "button",
+      "Show": false,
+      "Pos":[ 0, 0],
+      "Size":[ 2048, 4096],
+      "Z": 13,
+      "Pivot":[0.5, 0.5],
+      "Anchor":"CM",
+      "GUIAction":[
+      ]
+    },
+    {
+      "Comment": "背景画像(黒)",
+      "Name": "invite_base",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ 0, 300],
+      "Size":[ 1024,1024],
+      "Z": 13,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamImage": {
+        "Uri": "gui2023/invite/invite_base_noqr_po.png"
+      }
+    },
+    {
+      "Comment": "タイトル(友達を招待)",
+      "Name": "label_invite_friend",
+      "Type": "image",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ -202, 77],
+      "Size":[ 512, 64],
+      "Z": 14,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamImage": {
+        "Uri": "gui2023/invite/invite_title.png"
+      }
+    },
+    {
+      "Comment": "QRコードで招待",
+      "Name": "invite_label_qr",
+      "Type": "image",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ 0, -447],
+      "Size":[ 512, 32],
+      "Z": 14,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamImage": {
+        "Uri": "gui2023/invite/invite_label_qr.png"
+      },
+      "Toggle":[
+        {"Name":"invite_qr_code_toggle","State":false}
+      ]
+    },
+    {
+      "Comment": "QRコード",
+      "Name": "invite_qr_code",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ 0, -138],
+      "Size":[ 512, 512],
+      "Z": 14,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamImage": {
+        "Uri": "gui2023/invite/invite_qr_code.png"
+      },
+      "Toggle":[
+        {"Name":"invite_qr_code_toggle","State":false}
+      ]
+    },
+    {
+      "Comment": "招待リンクをコピー",
+      "Name": "copy_invite_link_btn",
+      "Type": "button",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ 0, 245],
+      "Size":[ 512, 128],
+      "Z": 14,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/invite/invite_btn_copy.png"
+      },
+      "GUIAction":[
+        {"SetShowLayer" : {"Name":"invite_friend_copied","Show":true}}
+      ]
+    },
+    {
+      "Comment": "他アプリから招待",
+      "Name": "invite_label_other_app",
+      "Type": "image",
+      "Language": "_en",
+      "Show": true,
+      "Pos":[ 0, 370],
+      "Size":[ 512, 32],
+      "Z": 14,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamImage": {
+        "Uri": "gui2023/invite/invite_label_app.png"
+      }
+    },
+    
+	{
+      "Comment":"フェースブックアイコン",
+      "Name": "invite_btn_facebook",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ -190, 485],
+      "Size":[ 128, 128],
+      "Z": 14,
+      "Pivot":[0.5,0.5],
+      "Anchor": "CM",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_facebook.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": []
+    },
+    {
+      "Comment":"LINEアイコン",
+      "Name": "invite_btn_line",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ 0, 485],
+      "Size":[ 128, 128],
+      "Z": 14,
+      "Pivot":[0.5,0.5],
+      "Anchor": "CM",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_line.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": []
+    },
+    {
+      "Comment":"Twitterアイコン",
+      "Name": "invite_btn_twitter",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ 190, 485],
+      "Size":[ 128, 128],
+      "Z": 14,
+      "Pivot":[0.5,0.5],
+      "Anchor": "CM",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_twitter.png",
+        "OnCursorFileName": "",
+        "DownFileName": ""
+      },
+      "GUIAction": []
+    },
+    {
+      "Comment": "閉じるボタン",
+      "Name": "invite_close",
+      "Type": "button",
+      "Show": true,
+      "Pos":[ 432, 52],
+      "Size":[ 128, 128],
+      "Z": 14,
+      "Pivot":[ 0.5, 0.5],
+      "Anchor":"CM",
+      "ParamButton": {
+        "FileName": "gui2023/common/common_btn_close_po.png"
+      },
+      "GUIAction" :[
+        {"SetShowLayer" : {"Name" : "invite_friend","Show" : false}}
+      ]
+    }
+    ]
+  }
+  
+  ]
+}

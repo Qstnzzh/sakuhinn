@@ -1,0 +1,13 @@
+{
+  "Version": 0,
+  "Z": 0,
+  "Layout": [
+    {
+      "Name": "mainmenu_mypage_myroom",
+      "Show": true,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": []
+    }
+  ]
+}

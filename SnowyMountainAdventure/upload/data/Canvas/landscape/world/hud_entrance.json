@@ -1,0 +1,29 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Layout": [
+  {
+    "Name": "HUD",
+    "Show": false,
+    "Z": 1,
+    "Gui": [
+    {
+      "Name": "WorldIcon",
+      "Type": "image",
+      "Show": true,
+      "Pos":[ 8, 8],
+      "Size":[ 128, 128],
+      "Z": 1,
+      "Pivot":[ 0.0, 0.0],
+      "Anchor":"LT",
+      "ParamImage": {
+        "Uri": ""
+      },
+      "Toggle":[
+        {"Name":"Toggle_MoveKeyOnly","State":true}
+      ]
+    }
+    ]
+  }
+  ]
+}

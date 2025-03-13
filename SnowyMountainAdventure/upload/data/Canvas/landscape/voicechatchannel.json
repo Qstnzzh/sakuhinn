@@ -1,0 +1,1001 @@
+{
+  "Version": 1,
+  "Z": 3,
+  "Scripts": [
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/VoiceChatChannel/VCCViewModel.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCView.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCChannelSettingView.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCJoinUserTable.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCModel.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCModelSingle.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCModelMultiple.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCChannelData.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCUserData.hs",
+    "Canvas/HeliScript/VoiceChatChannel/VCCController.hs"
+  ],
+  "Layout": [
+    {
+      "Comment":"アイコンのみの一覧",
+      "Name": "vcc_icon_only_base",
+      "Show": false,
+      "Z": 0,
+      "Components": [
+        "VCCViewModel",
+        "VCCModel",
+        "VCCModelSingle",
+        "VCCModelMultiple",
+        "VCCController"
+      ],
+      "Gui": [
+        {
+          "Name": "hud_voicechat_bg_m",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 120, 153],
+          "Size":[ 256, 256],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/hud_voicechat_bg_m.png"
+          }
+        },
+        {
+          "Name": "hud_voicechat_btn_open",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 120, 241],
+          "Size":[ 34, 17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_open.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_exit",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 65, 223],
+          "Size":[ 159, 19],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            { "Name": "Toggle_VCC_VCh_Single_Multiple", "State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_exit.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[90, 20]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_transition_ch",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 159, 223],
+          "Size":[ 159, 19],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_transition_ch.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[90, 20]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_setting",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 215, 223],
+          "Size":[ 20, 20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            { "Name": "Toggle_VCC_Is_Channel_Creator", "State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_setting.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[20, 20]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_setting_disabled",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 215, 223],
+          "Size":[ 20, 20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            { "Name": "Toggle_VCC_Is_Channel_Creator", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_setting_disabled.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[20, 20]
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Comment":"アイコンと名前の一覧",
+      "Name": "vcc_user_list_base",
+      "Show": false,
+      "Z": 0,
+      "Components": [
+        "VCCController"
+      ],
+      "Gui": [
+        {
+          "Name": "hud_voicechat_bg_l",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 120, 278],
+          "Size":[ 256, 512],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/hud_voicechat_bg_l.png"
+          }
+        },
+        {
+          "Name": "hud_voicechat_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 120, 492],
+          "Size":[ 34, 17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_exit",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 65, 474],
+          "Size":[ 159, 19],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            { "Name": "Toggle_VCC_VCh_Single_Multiple", "State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_exit.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[90, 20]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_transition_ch",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 159, 474],
+          "Size":[ 159, 19],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_transition_ch.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[90, 20]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_setting",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 215, 474],
+          "Size":[ 20, 20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            { "Name": "Toggle_VCC_Is_Channel_Creator", "State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_setting.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[20, 20]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_btn_setting_disabled",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 215, 474],
+          "Size":[ 20, 20],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            { "Name": "Toggle_VCC_Is_Channel_Creator", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/hud_voicechat_btn_setting_disabled.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[20, 20]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "hud_voicechat_info",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 120, 433],
+          "Size":[ 324, 40],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/hud_voicechat_info.png"
+          }
+        },
+        {
+          "Name": "hud_text_channel_number",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 173, 427],
+          "Size":[ 82, 17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamText": {
+            "FontSize": 14,
+            "FontFamily": "BIZUDPGothic",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123456"
+          }
+        },
+        {
+          "Name": "hud_text_user_count",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 104, 442],
+          "Size":[ 100, 17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamText": {
+            "FontSize": 14,
+            "FontFamily": "BIZUDPGothic",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "18/20"
+          }
+        }
+      ]
+    },
+    {
+      "Comment":"ボイスチャットチャンネル一覧",
+      "Name": "vcc_channel_list",
+      "Show": false,
+      "Z": 0,
+      "Components": [
+        "VCCController"
+      ],
+      "Gui": [
+        {
+          "Comment":"ボイスチャットチャンネル一覧",
+          "Name": "voicechat_ch_list_bg",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 172, 367],
+          "Size":[ 339, 678],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_ch_list_bg.png"
+          }
+        },
+        {
+          "Name": "voicechat_ch_list_title",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 123, 138],
+          "Size":[ 191, 23],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_ch_list_title.png"
+          }
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 307, 136],
+          "Size":[ 32, 32],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_create_ch_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 96, 172],
+          "Size":[ 263, 32],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_create_ch_btn.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_ch_num_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 247, 172],
+          "Size":[ 263, 32],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            { "Name": "Toggle_VCC_VCh_Single_Multiple", "State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_ch_num_btn.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "vcc_join_dialog",
+      "Show": false,
+      "Z": 12,
+      "Components": [
+        "VCCController"
+      ],
+      "Gui": [
+        {
+          "Name": "common_dialog_bg",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[550,275],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[165,-75],
+          "Size":[35,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_cancel",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-85,65],
+          "Size":[280,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[160, 35]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_join",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[85,65],
+          "Size":[280,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_join.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[160, 35]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_txt_join_ch",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,5],
+          "Size":[560,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_txt_join_ch.png"
+          }
+        },
+        {
+          "Name": "vcc_channel_name_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-30],
+          "Size":[370,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 14,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "「あいうえおかきくけこさしすせそたちつてと」"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "vcc_setting_channel_window",
+      "Show": false,
+      "Z": 2,
+      "Components": [
+        "VCCChannelSettingView",
+        "VCCController"
+      ],
+      "Gui": [
+        {
+          "Name": "voicechat_new_ch_bg",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 194, 257],
+          "Size":[ 372, 372],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_new_ch_bg.png"
+          }
+        },
+        {
+          "Name": "voicechat_new_ch_title",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 136, 135],
+          "Size":[ 215, 26],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_new_ch_title.png"
+          }
+        },
+        {
+          "Name": "voicechat_label_ch_setting",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 155, 135],
+          "Size":[ 256, 16],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Create_Update","State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_label_ch_setting.png"
+          }
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 349, 134],
+          "Size":[ 32, 32],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_label_ch_type",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 133, 175],
+          "Size":[ 209, 13],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_label_ch_type.png"
+          }
+        },
+        {
+          "Name": "voicechat_btn_open_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 109, 203],
+          "Size":[ 187, 46],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Open_Private","State":true},
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_btn_open_on.png"
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_btn_open_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 109, 203],
+          "Size":[ 187, 46],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Open_Private","State":false},
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_btn_open_off.png"
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_btn_private_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 279, 203],
+          "Size":[ 187, 46],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Open_Private","State":false},
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_btn_private_on.png"
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_btn_private_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 279, 203],
+          "Size":[ 187, 46],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Open_Private","State":true},
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_btn_private_off.png"
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_txt_open",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 140, 244],
+          "Size":[ 224, 28],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Open_Private","State":true},
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_txt_open.png"
+          }
+        },
+        {
+          "Name": "voicechat_txt_private",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": false,
+          "Pos":[ 242, 256],
+          "Size":[ 429, 53],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Open_Private","State":false},
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_txt_private.png"
+          }
+        },
+        {
+          "Name": "voicechat_label_ch_name",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 246, 297],
+          "Size":[ 437, 13],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_label_ch_name.png"
+          }
+        },
+        {
+          "Name": "vcc_channel_name_inputtext",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 193, 331],
+          "Size":[ 335, 30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "ParamText": {
+            "FontSize": 15,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          }
+        },
+        {
+          "Name": "voicechat_new_ch_btn",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 194, 375],
+          "Size":[ 173, 43],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Create_Update","State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_new_ch_btn.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_btn_change_setting",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[ 194, 375],
+          "Size":[ 232, 29],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle":[
+            {"Name":"Toggle_VCC_Create_Update","State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/voicechat/voicechat_btn_change_setting.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "vcc_input_channel_number",
+      "Show": false,
+      "Z": 6,
+      "Components": [
+        "VCCController"
+      ],
+      "Gui": [
+        {
+          "Name": "common_dialog_bg",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[550,275],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[165,-75],
+          "Size":[35,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_cancel",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-85,65],
+          "Size":[280,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_join",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[85,65],
+          "Size":[280,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_join.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "voicechat_txt_input_num",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-30],
+          "Size":[280,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/voicechat/voicechat_txt_input_num.png"
+          }
+        },
+        {
+          "Name": "vcc_channel_number_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[370,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 16,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "123456"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "663833768731",
+    "firebase_url": "https://vketcloudsdk-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "vketcloudsdk",
+    "storage_bucket": "vketcloudsdk.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:663833768731:android:3ba0ee8e575fc09f7b19be",
+        "android_client_info": {
+          "package_name": "com.vrhikky.vketcloudsdk"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "663833768731-7510v3tnokesbrtcsgq3g6nqrrvla9om.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyd1soDO4xuCzpypokHjPfFMgCFJowmj8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "663833768731-7510v3tnokesbrtcsgq3g6nqrrvla9om.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

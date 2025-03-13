@@ -1,0 +1,1469 @@
+{
+    "Version": 1,
+    "Z": 1,
+    "Layout": [
+      {
+        "Name": "InputTextChat",
+        "Show": false,
+        "Z": 70,
+        "Gui": [
+          {
+            "Name": "common_messagebox_base",
+            "Type": "image",
+            "Platform": "",
+            "Language": "_en",
+            "Portrait": "",
+            "Show": true,
+            "Pos":[ 0, -25],
+            "Size":[ 1792, 448],
+            "Z": 1,
+            "Pivot":[ 0.5, 1.0],
+            "Anchor":"CB",
+            "ParamImage": {
+              "Uri": "gui/common/common_messagebox_base.png"
+            }
+          },
+          {
+            "Name": "common_messagebox_button_send",
+            "Type": "button",
+            "Platform": "",
+            "Language": "_en",
+            "Portrait": "",
+            "Show": true,
+            "Pos":[ 280, -50],
+            "Size":[ 448, 112],
+            "Z": 2,
+            "Pivot":[ 0.5, 1.0],
+            "Anchor":"CB",
+            "ParamButton": {
+              "FileName": "gui/common/common_messagebox_button_send.png",
+              "OnCursorFileName": "gui/common/common_messagebox_button_send.png",
+              "DownFileName": "gui/common/common_messagebox_button_send.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "TextChatSend"}}
+            ]
+          },
+          {
+            "Name": "common_messagebox_button_cancel",
+            "Type": "button",
+            "Platform": "",
+            "Language": "_en",
+            "Portrait": "",
+            "Show": true,
+            "Pos":[ -280, -50],
+            "Size":[ 448, 112],
+            "Z": 2,
+            "Pivot":[ 0.5, 1.0],
+            "Anchor":"CB",
+            "ParamButton": {
+              "FileName": "gui/common/common_messagebox_button_cancel.png",
+              "OnCursorFileName": "gui/common/common_messagebox_button_cancel.png",
+              "DownFileName": "gui/common/common_messagebox_button_cancel.png"
+            },
+            "GUIAction" :[
+              {"Flag" : {"Name" : "TextChatMode","Enable":false}},
+              {"Flag" : {"Name" : "EmscriptenTextChatbox","Enable":false}},
+              {"SetShowLayer" : {"Name" : "InputTextChat","Show" : false}},
+              {"SetShowLayer" : {"Name" : "InputTextChat_po","Show" : false}}
+            ]
+          },
+          {
+            "Name": "common_dialog_message_Slot_po",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -250],
+            "Size":[ 910, 70],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CB",
+            "ParamText": {
+              "FontSize": 30,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": ""
+            }
+          }
+        ]
+      },
+      {
+        "Name": "enterdialog_po",
+        "Show": false,
+        "Z": 5,
+        "Components":[
+          "DialogController"
+        ],
+        "Gui": [
+          {
+            "Name": "dialog_bg",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1024, 1024],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui2023/enter_room/enter_room_base.png"
+            }
+          },
+          {
+            "Name": "text_guest",
+            "Type": "image",
+            "Platform": "",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[ 0, -371],
+            "Size":[ 512, 64
+          ],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui2023/enter_room/enter_room_title.png"
+            }
+          },
+          {
+            "Name": "text_nickname",
+            "Type": "image",
+            "Platform": "",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[ -262, -222],
+            "Size":[ 256, 32],
+            "Z": 2,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui2023/enter_room/enter_room_label_nickname.png"
+            }
+          },
+          {
+            "Name": "nickname_input_area",
+            "Type": "image",
+            "Platform": "",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[ 0, -101],
+            "Size":[ 1024, 256],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui2023/enter_room/enter_room_input_nickname.png"
+            }
+          },
+          {
+            "Name": "btn_enter_room",
+            "Type": "button",
+            "Platform": "",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[ 0, -42],
+            "Size":[ 1024, 256],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.0],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui2023/enter_room/enter_room_btn_play.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "EnterRoomFromDialog"}}
+            ]
+          },
+          {
+            "Comment": "マイクの使用許可を求められた場合は許可してください",
+            "Name": "nickname_input_area",
+            "Type": "image",
+            "Platform": "",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[ 0, 288],
+            "Size":[ 1024, 128],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui2023/mic_permission/mic_access_txt_permission_po.png"
+            }
+          },
+          {
+            "Name": "btn_text_use_of_terms",
+            "Type": "button",
+            "Platform": "",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[ -154, 318],
+            "Size":[ 256, 64],
+            "Z": 4,
+            "Pivot":[ 1.0, 0.0],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui2023/enter_room/enter_room_btn_terms.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "OpenUseOfTerms"}}
+            ]
+          },
+          {
+            "Name": "btn_text_privacy_policy",
+            "Type": "button",
+            "Platform": "",
+            "Language": "_en",
+            "Show": true,
+            "Pos":[ -48, 318],
+            "Size":[ 512, 64],
+            "Z": 4,
+            "Pivot":[ 0.0, 0.0],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui2023/enter_room/enter_room_btn_privacy.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "OpenPrivacyPolicy"}}
+            ]
+          },
+          {
+            "Name": "common_dialog_message_Slot",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -88],
+            "Size":[ 698, 78],
+            "Z": 4,
+            "Pivot":[ 0.5, 1.0],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 30,
+              "FontFamily": "BIZUDPGothic",
+              "Alignment":"LM",
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": ""
+            }
+          }
+        ]
+      },
+          {
+            "Name": "common_dialog_roonurl_po",
+            "Show": false,
+            "Z": 70,
+            "Gui": [
+              {
+                "Name": "common_dialog_base_roonurl",
+                "Type": "image",
+                "Platform": "",
+                "Language": "_en",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 1280, 1280],
+                "Z": 1,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamImage": {
+                  "Uri": "gui/common/common_dialog_base_roonurl.png"
+                }
+              },
+              {
+                "Name": "",
+                "Type": "button",
+                "Platform": "",
+                "Language": "",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 4096, 4096],
+                "Z": 1,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/NoButton.png",
+                  "OnCursorFileName": "gui/NoButton.png",
+                  "DownFileName": "gui/NoButton.png"
+                }
+              },
+              {
+                "Name": "common_dialog_button_close",
+                "Type": "button",
+                "Platform": "",
+                "Language": "_en",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 280],
+                "Size":[ 640, 80],
+                "Z": 2,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/common/common_dialog_button_close.png",
+                  "OnCursorFileName": "gui/common/common_dialog_button_close.png",
+                  "DownFileName": "gui/common/common_dialog_button_close.png"
+                },
+                "GUIAction" :[
+                  {"SetShowLayer" : {"Name" : "common_dialog_roonurl","Show" : false}},
+                  {"SetShowLayer" : {"Name" : "common_dialog_roonurl_po","Show" : false}},
+                  {"Flag" : {"Name" : "SetShowConfigURLTextBox","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowRoolURL","Enable":false}}
+                ]
+              },
+              {
+                "Name": "common_dialog_button_copyclipboard",
+                "Type": "button",
+                "Platform": "",
+                "Language": "_en",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 180],
+                "Size":[ 640, 80],
+                "Z": 2,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/common/common_dialog_button_copyclipboard.png",
+                  "OnCursorFileName": "gui/common/common_dialog_button_copyclipboard.png",
+                  "DownFileName": "gui/common/common_dialog_button_copyclipboard_down.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "RoomURLCopy"}}
+                ]
+              },
+              {
+                "Name": "config_common_roomURL_Slot",
+                "Type": "text",
+                "Show": true,
+                "Pos":[ 0, -50],
+                "Size":[ 500, 250],
+                "Z": 3,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamText": {
+                  "FontSize": 30,
+                  "Color":[ 1.0, 1.0, 1.0, 1.0],
+                  "Text": ""
+                }
+              }
+            ]
+      },
+      {
+            "Name": "common_dialog_displayname_po",
+            "Show": false,
+            "Z": 70,
+            "Gui": [
+              {
+                "Name": "common_dialog_base_displayname",
+                "Type": "image",
+                "Platform": "",
+                "Language": "_en",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 1280, 1280],
+                "Z": 1,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamImage": {
+                  "Uri": "gui/common/common_dialog_base_displayname.png"
+                }
+              },
+              {
+                "Name": "",
+                "Type": "button",
+                "Platform": "",
+                "Language": "",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 4096, 4096],
+                "Z": 1,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/NoButton.png",
+                  "OnCursorFileName": "gui/NoButton.png",
+                  "DownFileName": "gui/NoButton.png"
+                }
+              },
+              {
+                "Name": "common_dialog_button_displayname",
+                "Type": "button",
+                "Platform": "",
+                "Language": "_en",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 280],
+                "Size":[ 640, 80],
+                "Z": 2,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/common/common_dialog_button_confirm.png",
+                  "OnCursorFileName": "gui/common/common_dialog_button_confirm.png",
+                  "DownFileName": "gui/common/common_dialog_button_confirm.png"
+                },
+                "GUIAction" :[
+                  {"Func" : {"Name" : "EmscriptenUserNameUpdate"}},
+                  {"Flag" : {"Name" : "UpdateUserName","Enable":false}},
+                  {"Flag" : {"Name" : "SetShowInputFieldUserName","Enable":false}},
+                  {"SetShowLayer" : {"Name" : "common_dialog_displayname","Show" : false}},
+                  {"SetShowLayer" : {"Name" : "common_dialog_displayname_po","Show" : false}}
+                ]
+              },
+              {
+                "Name": "common_dialog_message_displayname01",
+                "Type": "image",
+                "Show": true,
+                "Pos":[ 0, -150],
+                "Size":[ 765, 80],
+                "Z": 3,
+                "Pivot":[ 0.5, 0.0],
+                "Anchor":"CM",
+                "ParamImage": {
+                  "Uri": "gui/common/common_dialog_message_displayname01.png"
+                }
+              },
+              {
+                "Name": "config_avatar_UserName",
+                "Type": "text",
+                "Show": true,
+                "Pos":[ 0, 50],
+                "Size":[ 700, 64],
+                "Z": 3,
+                "Pivot":[ 0.5, 0.0],
+                "Anchor":"CM",
+                "ParamText": {
+                  "FontSize": 30,
+                  "Color":[ 1.0, 1.0, 1.0, 1.0],
+                  "Text": ""
+                }
+              }
+            ]
+      },
+      {
+            "Name": "common_dialog_webxr",
+            "Show": false,
+            "Z": 10,
+            "Gui": [
+              {
+                "Name": "common_dialog_base_webxr",
+                "Type": "image",
+                "Platform": "",
+                "Portrait": "",
+                "Show": true,
+                "Pos":[ 0, 0],
+                "Size":[ 1280, 1280],
+                "Z": 1,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamImage": {
+                  "Uri": "gui/common/common_dialog_base_webxr.png"
+                }
+              },
+              {
+                "Name": "common_dialog_text_webxr",
+                "Type": "image",
+                "Platform": "",
+                "Portrait": "",
+                "Language": "_en",
+                "Show": true,
+                "Pos":[ 0, -100],
+                "Size":[ 1280, 1280],
+                "Z": 2,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamImage": {
+                  "Uri": "gui/common/common_dialog_text_webxr.png"
+                }
+              },
+              {
+                "Name": "common_dialog_start_webxr",
+                "Type": "button",
+                "Platform": "",
+                "Portrait": "",
+                "Language": "_en",
+                "Show": true,
+                "Pos":[ 280, 400],
+                "Size":[ 384, 96 ],
+                "Z": 3,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/common/common_dialog_start_webxr.png",
+                  "OnCursorFileName": "gui/common/common_dialog_start_webxr.png",
+                  "DownFileName": "gui/common/common_dialog_start_webxr.png"
+                },
+                "GUIAction": [
+                  {"Func" : {"Name" : "enter_webxr"}},
+                  {"SetShowLayer" : {"Name" : "common_dialog_webxr","Show" : false}},
+                  {"String":{"Name":"ToggleDefault","Value":"webxr_enter"}},
+                  {"String":{"Name":"ToggleChange","Value":"webxr_enter"}}
+                ]
+              },
+              {
+                "Name": "common_dialog_cancel_webxr",
+                "Type": "button",
+                "Platform": "",
+                "Portrait": "",
+                "Language": "_en",
+                "Show": true,
+                "Pos":[ -280, 400],
+                "Size":[ 384, 96 ],
+                "Z": 3,
+                "Pivot":[ 0.5, 0.5],
+                "Anchor":"CM",
+                "ParamButton": {
+                  "FileName": "gui/common/common_dialog_cancel_webxr.png",
+                  "OnCursorFileName": "gui/common/common_dialog_cancel_webxr.png",
+                  "DownFileName": "gui/common/common_dialog_cancel_webxr.png"
+                },
+                "GUIAction": [
+                  {"SetShowLayer" : {"Name" : "common_dialog_webxr","Show" : false}}
+                ]
+              }
+            ]
+      },
+      {
+        "Name": "common_dialog_base_common_notitle_button01_short",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_short_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 300],
+            "Size":[ 384, 96 ],
+            "Z": 2,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_short_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_short_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_short_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonOK" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_short_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 300],
+            "Size":[ 384, 96 ],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 48,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "OK",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_short_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -50],
+            "Size":[ 870, 500 ],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 48,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "common_dialog_base_common_notitle_button02_short",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_short_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 2,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_short_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_short_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_short_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonNo" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_short_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 3,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Cancel",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_button_short_red",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 2,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_short_red.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_short_red.png",
+              "DownFileName": "gui/common/common_dialog_button_short_red.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonYes" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_short_red_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 3,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Start",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_short_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -50],
+            "Size":[ 870, 600],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "common_dialog_base_common_notitle_button01_long",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_long_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 768, 96],
+            "Z": 2,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_long_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_long_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_long_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonNo" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_long_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 768, 96],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "OK",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_long_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -50],
+            "Size":[ 870, 600],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "common_dialog_base_common_notitle_button02_long",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_long_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 100, 350],
+            "Size":[ 768, 96],
+            "Z": 2,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_long_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_long_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_long_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonNo" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_long_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 100, 350],
+            "Size":[ 768, 96],
+            "Z": 3,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Cancel",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_button_long_red",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ -100, 350],
+            "Size":[ 768, 96],
+            "Z": 2,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_long_red.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_long_red.png",
+              "DownFileName": "gui/common/common_dialog_button_long_red.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonYes" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_long_red_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ -100, 350],
+            "Size":[ 768, 96],
+            "Z": 3,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Start",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_long_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -50],
+            "Size":[ 870, 600],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "common_dialog_base_common_title_button01_short",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_title",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common_title.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_short_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 2,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_short_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_short_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_short_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonOK" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_short_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Start",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_short_Title_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -360],
+            "Size":[ 1024, 128],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_short_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 870, 600],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "common_dialog_base_common_title_button02_short",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_title",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common_title.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_short_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 2,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_short_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_short_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_short_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonNo" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_short_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 3,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Cancel",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_button_short_red",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 2,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_short_red.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_short_red.png",
+              "DownFileName": "gui/common/common_dialog_button_short_red.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonYes" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_short_red_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 384, 96 ],
+            "Z": 3,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Start",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_short_Title_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -360],
+            "Size":[ 1024, 128],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_short_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 870, 600],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "common_dialog_base_common_title_button01_long",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_title",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common_title.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_long_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 1024, 128],
+            "Z": 2,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_long_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_long_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_long_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonOK" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_long_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 350],
+            "Size":[ 1024, 128],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Start",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_long_Title_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -360],
+            "Size":[ 1024, 128],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_long_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 870, 600],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      },
+      {
+        "Name": "common_dialog_base_common_title_button02_long",
+        "Show": false,
+        "Z": 200,
+        "Gui": [
+          {
+            "Name": "common_dialog_base_common_bg",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 4096, 4096],
+            "Z": 0,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/clear.png"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_title",
+            "Type": "image",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 1600, 1600 ],
+            "Z": 1,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamImage": {
+              "Uri": "gui/common/common_dialog_base_common_title.png"
+            }
+          },
+          {
+            "Name": "common_dialog_button_long_blue",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ 100, 350],
+            "Size":[ 768, 96],
+            "Z": 2,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_long_blue.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_long_blue.png",
+              "DownFileName": "gui/common/common_dialog_button_long_blue.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonNo" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_long_blue_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 100, 350],
+            "Size":[ 768, 96],
+            "Z": 3,
+            "Pivot":[ 1.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Cancel",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_button_long_red",
+            "Type": "button",
+            "Platform": "",
+            "Language": "",
+            "Show": true,
+            "Pos":[ -100, 350],
+            "Size":[ 768, 96],
+            "Z": 2,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamButton": {
+              "FileName": "gui/common/common_dialog_button_long_red.png",
+              "OnCursorFileName": "gui/common/common_dialog_button_long_red.png",
+              "DownFileName": "gui/common/common_dialog_button_long_red.png"
+            },
+            "GUIAction" :[
+              {"Func" : {"Name" : "callscript","Param" : ",,hsOnClickedCommonDialogButtonYes" }}
+            ]
+          },
+          {
+            "Name": "common_dialog_button_long_red_text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ -100, 350],
+            "Size":[ 768, 96],
+            "Z": 3,
+            "Pivot":[ 0.0, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "Start",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_long_Title_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, -360],
+            "Size":[ 1024, 128],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 1.0, 1.0, 1.0, 1.0],
+              "Text": "",
+              "Alignment":"CM"
+            }
+          },
+          {
+            "Name": "common_dialog_base_common_long_Main_Text",
+            "Type": "text",
+            "Show": true,
+            "Pos":[ 0, 0],
+            "Size":[ 870, 600],
+            "Z": 3,
+            "Pivot":[ 0.5, 0.5],
+            "Anchor":"CM",
+            "ParamText": {
+              "FontSize": 64,
+              "Color":[ 0.0, 0.0, 0.0, 1.0],
+              "Text": "",
+              "Alignment":"CM",
+				"CharaSpace": 3,
+				"LineSpace": 6,
+				"OverflowWrap": true
+            }
+          }
+        ]
+      }
+    ]
+}

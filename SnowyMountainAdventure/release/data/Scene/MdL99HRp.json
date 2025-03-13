@@ -1,0 +1,671 @@
+{
+  "player": {
+    "pos": [
+      -82.68,
+      107.21,
+      -317.7
+    ],
+    "rotate": [
+      0.0,
+      270.0,
+      0.0
+    ],
+    "tpsrotate": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "jump": false,
+    "jumpvelocity": 4.5,
+    "crpmode": false,
+    "movespeed": 60.0,
+    "movespeedupratio": 1.0
+  },
+  "version": 0,
+  "debugmode": false,
+  "useavatarclick": true,
+  "vrmdrop": false,
+  "occlusionculling": false,
+  "isDirWorldName": false,
+  "usegamepad": false,
+  "physics": {
+    "use": false
+  },
+  "scripts": [
+    "HeliScript/Master.hs",
+    "HeliScript/SpeedUp2.hs"
+  ],
+  "camera": {
+    "tpsnearoffsety": 0.0,
+    "tpsfaroffsety": 0.0,
+    "smoothing": false,
+    "photoradius": 20.0,
+    "tpspitchmaxangle": 6.0,
+    "defaulttpsadjusttype": "center"
+  },
+  "raycastmaxdistance": 50.0,
+  "rendering": {
+    "pbr": true,
+    "lightdir": [
+      -1.0,
+      -2.0,
+      -1.0
+    ],
+    "lightcolor": [
+      1.0,
+      1.0,
+      1.0
+    ],
+    "bgcolor": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "fadeintime": 2.0,
+    "shadowtype": "round",
+    "shadowbias": 0.001,
+    "shadowareasize": 3.0,
+    "shadowfadesize": 1.0,
+    "projectionnear": 0.1,
+    "projectionfar": 500.0,
+    "projectiondeg": 70.0,
+    "bloom": {
+      "use": false,
+      "intensity": 0.0,
+      "threshold": 0.0
+    },
+    "lightscattering": {
+      "use": false,
+      "betar": 0.0,
+      "betam": 0.0,
+      "g": 0.0,
+      "distance": 0.0,
+      "lightcolor": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "suncolor": [
+        0.85,
+        0.85,
+        0.85
+      ]
+    },
+    "ibl": {
+      "use": false,
+      "ibldiffuse": "",
+      "iblspecular": "",
+      "ibldiffusesize": 0,
+      "iblspecularsize": 0,
+      "iblspecularmipmapcount": 0
+    }
+  },
+  "dummyavatars": [
+    {
+      "filename": "Field/dummy_human_02/dummy_human_02.heo"
+    }
+  ],
+  "avatars": [
+    {
+      "id": 0,
+      "height": 1.0,
+      "emotions": [
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_pointing.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_thumbsup.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_hand.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_pray.hem"
+        },
+        {
+          "loop": true,
+          "actions": [],
+          "filename": "Motion/VketCloud_dance.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_ok.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_ng.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_guts.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_wavehands.hem"
+        },
+        {
+          "loop": true,
+          "actions": [],
+          "filename": "Motion/VketCloud_ota.hem"
+        }
+      ],
+      "objects": [
+        {
+          "name": "hb",
+          "type": "heo",
+          "target": "leftFoot",
+          "filename": "Field/hb1/hb1.heo",
+          "pos": [
+            0.15,
+            -0.0655,
+            0.0
+          ],
+          "rotate": [
+            -7.0,
+            90.0,
+            0.0
+          ]
+        }
+      ],
+      "filename": "Avatar/Vketchan_v1.6_MToon_blendshape.vrm",
+      "motions": {
+        "Idle": {
+          "loop": true,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Idle3.hem"
+        },
+        "Run": {
+          "loop": true,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/move.hem"
+        },
+        "JumpUp": {
+          "loop": false,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Jump_Up.hem"
+        },
+        "JumpAir": {
+          "loop": false,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Jump_MidAir.hem"
+        },
+        "JumpLand": {
+          "loop": false,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Jump_Land.hem"
+        },
+        "Sit": {
+          "loop": true,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Sit.hem"
+        }
+      }
+    },
+    {
+      "id": 1,
+      "height": 1.0,
+      "emotions": [
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_pointing.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_thumbsup.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_hand.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_pray.hem"
+        },
+        {
+          "loop": true,
+          "actions": [],
+          "filename": "Motion/VketCloud_dance.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_ok.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_ng.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_guts.hem"
+        },
+        {
+          "loop": false,
+          "actions": [],
+          "filename": "Motion/VketCloud_wavehands.hem"
+        },
+        {
+          "loop": true,
+          "actions": [],
+          "filename": "Motion/VketCloud_ota.hem"
+        }
+      ],
+      "objects": [
+        {
+          "name": "hb",
+          "type": "heo",
+          "target": "leftFoot",
+          "filename": "Field/hb1/hb1.heo",
+          "pos": [
+            0.15,
+            -0.0655,
+            0.0
+          ],
+          "rotate": [
+            -7.0,
+            90.0,
+            0.0
+          ]
+        }
+      ],
+      "filename": "Avatar/Vketchan_v1.6_MToon_blendshape.vrm",
+      "motions": {
+        "Idle": {
+          "loop": true,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Idle3.hem"
+        },
+        "Run": {
+          "loop": true,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/move.hem"
+        },
+        "JumpUp": {
+          "loop": false,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Jump_Up.hem"
+        },
+        "JumpAir": {
+          "loop": false,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Jump_MidAir.hem"
+        },
+        "JumpLand": {
+          "loop": false,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Jump_Land.hem"
+        },
+        "Sit": {
+          "loop": true,
+          "actions": [],
+          "drawcircleshadow": true,
+          "collisiondetection": true,
+          "filename": "Motion/Sit.hem"
+        }
+      }
+    }
+  ],
+  "myavatar": {
+    "use": true,
+    "filter": {
+      "nsfw": false,
+      "polygon": 50000
+    },
+    "emotions": [
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_pointing.hem"
+      },
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_thumbsup.hem"
+      },
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_hand.hem"
+      },
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_pray.hem"
+      },
+      {
+        "loop": true,
+        "actions": [],
+        "filename": "Motion/VketCloud_dance.hem"
+      },
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_ok.hem"
+      },
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_ng.hem"
+      },
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_guts.hem"
+      },
+      {
+        "loop": false,
+        "actions": [],
+        "filename": "Motion/VketCloud_wavehands.hem"
+      },
+      {
+        "loop": true,
+        "actions": [],
+        "filename": "Motion/VketCloud_ota.hem"
+      }
+    ],
+    "objects": [
+      {
+        "name": "hb",
+        "type": "heo",
+        "target": "rightToes",
+        "filename": "Field/hb/hb.heo",
+        "pos": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "rotate": [
+          0.0,
+          0.0,
+          0.0
+        ]
+      }
+    ],
+    "motions": {
+      "Idle": {
+        "loop": true,
+        "actions": [],
+        "drawcircleshadow": true,
+        "collisiondetection": true,
+        "filename": "Motion/VketCloud_Idle.hem"
+      },
+      "Run": {
+        "loop": true,
+        "actions": [],
+        "drawcircleshadow": true,
+        "collisiondetection": true,
+        "filename": "Motion/move.hem"
+      },
+      "JumpUp": {
+        "loop": true,
+        "actions": [],
+        "drawcircleshadow": true,
+        "collisiondetection": true,
+        "filename": "Motion/VketCloud_JumpUp.hem"
+      },
+      "JumpAir": {
+        "loop": true,
+        "actions": [],
+        "drawcircleshadow": true,
+        "collisiondetection": true,
+        "filename": "Motion/VketCloud_JumpAir.hem"
+      },
+      "JumpLand": {
+        "loop": true,
+        "actions": [],
+        "drawcircleshadow": true,
+        "collisiondetection": true,
+        "filename": "Motion/VketCloud_JumpLand.hem"
+      },
+      "Sit": {
+        "loop": true,
+        "actions": [],
+        "drawcircleshadow": true,
+        "collisiondetection": true,
+        "filename": "Motion/VketCloud_Sit.hem"
+      }
+    }
+  },
+  "spatiumcode": "default",
+  "voiceattenuation": {
+    "use": true,
+    "maxdistance": 10.0,
+    "mindistance": 5.0
+  },
+  "spawns": [],
+  "items": [
+    {
+      "name": "Item_2",
+      "filename": "Field/Item_2/Item_2.heo",
+      "clickablenodes": [],
+      "objects": [],
+      "components": [
+        "SpeedUp2"
+      ],
+      "overrides": [],
+      "properties": {},
+      "autoloading": true,
+      "lookatcamera": false,
+      "type": "field"
+    },
+    {
+      "name": "Item_3",
+      "filename": "Field/Item_3/Item_3.heo",
+      "clickablenodes": [],
+      "objects": [],
+      "components": [
+        "SpeedUp2"
+      ],
+      "overrides": [],
+      "properties": {},
+      "autoloading": true,
+      "lookatcamera": false,
+      "type": "field"
+    },
+    {
+      "name": "Item_4",
+      "filename": "Field/Item_4/Item_4.heo",
+      "clickablenodes": [],
+      "objects": [],
+      "components": [
+        "SpeedUp2"
+      ],
+      "overrides": [],
+      "properties": {},
+      "autoloading": true,
+      "lookatcamera": false,
+      "type": "field"
+    },
+    {
+      "name": "Item_5",
+      "filename": "Field/Item_5/Item_5.heo",
+      "clickablenodes": [],
+      "objects": [],
+      "components": [
+        "SpeedUp2"
+      ],
+      "overrides": [],
+      "properties": {},
+      "autoloading": true,
+      "lookatcamera": false,
+      "type": "field"
+    },
+    {
+      "name": "World",
+      "filename": "Field/World/World.heo",
+      "clickablenodes": [
+        {
+          "name": "StartButton",
+          "enable": true,
+          "actions": [
+            {
+              "type": "hidenode",
+              "name": "World",
+              "nodename": "Wall"
+            },
+            {
+              "type": "disablecollider",
+              "name": "World",
+              "nodename": "Wall"
+            }
+          ]
+        },
+        {
+          "name": "GoalArea",
+          "enable": true,
+          "actions": [
+            {
+              "type": "shownode",
+              "name": "World",
+              "nodename": "Wall"
+            },
+            {
+              "type": "enablecollider",
+              "name": "World",
+              "nodename": "Wall"
+            }
+          ]
+        }
+      ],
+      "objects": [],
+      "components": [
+        "SpeedUp2"
+      ],
+      "overrides": [],
+      "properties": {},
+      "autoloading": true,
+      "lookatcamera": false,
+      "type": "field"
+    },
+    {
+      "name": "Cube_2",
+      "actions": [
+        {
+          "name": "Item_2",
+          "text": "SpeedUp2,SpeedUp_Switch_OnOff_3,Cube_2",
+          "category": "scene",
+          "type": "callscript"
+        }
+      ],
+      "leaveactions": [],
+      "components": [
+        "Cube"
+      ],
+      "properties": {},
+      "type": "areacollider"
+    },
+    {
+      "name": "Cube_3",
+      "actions": [
+        {
+          "name": "Item_3",
+          "text": "SpeedUp2,SpeedUp_Switch_OnOff_1,Cube_3",
+          "category": "scene",
+          "type": "callscript"
+        }
+      ],
+      "leaveactions": [],
+      "components": [
+        "Cube"
+      ],
+      "properties": {},
+      "type": "areacollider"
+    },
+    {
+      "name": "Cube_4",
+      "actions": [
+        {
+          "name": "Item_4",
+          "text": "SpeedUp2,SpeedUp_Switch_OnOff_4,Cube_4",
+          "category": "scene",
+          "type": "callscript"
+        }
+      ],
+      "leaveactions": [],
+      "components": [
+        "Cube"
+      ],
+      "properties": {},
+      "type": "areacollider"
+    },
+    {
+      "name": "Cube_5",
+      "actions": [
+        {
+          "name": "Item_5",
+          "text": "SpeedUp2,SpeedUp_Switch_OnOff_1,Cube_5",
+          "category": "scene",
+          "type": "callscript"
+        }
+      ],
+      "leaveactions": [],
+      "components": [
+        "Cube"
+      ],
+      "properties": {},
+      "type": "areacollider"
+    },
+    {
+      "name": "GoalArea",
+      "actions": [
+        {
+          "type": "warp",
+          "pos": [
+            -82.68,
+            107.21,
+            -317.7
+          ],
+          "rotate": [
+            0.0,
+            270.0,
+            0.0
+          ]
+        }
+      ],
+      "leaveactions": [],
+      "components": [],
+      "properties": {},
+      "type": "areacollider"
+    }
+  ]
+}

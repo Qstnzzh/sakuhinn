@@ -1,0 +1,235 @@
+{
+  "Version": 0,
+  "Z": 2,
+  "Scripts": [
+    "Canvas/HeliScript/MainMenu/MainMenu/MainMenuController.hs",
+
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "mainmenu_mypage_base",
+      "Show": false,
+      "Z": 0,
+      "Components": [
+        "MainMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "mypage_tab_profile_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-145,-215],
+          "Size":[240,30],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_tab_profile_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[190, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MainMenu_Profile",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_profile","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_myroom","Show" : false}}
+          ]
+        },
+        {
+          "Name": "mypage_tab_profile_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-145,-215],
+          "Size":[240,30],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_tab_profile_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[190, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MainMenu_Profile",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_tab_avatar_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,-215],
+          "Size":[240,30],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_tab_avatar_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[190, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MainMenu_Avatar",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MyPage_Avatar_Preset_My"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_profile","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_myroom","Show" : false}}
+          ]
+        },
+        {
+          "Name": "mypage_tab_avatar_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,-215],
+          "Size":[240,30],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_tab_avatar_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[190, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MainMenu_Avatar",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_tab_myroom_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[245,-215],
+          "Size":[240,30],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_tab_myroom_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[190, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MainMenu_MyRoom",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_profile","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_myroom","Show" : true}}
+          ]
+        },
+        {
+          "Name": "mypage_tab_myroom_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[245,-215],
+          "Size":[240,30],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_tab_myroom_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[190, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MainMenu_MyRoom",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+
+        {
+          "Name": "menu_commingsoon_Event",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,20],
+          "Size":[256,32],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_MyRoom", "State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/menu_coming_soon.png"
+          }
+        }
+      ]
+    }
+  ]
+}

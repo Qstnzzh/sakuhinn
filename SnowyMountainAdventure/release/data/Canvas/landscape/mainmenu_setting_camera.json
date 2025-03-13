@@ -1,0 +1,1157 @@
+{
+  "Version": 1,
+  "Z": 2,
+  "Layout": [
+    {
+      "Name": "mainmenu_setting_camera",
+      "Show": false,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------camera 1 content----------------------------------- "
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,-90],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_camspeed",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-135,-120],
+          "Size":[136,17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/camera/setting_label_camspeed.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_slow",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-54,-120],
+          "Size":[68,17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/camera/setting_label_slow.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_fast",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[380,-120],
+          "Size":[68,17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/camera/setting_label_fast.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "Video_Slider",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-120],
+          "Size":[340,7],
+          "Z": 1,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamSlider": {
+            "Base": "gui2023/menu/setting/sound/setting_barbase.png",
+            "Front": "gui2023/menu/setting/sound/setting_bar.png",
+            "OnName": "gui2023/menu/setting/sound/setting_slider_on.png",
+            "OnSize":[33,33],
+            "OffName": "gui2023/menu/setting/sound/setting_slider_off_po.png",
+            "OffSize":[33,33],
+            "DriveField": "Camera"
+          }
+        },
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------camera 2 content----------------------------------- "
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,-30],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_lr",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-135,-60],
+          "Size":[136,17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/camera/setting_label_lr.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_normal_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_normal_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlLeftAndRight",
+              "State": true
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_normal_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_normal_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlLeftAndRight",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_ControlLeftAndRight"
+              }
+            },
+            {
+              "Flag": {
+                "Name": "SetYRotateReverse",
+                "Enable": false
+              }
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_inverted_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_reverse_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlLeftAndRight",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_inverted_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_reverse_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlLeftAndRight",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_ControlLeftAndRight"
+              }
+            },
+            {
+              "Flag": {
+                "Name": "SetYRotateReverse",
+                "Enable": true
+              }
+            }
+          ]
+        },
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------camera 3 content----------------------------------- "
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,30],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_updown",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-135,0],
+          "Size":[136,17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/camera/setting_label_updown.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_normal_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_normal_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlUpAndDown",
+              "State": true
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_normal_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_normal_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlUpAndDown",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_ControlUpAndDown"
+              }
+            },
+            {
+              "Flag": {
+                "Name": "SetXRotateReverse",
+                "Enable": false
+              }
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_inverted_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_reverse_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlUpAndDown",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_inverted_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_reverse_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlUpAndDown",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_ControlUpAndDown"
+              }
+            },
+            {
+              "Flag": {
+                "Name": "SetXRotateReverse",
+                "Enable": true
+              }
+            }
+          ]
+        },
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------camera 4 content----------------------------------- "
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,90],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_tpp",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-205,60],
+          "Size":[256,32],
+          "Z": 1,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/camera/setting_label_tpp.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_left_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_left_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlTPP_left",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_left_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_left_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlTPP_left",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_left"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_center"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_right"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_ControlTPP_left"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetTpsAdjustType",
+                "Value": "Left"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_center_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_center_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlTPP_center",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_center_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_center_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlTPP_center",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_left"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_center"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_right"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_ControlTPP_center"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetTpsAdjustType",
+                "Value": "Center"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_right_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_right_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlTPP_right",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_right_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/camera/setting_btn_right_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_ControlTPP_right",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_left"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_center"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_ControlTPP_right"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_ControlTPP_right"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetTpsAdjustType",
+                "Value": "Right"
+              }
+            }
+          ]
+        },
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------camera 5 content----------------------------------- "
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,150],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "setting_label_eyelevel",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-205,120],
+          "Size":[128,16],
+          "Z": 1,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/camera/setting_label_eyelevel.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "setting_eyelevel_low_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_low_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_EyeLevel_low",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "setting_eyelevel_low_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_low_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_EyeLevel_low",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_low"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_high"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_EyeLevel_low"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetTpsCameraPitchAngleType",
+                "Value": "Low"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "setting_eyelevel_medium_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_midium_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_EyeLevel_medium",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "setting_eyelevel_medium_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_midium_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_EyeLevel_medium",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_low"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_high"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_EyeLevel_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetTpsCameraPitchAngleType",
+                "Value": "Medium"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "setting_eyelevel_high_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_high_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_EyeLevel_high",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "setting_eyelevel_high_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_high_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            },
+            {
+              "Name": "SettingCamera_EyeLevel_high",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_low"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCamera_EyeLevel_high"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCamera_EyeLevel_high"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetTpsCameraPitchAngleType",
+                "Value": "High"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

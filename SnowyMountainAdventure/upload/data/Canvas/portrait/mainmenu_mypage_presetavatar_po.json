@@ -1,0 +1,32 @@
+{
+    "Version": 1,
+    "Z": 1,
+    "Scripts": [
+      "Canvas/HeliScript/PresetAvatar/PresetAvatarView.hs"
+    ],
+    "Layout": [
+      {
+        "Name": "config_avatar_List",
+        "Show": false,
+        "Z": 1,
+        "Mask":{
+          "URI":"gui/NoButton.png",
+          "Show":false,
+          "Pos":[0,140],
+          "Size":[1200,1000],
+          "Z": 0,
+          "Pivot":[ 0.5, 0.5],
+          "Anchor": "CM",
+          "Color":[ 0.0, 0.0, 0.0, 0.0],
+          "Vertical":true,
+          "FreeSlide":false,
+          "WheelTravel" : 80
+        },
+        "Components": [
+          "PresetAvatarView"
+        ],
+        "AutoLoading":false,
+        "Gui":[]
+      }
+    ]
+}

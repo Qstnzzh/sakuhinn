@@ -1,0 +1,1066 @@
+{
+  "Version": 1,
+  "Z": 2,
+  "Layout": [
+    {
+      "Name": "mainmenu_setting_sound",
+      "Show": false,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "config_setting_label_mastervol",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-120],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/sound/setting_label_master_volume.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_worldvolume",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-60],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/sound/setting_label_bgm.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_voicevolume",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,0],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/sound/setting_label_voice.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_sevolume",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,60],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/sound/setting_label_se.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_systemsevolume",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,120],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/sound/setting_label_system.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_videovolume",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,180],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/sound/setting_label_movie.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_Master_ON",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-20,-120],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MuteMasterSound",
+              "State": true
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"Master" : {"Volume":0.0,"VolumeSliderToggle":false,"VolumeMuteFlag":true}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_Master_ON",
+                "Show": false
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_Master_OFF",
+                "Show": true
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "Toggle_MuteMasterSound"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "WorldVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "VoiceVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SEVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SystemSEVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "VideoVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "Toggle_MuteMasterSound"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "WorldVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "VoiceVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SEVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SystemSEVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "VideoVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_Master_OFF",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-20,-120],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MuteMasterSound",
+              "State": false
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"Master" : {"Volume":-1.0,"VolumeSliderToggle":true,"VolumeMuteFlag":false}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_Master_ON",
+                "Show": true
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_Master_OFF",
+                "Show": false
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "Toggle_MuteMasterSound"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "WorldVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "VoiceVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SEVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SystemSEVolume"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "VideoVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_WorldVolume_ON",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-20,-60],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "WorldVolume",
+              "State": true
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"World" : {"Volume":0.0,"VolumeSliderToggle":false,"VolumeMuteFlag":true}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_WorldVolume_ON",
+                "Show": false
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_WorldVolume_OFF",
+                "Show": true
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "WorldVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_WorldVolume_OFF",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-20,-60],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "WorldVolume",
+              "State": false
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"World" : {"Volume":-1.0,"VolumeSliderToggle":true,"VolumeMuteFlag":false}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_WorldVolume_ON",
+                "Show": true
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_WorldVolume_OFF",
+                "Show": false
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "WorldVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_VoiceVolume_ON",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-20,0],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "VoiceVolume",
+              "State": true
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"Voice" : {"Volume":0.0,"VolumeSliderToggle":false,"VolumeMuteFlag":true}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VoiceVolume_ON",
+                "Show": false
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VoiceVolume_OFF",
+                "Show": true
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "VoiceVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_VoiceVolume_OFF",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-20,0],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "VoiceVolume",
+              "State": false
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"Voice" : {"Volume":-1.0,"VolumeSliderToggle":true,"VolumeMuteFlag":false}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VoiceVolume_ON",
+                "Show": true
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VoiceVolume_OFF",
+                "Show": false
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "VoiceVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_SEVolume_ON",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-20,60],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SEVolume",
+              "State": true
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"SE" : {"Volume":0.0,"VolumeSliderToggle":false,"VolumeMuteFlag":true}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SEVolume_ON",
+                "Show": false
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SEVolume_OFF",
+                "Show": true
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SEVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_SEVolume_OFF",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-20,60],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SEVolume",
+              "State": false
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"SE" : {"Volume":-1.0,"VolumeSliderToggle":true,"VolumeMuteFlag":false}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SEVolume_ON",
+                "Show": true
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SEVolume_OFF",
+                "Show": false
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SEVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_SystemSEVolume_ON",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-20,120],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SystemSEVolume",
+              "State": true
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"SystemSE" : {"Volume":0.0,"VolumeSliderToggle":false,"VolumeMuteFlag":true}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SystemSEVolume_ON",
+                "Show": false
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SystemSEVolume_OFF",
+                "Show": true
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SystemSEVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_SystemSEVolume_OFF",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-20,120],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "SystemSEVolume",
+              "State": false
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"SystemSE" : {"Volume":-1.0,"VolumeSliderToggle":true,"VolumeMuteFlag":false}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SystemSEVolume_ON",
+                "Show": true
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_SystemSEVolume_OFF",
+                "Show": false
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SystemSEVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_VideoVolume_ON",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-20,180],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "VideoVolume",
+              "State": true
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"Video" : {"Volume":0.0,"VolumeSliderToggle":false,"VolumeMuteFlag":true}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VideoVolume_ON",
+                "Show": false
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VideoVolume_OFF",
+                "Show": true
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "VideoVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Setting_icon_VideoVolume_OFF",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[-20,180],
+          "Size":[30,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/sound/setting_volumeicon_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "VideoVolume",
+              "State": false
+            },
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {"Video" : {"Volume":-1.0,"VolumeSliderToggle":true,"VolumeMuteFlag":false}},
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VideoVolume_ON",
+                "Show": true
+              }
+            },
+            {
+              "SetShowGUI": {
+                "Name": "Setting_icon_VideoVolume_OFF",
+                "Show": false
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "VideoVolume"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "Master_Slider",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,-120],
+          "Size":[340,7],
+          "Z": 2,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamSlider": {
+            "Base": "gui2023/menu/setting/sound/setting_barbase.png",
+            "Front": "gui2023/menu/setting/sound/setting_bar.png",
+            "OnName": "gui2023/menu/setting/sound/setting_slider_on_po.png",
+            "OnSize":[33,33],
+            "OffName": "gui2023/menu/setting/sound/setting_slider_off_po.png",
+            "OffSize":[33,33],
+            "DriveField": "MasterSound"
+          }
+        },
+        {
+          "Name": "BGM_Slider",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,-60],
+          "Size":[340,7],
+          "Z": 2,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamSlider": {
+            "Base": "gui2023/menu/setting/sound/setting_barbase.png",
+            "Front": "gui2023/menu/setting/sound/setting_bar.png",
+            "OnName": "gui2023/menu/setting/sound/setting_slider_on_po.png",
+            "OnSize":[33,33],
+            "OffName": "gui2023/menu/setting/sound/setting_slider_off_po.png",
+            "OffSize":[33,33],
+            "DriveField": "SoundMixer/BGM"
+          }
+        },
+        {
+          "Name": "Voice_Slider",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,0],
+          "Size":[340,7],
+          "Z": 2,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamSlider": {
+            "Base": "gui2023/menu/setting/sound/setting_barbase.png",
+            "Front": "gui2023/menu/setting/sound/setting_bar.png",
+            "OnName": "gui2023/menu/setting/sound/setting_slider_on_po.png",
+            "OnSize":[33,33],
+            "OffName": "gui2023/menu/setting/sound/setting_slider_off_po.png",
+            "OffSize":[33,33],
+            "DriveField": "SoundMixer/Voice"
+          }
+        },
+        {
+          "Name": "SE_Slider",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,60],
+          "Size":[340,7],
+          "Z": 2,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamSlider": {
+            "Base": "gui2023/menu/setting/sound/setting_barbase.png",
+            "Front": "gui2023/menu/setting/sound/setting_bar.png",
+            "OnName": "gui2023/menu/setting/sound/setting_slider_on_po.png",
+            "OnSize":[33,33],
+            "OffName": "gui2023/menu/setting/sound/setting_slider_off_po.png",
+            "OffSize":[33,33],
+            "DriveField": "SoundMixer/SE"
+          }
+        },
+        {
+          "Name": "SystemSE_Slider",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,120],
+          "Size":[340,7],
+          "Z": 2,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamSlider": {
+            "Base": "gui2023/menu/setting/sound/setting_barbase.png",
+            "Front": "gui2023/menu/setting/sound/setting_bar.png",
+            "OnName": "gui2023/menu/setting/sound/setting_slider_on_po.png",
+            "OnSize":[33,33],
+            "OffName": "gui2023/menu/setting/sound/setting_slider_off_po.png",
+            "OffSize":[33,33],
+            "DriveField": "SoundMixer/SystemSE"
+          }
+        },
+        {
+          "Name": "Video_Slider",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[50,180],
+          "Size":[340,7],
+          "Z": 2,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamSlider": {
+            "Base": "gui2023/menu/setting/sound/setting_barbase.png",
+            "Front": "gui2023/menu/setting/sound/setting_bar.png",
+            "OnName": "gui2023/menu/setting/sound/setting_slider_on_po.png",
+            "OnSize":[33,33],
+            "OffName": "gui2023/menu/setting/sound/setting_slider_off_po.png",
+            "OffSize":[33,33],
+            "DriveField": "SoundMixer/Video"
+          }
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,-90],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,-30],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,30],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,90],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,150],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

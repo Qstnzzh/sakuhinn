@@ -1,0 +1,123 @@
+{
+  "Version": 0,
+  "Z": 20,
+  "Scripts": [
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/Toast/ToastViewModel.hs",
+    "Canvas/HeliScript/Toast/ToastView.hs",
+    "Canvas/HeliScript/Toast/ErrorToastView.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "toast",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "ToastViewModel"
+      ],
+      "Gui": [
+        {
+          "Name": "common_toast_base",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,25],
+          "Size":[400,50],
+          "Alpha":1.0,
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CT",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_toast_base.png"
+          },
+          "Toggle": [
+            { "Name": "Toggle_Default_Toast_Bar", "State": true}
+          ],
+          "Animation":{
+            "State":{
+              "Begin":{
+                "Pos": [ 0, -25 ],
+                "Alpha":0.0
+              },
+              "End":{
+                "Pos": [ 0, 25 ],
+                "Alpha":0.0
+              }
+            }
+          }
+        },
+        {
+          "Name": "common_toast_base_red",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": false,
+          "Pos":[0,25],
+          "Size":[400,50],
+          "Alpha":1.0,
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CT",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_toast_base_red.png"
+          },
+          "Toggle": [
+            { "Name": "Toggle_Error_Toast_Bar", "State": false}
+          ],
+          "Animation":{
+            "State":{
+              "Begin":{
+                "Pos": [ 0, -25 ],
+                "Alpha":0.0
+              },
+              "End":{
+                "Pos": [ 0, 25 ],
+                "Alpha":0.0
+              }
+            }
+          }
+        },
+        {
+          "Name": "toast_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,15],
+          "Size":[370,25],
+          "Alpha":1.0,
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CT",
+          "ParamText": {
+            "FontSize": 10,
+            "FontFamily": "BIZUDPGothic",
+            "OverflowWrap":true,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          },
+          "Animation":{
+            "State":{
+              "Begin":{
+                "Pos": [ 0, -10 ],
+                "Alpha":0.0
+              },
+              "End":{
+                "Pos": [ 0, 15 ],
+                "Alpha":1.0
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

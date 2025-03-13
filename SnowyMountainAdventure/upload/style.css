@@ -1,0 +1,155 @@
+body {
+  font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Arial", "Yu Gothic", "Meiryo", sans-serif;
+  background-color: #151515;
+  color: white;
+  background-image: url("img/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+input[type=button], input[type=text], input[type=submit], input[type=image], textarea, select {
+  outline: none;
+}
+
+.page {
+  width: 100%;
+  position: absolute;
+  aspect-ratio: 16/9;
+}
+
+.page-top .title-image {
+  width: 45%;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+
+.input-panel {
+  font-family: "Arial Black", sans-serif;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  width: 42%;
+  height: 38%;
+}
+.input-panel .panel-form {
+  width: 100%;
+  height: 15%;
+  margin-top: 8%;
+  display: flex;
+  align-items: center;
+}
+.input-panel .panel-form .input {
+  width: 90%;
+  height: 75%;
+  border-bottom: solid 2px #ddd;
+  padding-bottom: 1%;
+}
+.input-panel .panel-form .input .name {
+  width: 20%;
+  font-size: 1.4vw;
+  display: inline-block;
+  opacity: 0.7;
+}
+.input-panel .panel-form .input input[type=text], .input-panel .panel-form .input select {
+  width: 75%;
+  height: 100%;
+  background-color: transparent;
+  border: none;
+  padding-bottom: 1%;
+  color: white;
+  font-size: 1.3vw;
+}
+.input-panel .panel-form .input option {
+  background-color: black;
+  border: none;
+}
+.input-panel .panel-form .indicator {
+  position: absolute;
+  right: 0;
+  width: 8%;
+  display: none;
+}
+
+.tips {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  width: 21%;
+}
+
+.main-panel {
+  width: 50%;
+  height: 65%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.main-panel .button {
+  cursor: pointer;
+}
+.main-panel .button.disabled {
+  filter: brightness(0.5);
+}
+.main-panel .button:hover {
+  filter: brightness(0.8);
+}
+.main-panel .button:hover.disabled {
+  filter: brightness(0.5);
+}
+.main-panel .fetch {
+  position: absolute;
+  top: 21.4%;
+  left: 18.3%;
+  width: 23%;
+  z-index: 3;
+}
+.main-panel .create {
+  position: absolute;
+  top: 8%;
+  left: 35.4%;
+  width: 23%;
+  z-index: 3;
+}
+.main-panel .label-fetch {
+  position: absolute;
+  height: 5.5%;
+  top: 15%;
+  left: 2%;
+}
+.main-panel .label-create {
+  position: absolute;
+  height: 5.5%;
+  top: 0;
+  left: 41.2%;
+}
+.main-panel .start {
+  position: absolute;
+  width: 36%;
+  bottom: 22%;
+  right: 31%;
+  z-index: 2;
+}
+.main-panel .single {
+  position: absolute;
+  width: 23%;
+  bottom: 15%;
+  right: 13%;
+}
+.main-panel .room_id {
+  position: absolute;
+  bottom: 6%;
+  width: 50%;
+  left: -6.1%;
+}
+.main-panel .room_id_text {
+  position: absolute;
+  bottom: 11%;
+  left: -6.4%;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2vw;
+}
+
+/*# sourceMappingURL=style.css.map */

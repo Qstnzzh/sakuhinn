@@ -1,0 +1,260 @@
+{
+  "Version": 1,
+  "Z": 3,
+  "Scripts":[
+    "Canvas/HeliScript/Action/ActionPalette.hs",
+    "Canvas/HeliScript/Action/ActionList.hs"
+  ],
+  "Layout": [
+  {
+    "Name": "action_palette",
+    "Show": false,
+    "Z": 2,
+    "Components":[
+      "ActionPalette",
+      "EmoteActionList"
+    ],
+    "AutoLoading":false,
+    "Gui": [
+      {
+        "Comment": "背景にレイキャストをとばさないためのダミーボタン",
+        "Name": "action_palette_base",
+        "Language": "",
+        "Portrait": "",
+        "Type": "button",
+        "Show": false,
+        "Pos":[ -89, -10],
+        "Size":[ 336, 80],
+        "Z": 1,
+        "Pivot":[1.0, 1.0],
+        "Anchor":"RB"
+      },
+    {
+      "Comment": "アクションパレット背景",
+      "Name": "action_palette_base",
+      "Language": "",
+      "Portrait": "",
+      "Type": "image",
+      "Show": false,
+      "Pos":[ -89, -40],
+      "Size":[ 336, 84],
+      "Z": 2,
+      "Pivot":[1.0, 0.5],
+      "Anchor":"RB",
+      "ParamImage": {
+        "Uri": "gui2023/action/action_bg.png"
+      },
+      "Animation":{
+        "State" : {
+          "Begin":{
+            "Pos": [ -89, 124]
+          },
+          "End":{
+            "Pos": [ -89, 124]
+          }
+        }
+      }
+    },
+    {
+      "Comment": "エモートタブ",
+        "Name": "action_emote_on_tab",
+        "Language": "",
+        "Portrait": "",
+        "Type": "image",
+        "Show": false,
+        "Pos":[ -412, -71],
+        "Size":[ 79, 19],
+        "Z": 3,
+        "Pivot":[0.0, 1.0],
+        "Anchor":"RB",
+        "ParamImage": {
+          "Uri": "gui2023/action/action_emote_on.png"
+        },
+        "Animation":{
+          "State" : {
+            "Begin":{
+              "Pos": [ -412, 95]
+            },
+            "End":{
+              "Pos": [ -412, 95]
+            }
+          }
+        }
+    },
+    {
+        "Comment": "指差し",
+        "Name": "action_palette_button1",
+        "Language": "",
+        "Portrait": "",
+        "Type": "button",
+        "Show": false,
+        "Pos":[ -395, -40],
+        "Size":[ 42, 42],
+        "Z": 3,
+        "Pivot":[0.5, 0.5],
+        "Anchor":"RB",
+
+        "Animation":{
+          "State" : {
+            "Begin":{
+              "Pos": [ -395, 120]
+            },
+            "End":{
+              "Pos": [ -395, 120]
+            }
+          }
+        }
+      },
+      {
+          "Comment": "サムズアップ",
+          "Name": "action_palette_button2",
+          "Language": "",
+          "Portrait": "",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ -349, -40],
+          "Size":[ 42, 42],
+          "Z": 3,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"RB",
+
+          "Animation":{
+            "State" : {
+              "Begin":{
+                "Pos": [ -349, 120]
+              },
+              "End":{
+                "Pos": [ -349, 120]
+              }
+            }
+          }
+      },
+      {
+          "Comment": "手を振る",
+          "Name": "action_palette_button3",
+          "Language": "",
+          "Portrait": "",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ -303, -40],
+          "Size":[ 42, 42],
+          "Z": 3,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"RB",
+
+          "Animation":{
+            "State" : {
+              "Begin":{
+                "Pos": [ -303, 120]
+              },
+              "End":{
+                "Pos": [ -303, 120]
+              }
+            }
+          }
+      },
+      {
+          "Comment": "祈り",
+          "Name": "action_palette_button4",
+          "Language": "",
+          "Portrait": "",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ -256, -40],
+          "Size":[ 42, 42],
+          "Z": 3,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"RB",
+ 
+          "Animation":{
+            "State" : {
+              "Begin":{
+                "Pos": [ -256, 120]
+              },
+              "End":{
+                "Pos": [ -256, 120]
+              }
+            }
+          }
+      },
+      {
+          "Comment": "ダンス",
+          "Name": "action_palette_button5",
+          "Language": "",
+          "Portrait": "",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ -210, -40],
+          "Size":[ 42, 42],
+          "Z": 3,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"RB",
+
+          "Animation":{
+            "State" : {
+              "Begin":{
+                "Pos": [ -210, 120]
+              },
+              "End":{
+                "Pos": [ -210, 120]
+              }
+            }
+          }
+      },
+      {
+          "Comment": "丸",
+          "Name": "action_palette_button6",
+          "Language": "",
+          "Portrait": "",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ -164, -40],
+          "Size":[ 42, 42],
+          "Z": 3,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"RB",
+
+          "Animation":{
+            "State" : {
+              "Begin":{
+                "Pos": [ -164, 120]
+              },
+              "End":{
+                "Pos": [ -164, 120]
+              }
+            }
+          }
+      },
+      {
+        "Comment": "追加枠",
+          "Name": "action_add_item_btn",
+          "Language": "",
+          "Portrait": "",
+          "Type": "button",
+          "Show": false,
+          "Pos":[ -117, -40],
+          "Size":[ 42, 42],
+          "Z": 3,
+          "Pivot":[0.5, 0.5],
+          "Anchor":"RB",
+          "ParamButton": {
+            "FileName": "gui2023/action/action_add_item_btn.png"
+          },
+          "Animation":{
+            "State" : {
+              "Begin":{
+                "Pos": [ -117, 120]
+              },
+              "End":{
+                "Pos": [ -117, 120]
+              }
+            }
+          },
+          "GUIAction" :[
+            {"SetShowLayer" : {"Name" : "action_list","Show":true}}
+          ]
+      }
+    ]
+  }
+  ]
+}

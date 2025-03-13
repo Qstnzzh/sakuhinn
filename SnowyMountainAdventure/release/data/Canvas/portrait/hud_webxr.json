@@ -1,0 +1,59 @@
+{
+	"Version": 1,
+	"Z": 1,
+	"Layout": [
+		{
+			"Name": "HUD",
+			"Show": false,
+			"Z": 1,
+			"Gui": [
+				{
+					"Name": "hud_enter_webxr",
+					"Type": "button",
+					"Show": true,
+					"Pos":[-25,600],
+					"Size":[ 144, 144],
+					"Z": 1,
+					"Pivot":[ 1.0, 0.0],
+					"Anchor":"RT",
+					"Toggle":[
+						{"Name":"webxr_all","State":false},
+						{"Name":"webxr_enter","State":true}
+					],
+					"ParamButton": {
+						"FileName": "gui/hud/hud_webxr.png",
+						"OnCursorFileName": "gui/hud/hud_webxr.png",
+						"DownFileName": "gui/hud/hud_webxr_down.png"
+					},
+					"GUIAction" :[
+						{"SetShowLayer" : {"Name" : "common_dialog_webxr","Show" : true}}
+					]
+				},
+				{
+					"Name": "hud_exit_webxr",
+					"Type": "button",
+					"Show": false,
+					"Pos":[-25,600],
+					"Size":[ 144, 144],
+					"Z": 1,
+					"Pivot":[ 1.0, 0.0],
+					"Anchor":"RT",
+					"Toggle":[
+						{"Name":"webxr_all","State":false},
+						{"Name":"webxr_enter","State":false}
+					],
+					"ParamButton": {
+						"FileName": "gui/hud/hud_webxr.png",
+						"OnCursorFileName": "gui/hud/hud_webxr.png",
+						"DownFileName": "gui/hud/hud_webxr_down.png"
+					},
+					"GUIAction" :[
+						{"Func" : {"Name" : "exit_webxr"}},
+						{"String":{"Name":"ToggleDefault","Value":"webxr_enter"}},
+						{"SetShowLayer" : {"Name" : "common_dialog_webxr","Show" : false}}
+					]
+				}
+			]
+		}
+	]
+}

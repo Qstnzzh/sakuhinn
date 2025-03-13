@@ -1,0 +1,717 @@
+{
+  "Version": 1,
+  "Z": 2,
+  "Layout": [
+    {
+      "Name": "mainmenu_setting_system",
+      "Show": false,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------system 1 content----------------------------------- "
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,-90],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_nameplate",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-135,-120],
+          "Size":[136,17],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/system/setting_label_nameplate.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_display_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_display_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_NamePlate",
+              "State": true
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_display_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_display_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_NamePlate",
+              "State": false
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingSystem_NamePlate"
+              }
+            },
+            {
+              "Flag": {
+                "Name": "SetNamePlateDisplay",
+                "Enable": true
+              }
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_hide_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,-120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_hide_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_NamePlate",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_hide_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,-120],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_hide_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_NamePlate",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingSystem_NamePlate"
+              }
+            },
+            {
+              "Flag": {
+                "Name": "SetNamePlateDisplay",
+                "Enable": false
+              }
+            }
+          ]
+        },
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------system 2 content----------------------------------- "
+        },
+        {
+          "Name": "config_common_line",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[95,-29],
+          "Size":[600,4],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/config_common_line.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_label_avatar",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-205,-60],
+          "Size":[256,32],
+          "Z": 1,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/system/setting_label_avatarnam.png"
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_few_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_few_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_UserView_few",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_few_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_few_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_UserView_few",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_few"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_many"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingSystem_UserView_few"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetMaxShowAvatarDisplayed",
+                "Value": "Few"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_medium_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_midium_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_UserView_medium",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_medium_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_midium_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_UserView_medium",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_few"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_many"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingSystem_UserView_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetMaxShowAvatarDisplayed",
+                "Value": "Usually"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "config_setting_btn_many_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_many_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_UserView_many",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_setting_btn_many_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,-60],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_many_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            },
+            {
+              "Name": "SettingSystem_UserView_many",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_few"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_medium"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystem_UserView_many"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingSystem_UserView_many"
+              }
+            },
+            {
+              "String": {
+                "Name": "SetMaxShowAvatarDisplayed",
+                "Value": "Many"
+              }
+            }
+          ]
+        },
+        {
+          "Show": true,
+          "Z": 0,
+          "//": " -------------------------system 3 content-----------------------------------"
+        },
+        {
+          "Name": "setting_label_shadow",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-205,0],
+          "Size":[128,16],
+          "Z": 1,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/setting/system/setting_label_shadow.png"
+          },
+          "Toggle" : [
+            {"Name":"SettingSystemShow","State":false}
+          ]
+        },
+        {
+          "Name": "setting_shadow_low_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_low_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle" : [
+            {"Name":"SettingSystemShow","State":false},
+            {"Name":"SettingSystem_ShadowQuality_low","State":false}
+          ]
+        },
+        {
+          "Name": "setting_shadow_low_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_low_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle" : [
+            {"Name":"SettingSystemShow","State":false},
+            {"Name":"SettingSystem_ShadowQuality_low","State":true}
+          ],
+          "GUIAction" :[
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_low"}},
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_medium"}},
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_high"}},
+  
+            {"String" : {"Name" : "ToggleChange","Value":"SettingSystem_ShadowQuality_low"}},
+            {"String" : {"Name" : "SetShadowQuality","Value":"Low"}}
+          ]
+        },
+        {
+          "Name": "setting_shadow_medium_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_midium_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle" : [
+            {"Name":"SettingSystemShow","State":false},
+            {"Name":"SettingSystem_ShadowQuality_medium","State":false}
+          ]
+        },
+        {
+          "Name": "setting_shadow_medium_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_midium_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle" : [
+            {"Name":"SettingSystemShow","State":false},
+            {"Name":"SettingSystem_ShadowQuality_medium","State":true}
+          ],
+          "GUIAction" :[
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_low"}},
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_medium"}},
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_high"}},
+  
+            {"String" : {"Name" : "ToggleChange","Value":"SettingSystem_ShadowQuality_medium"}},
+            {"String" : {"Name" : "SetShadowQuality","Value":"Medium"}}
+          ]
+        },
+        {
+          "Name": "setting_shadow_high_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_high_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle" : [
+            {"Name":"SettingSystemShow","State":false},
+            {"Name":"SettingSystem_ShadowQuality_high","State":false}
+          ]
+        },
+        {
+          "Name": "setting_shadow_high_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,0],
+          "Size":[264,33],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/system/setting_shadow_high_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[169, 33]
+          },
+          "Toggle" : [
+            {"Name":"SettingSystemShow","State":false},
+            {"Name":"SettingSystem_ShadowQuality_high","State":true}
+          ],
+          "GUIAction" :[
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_low"}},
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_medium"}},
+            {"String" : {"Name" : "ToggleDefault","Value":"SettingSystem_ShadowQuality_high"}},
+  
+            {"String" : {"Name" : "ToggleChange","Value":"SettingSystem_ShadowQuality_high"}},
+            {"String" : {"Name" : "SetShadowQuality","Value":"High"}}
+          ]
+        }
+      ]
+    }
+  ]
+}

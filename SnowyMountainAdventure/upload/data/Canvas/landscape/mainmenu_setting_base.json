@@ -1,0 +1,362 @@
+{
+  "Version": 1,
+  "Z": 2,
+  "Layout": [
+    {
+      "Name": "mainmenu_setting_base",
+      "Show": false,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "setting_tab_sound_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-160,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_sound_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingSoundShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCameraShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystemShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingHelpShow"
+              }
+            },
+
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleChange","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "setting_tab_sound_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-160,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_sound_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSoundShow",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "setting_tab_camera_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_camera_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSoundShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingCameraShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystemShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingHelpShow"
+              }
+            },
+
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleChange","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "setting_tab_camera_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[0,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_camera_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingCameraShow",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "setting_tab_system_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[160,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_system_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSoundShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCameraShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingSystemShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingHelpShow"
+              }
+            },
+
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleChange","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "setting_tab_system_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[160,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_system_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingSystemShow",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "setting_tab_help_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[320,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_help_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingHelpShow",
+              "State": true
+            }
+          ],
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSoundShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingCameraShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleDefault",
+                "Value": "SettingSystemShow"
+              }
+            },
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "SettingHelpShow"
+              }
+            },
+
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : true}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}},
+            {"String":{"Name":"ToggleChange","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "setting_tab_help_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[320,-210],
+          "Size":[240,30],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/setting/setting_tab_help_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[154, 30]
+          },
+          "Toggle": [
+            {
+              "Name": "SettingHelpShow",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        }
+      ]
+    }
+  ]
+}

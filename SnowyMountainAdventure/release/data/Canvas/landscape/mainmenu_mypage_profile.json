@@ -1,0 +1,611 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Scripts":[
+    "Canvas/HeliScript/MainMenu/ProfileMenu/ProfileMenuController.hs",
+    "Canvas/HeliScript/MainMenu/ProfileMenu/ProfileMenuModel.hs",
+    "Canvas/HeliScript/MainMenu/ProfileMenu/ProfileMenuView.hs",
+    "Canvas/HeliScript/MainMenu/ProfileMenu/ProfileMenuViewModel.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "config_profile",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "ProfileMenuController",
+        "ProfileMenuViewModel",
+        "ProfileMenuModel"
+      ],
+      "Gui": [
+        {
+          "Name": "config_profile_icon_image",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-100,-50],
+          "Size":[145,145],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_icon_none.png"
+          }
+        },
+        {
+          "Name": "config_button_icon_edit",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-100,50],
+          "Size":[256,32],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_avatar_change.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "config_button_icon_edit_disabled",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-100,50],
+          "Size":[256,32],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_avatar_change_disabled.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "config_profile_label_nickname",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[60,-100],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_label_nickname.png"
+          }
+        },
+        {
+          "Name": "config_profile_nickname_image",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[340,-88],
+          "Size":[512,64],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_input_nickname.png"
+          }
+        },
+        {
+          "Name": "UserName",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[100,-100],
+          "Size":[235,24],
+          "Z": 3,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 12,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前名前名前名前名前名前名前名前"
+          }
+        },
+        {
+          "Name": "config_button_nickname_edit",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[370,-100],
+          "Size":[32,32],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_edit.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "config_profile_label_aboutme",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[248,-50],
+          "Size":[512,16],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_label_introduce.png"
+          }
+        },
+        {
+          "Name": "mypage_input_introduce",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[170,44],
+          "Size":[512,290],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_input_introduce.png"
+          }
+        },
+        {
+          "Name": "config_button_intro_edit",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[370,90],
+          "Size":[32,32],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_edit.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "config_button_intro_edit_disabled",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[370,90],
+          "Size":[32,32],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_edit_disabled.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "Intro_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,48],
+          "Size":[340,156],
+          "Z": 3,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 15,
+            "FontFamily": "BIZUDPGothic",
+            "OverflowWrap":true,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己紹介自己"
+          }
+        },
+        {
+          "Name": "mypage_btn_myvket",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[110,200],
+          "Size":[256,32],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_myvket.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_vketaccount_signup_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,200],
+          "Size":[240,30],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_signup.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_vketaccount_login_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,200],
+          "Size":[240,30],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_login.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_txt_login",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[110,160],
+          "Size":[400,50],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Is_LoginedIn","State": true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_txt_login.png"
+          }
+        }
+      ]
+    },
+    {
+      "Name": "profile_nickname_edit_dialog",
+      "Show": false,
+      "Z": 6,
+      "Components":[
+        "ProfileMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "common_dialog_bg",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[400,200],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg_po.png"
+          }
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[175,-80],
+          "Size":[40,40],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_cancel",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-85,70],
+          "Size":[200,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_btn_confirm",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[85,70],
+          "Size":[245,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_confirm.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"Func" : {"Name" : "EmscriptenUserNameUpdate"}},
+            {"Flag" : {"Name" : "UpdateUserName","Enable":false}},
+            {"Flag" : {"Name" : "SetShowInputFieldUserName","Enable":false}}
+          ]
+        },
+        {
+          "Name": "config_profile_label_nickname",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-70,-40],
+          "Size":[136,17],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_label_nickname.png"
+          }
+        },
+        {
+          "Name": "config_profile_nickname_image",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[110,0],
+          "Size":[512,64],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_input_nickname.png"
+          }
+        },
+        {
+          "Name": "MyPage_UserName_Text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-133,-12],
+          "Size":[235,24],
+          "Z": 3,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 20,
+            "FontFamily": "BIZUDPGothic",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          }
+        }
+      ]
+    },
+    {
+      "Name": "profile_intro_edit_dialog",
+      "Show": false,
+      "Z": 6,
+      "Components":[
+        "ProfileMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "common_dialog_bg",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[500,250],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg_po.png"
+          }
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[215,-100],
+          "Size":[40,40],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_cancel",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-85,100],
+          "Size":[200,50],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_btn_confirm",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[85,100],
+          "Size":[245,35],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_confirm.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "config_profile_label_aboutme",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,-90],
+          "Size":[512,16],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_label_introduce.png"
+          }
+        },
+        {
+          "Name": "mypage_input_introduce",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-5],
+          "Size":[512,256],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_input_introduce.png"
+          }
+        },
+        {
+          "Name": "MyPage_Intro_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-170,0],
+          "Size":[340,130],
+          "Z": 3,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 20,
+            "FontFamily": "BIZUDPGothic",
+            "OverflowWrap":true,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          }
+        }
+      ]
+    }
+  ]
+}

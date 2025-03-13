@@ -1,0 +1,610 @@
+{
+  "Version": 0,
+  "Z": 1,
+  "Scripts":[
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/TextChat/TCModel.hs",
+    "Canvas/HeliScript/TextChat/TCView.hs",
+    "Canvas/HeliScript/TextChat/TCViewModel.hs",
+    "Canvas/HeliScript/TextChat/TCController.hs",
+    "Canvas/HeliScript/TextChat/TCMessageData.hs"
+  ],
+  "Layout": [
+    {
+      "Comment" : "エンジンのテキチャ機能が旧UIのChatLogViewに依存しているようでOperateCanvasエラーが出るので空のレイヤーを入れて対策",
+      "Name": "ChatLogView",
+      "Show": false,
+      "Z": 0,
+      "Gui": []
+    },
+    {
+      "Comment" : "エンジンのテキチャ機能が旧UIのconfig_baseに依存しているようでOperateCanvasエラーが出るので空のレイヤーを入れて対策",
+      "Name": "config_base",
+      "Show": false,
+      "Z": 0,
+      "Gui": []
+    },
+    {
+      "Comment" : "エンジンのテキチャ機能が旧UIのphoto_layerに依存しているようでOperateCanvasエラーが出るので空のレイヤーを入れて対策",
+      "Name": "photo_layer",
+      "Show": false,
+      "Z": 0,
+      "Gui": []
+    },
+    {
+      "Name": "textchat_common",
+      "Show": false,
+      "Z": 3,
+      "Components":[
+        "TCModel",
+        "TCViewModel",
+        "TCController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "chat_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,0],
+          "Size":[500,500],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_base.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_txt_chat_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-340,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_txt_chat_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_txt_chat_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-340,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_txt_chat_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_system_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-220,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_system_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_system_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-220,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_system_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-140,-225],
+          "Size":[30,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_btn_send",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_btn_send.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_input_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,180],
+          "Size":[500,62],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_input_base.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_scroll_base_chat",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-25],
+          "Size":[10,500],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_scroll_base.png"
+          }
+        },
+        {
+          "Name": "chat_scroll_slider_chat",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-170],
+          "Size":[20,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_scroll_base_system",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,17],
+          "Size":[10,620],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_scroll_base.png"
+          }
+        },
+        {
+          "Name": "chat_scroll_slider_system",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-170],
+          "Size":[20,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_text_inputfield",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,180],
+          "Size":[270,35],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamText": {
+            "FontSize": 15,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LT",
+            "Color":[0.0,0.0,0.0,1.0],
+            "Text": ""
+          }
+        }
+      ]
+    },
+    {
+      "Name": "textchat_common_long",
+      "Show": false,
+      "Z": 3,
+      "Components":[
+        "TCModel",
+        "TCViewModel",
+        "TCController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "chat_base_long",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,0],
+          "Size":[500,500],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_base.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_txt_chat_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-340,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_txt_chat_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_txt_chat_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-340,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_txt_chat_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_system_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-220,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_system_off.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_tab_system_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-220,-225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_tab_system_on.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-140,-225],
+          "Size":[30,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_btn_send",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,225],
+          "Size":[120,30],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_btn_send.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_input_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,180],
+          "Size":[500,62],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/chat/chat_input_base.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_scroll_base_chat",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-25],
+          "Size":[10,500],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_scroll_base.png"
+          }
+        },
+        {
+          "Name": "chat_scroll_slider_chat",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-170],
+          "Size":[20,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_scroll_base_system",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,17],
+          "Size":[10,620],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/chat/chat_scroll_base.png"
+          }
+        },
+        {
+          "Name": "chat_scroll_slider_system",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-170],
+          "Size":[20,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "chat_text_inputfield_long",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-260,180],
+          "Size":[270,35],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RM",
+          "Toggle":[
+            {"Name":"Toggle_TextChat_Tab", "State":true}
+          ],
+          "ParamText": {
+            "FontSize": 15,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LT",
+            "Color":[0.0,0.0,0.0,1.0],
+            "Text": ""
+          }
+        }
+      ]
+    }
+  ]
+}

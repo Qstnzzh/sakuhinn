@@ -1,0 +1,142 @@
+{
+  "Version": 0,
+  "Z": 0,
+  "Layout": [
+    {
+      "Name": "mic_permission_click_layer",
+      "Show": false,
+      "Z": 1,
+      "Gui": [
+        {
+          "Name": "mic_permision_back_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[400,400],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/mic_permission/mic_access_base.png"
+          }
+        },
+        {
+          "Name": "mic_access_text_click_img",
+          "Type": "image",
+          "Show": true,
+          "Language": "_en",
+          "Pos":[0,0],
+          "Size":[200,400],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/mic_permission/mic_access_txt_click.png"
+          }
+        },
+        {
+          "Name": "mic_permission_close_btn",
+          "Type": "button",
+          "Show": true,
+          "Pos":[118,-118],
+          "Size":[24,24],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "mic_permission_click_layer","Show" : false}}
+          ]
+        },
+        {
+          "Name": "mic_permission_back_btn",
+          "Type": "button",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[256,256],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "mic_block_info_layer",
+      "Show": false,
+      "Z": 0,
+      "Gui": [
+        {
+          "Name": "mic_permision_back_img",
+          "Type": "image",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[400,400],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/mic_permission/mic_access_base.png"
+          }
+        },
+        {
+          "Name": "mic_clock_text_img",
+          "Type": "image",
+          "Show": true,
+          "Language": "_en",
+          "Pos":[0,0],
+          "Size":[400,400],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/mic_permission/mic_access_txt_block.png"
+          }
+        },
+        {
+          "Name": "mic_permission_close_btn",
+          "Type": "button",
+          "Show": true,
+          "Pos":[118,-118],
+          "Size":[24,24],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "mic_block_info_layer","Show" : false}}
+          ]
+        },
+        {
+          "Name": "mic_permission_back_btn",
+          "Type": "button",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[256,256],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    }
+  ]
+}

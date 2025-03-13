@@ -1,0 +1,692 @@
+{
+  "Version": 0,
+  "Z": 20,
+  "Scripts":[
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs",
+
+    "Canvas/HeliScript/GenericWindow/GenericWindowController.hs",
+    "Canvas/HeliScript/GenericWindow/GenericWindowViewModel.hs",
+    "Canvas/HeliScript/GenericWindow/GenericWindowView.hs"
+  ],
+  "Layout": [
+    {
+      "Comment":"common middle /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Name": "genericwindow_common_middle",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "GenericWindowController",
+        "GenericWindowViewModel"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "common_base",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-320],
+          "Size":[2040,2040],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/movie/movie_base_po.png"
+          }
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[570,-780],
+          "Size":[70,70],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            { "SetShowLayer": { "Name": "genericwindow_common_middle", "Show": false }},
+            { "SetShowLayer": { "Name": "genericwindow_seekbar_middle", "Show": false }},
+            { "SetShowLayer": { "Name": "genericwindow_common_large", "Show": false }},
+            { "SetShowLayer": { "Name": "genericwindow_seekbar_large", "Show": false }},
+
+            { "String": {"Name": "ToggleDefault","Value": "Toggle_GenericWindow_Middle_Large"}},
+
+            {"Func": {"Name": "MovieViewerClose"}}
+          ]
+        },
+        {
+          "Name": "common_btn_maximize",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[560,120],
+          "Size":[100,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_maximize_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            { "Func": {"Name": "MovieViewerFullScreenOn"}}
+          ]
+        },
+        {
+          "Name": "VideoPlayerTexture",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-370],
+          "Size":[1216,684],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true },
+            { "Name": "Toggle_Use_VideoPlayerTexture","State": false }
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/black.png"
+          }
+        },
+        {
+          "Name": "ImageViewer",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-370],
+          "Size":[1216,684],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true },
+            { "Name": "Toggle_Use_ImageViewer","State": false }
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/black.png"
+          }
+        }
+      ]
+    },
+
+    {
+      "Comment":"common large /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Name": "genericwindow_common_large",
+      "Show": false,
+      "Z": 10,
+      "Components":[
+        "GenericWindowController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-80,-80],
+          "Size":[100,100],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RB",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            { "SetShowLayer": { "Name": "genericwindow_common_middle", "Show": false }},
+            { "SetShowLayer": { "Name": "genericwindow_seekbar_middle", "Show": false }},
+            { "SetShowLayer": { "Name": "genericwindow_common_large", "Show": false }},
+            { "SetShowLayer": { "Name": "genericwindow_seekbar_large", "Show": false }},
+
+            { "String": {"Name": "ToggleDefault","Value": "Toggle_GenericWindow_Middle_Large"}},
+
+            {"Func": {"Name": "MovieViewerClose"}}
+          ]
+        },
+        {
+          "Name": "common_btn_minimize",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,-80],
+          "Size":[140,140],
+          "Rotate":-90.0,
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LB",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_minimize_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            { "Func": {"Name": "MovieViewerFullScreenOff"}}
+          ]
+        },
+        {
+          "Name": "VideoPlayerTexture",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[2272,1278],
+          "Rotate":-90.0,
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false },
+            { "Name": "Toggle_Use_VideoPlayerTexture","State": false }
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/clear.png"
+          }
+        },
+        {
+          "Name": "ImageViewer",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[2272,1278],
+          "Rotate":-90.0,
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false },
+            { "Name": "Toggle_Use_ImageViewer","State": false }
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/clear.png"
+          }
+        },
+        {
+          "Name": "large_background",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Pos":[0,0],
+          "Size":[4000,4000],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/black.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+
+    {
+      "Comment":"seekbar middle /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Name": "genericwindow_seekbar_middle",
+      "Show": false,
+      "Z": 0,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "movie_bar",
+          "Type": "Slider",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-597,10],
+          "Size":[1170,12],
+          "Z": 1,
+          "Pivot":[0.0,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamSlider": {
+            "Base": "gui2023/movie/movie_bar_base_po.png",
+            "Front": "gui2023/movie/movie_bar_po.png",
+            "OnName": "gui2023/movie/movie_bar_slider_po.png",
+            "OnSize":[44,44],
+            "OffName": "gui2023/movie/movie_bar_slider.png",
+            "OffSize":[44,44],
+            "DriveField": "MovieViewer"
+          }
+        },
+        {
+          "Name": "VideoPlayerCurrentTime",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-505,60],
+          "Size":[200,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamText": {
+            "FontSize": 40,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "00:00:00"
+          }
+        },
+        {
+          "Name": "VideoPlayerTotalTime",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-280,60],
+          "Size":[200,45],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamText": {
+            "FontSize": 40,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "00:00:00"
+          }
+        },
+        {
+          "Name": "movie_btn_play",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,120],
+          "Size":[100,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_movie_playing","State": false },
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_play_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "Toggle_movie_playing"
+              }
+            },
+            {
+              "Func": {
+                "Name": "MovieViewerPlayPauseToggle"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "movie_btn_stop",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,120],
+          "Size":[100,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_movie_playing","State": true },
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_stop_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "Toggle_movie_playing"
+              }
+            },
+            {
+              "Func": {
+                "Name": "MovieViewerPlayPauseToggle"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "movie_btn_forward",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[120,120],
+          "Size":[100,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_forward_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "Func": {
+                "Name": "MovieViewerForward",
+                "Param": "10"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "movie_btn_rewind",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,120],
+          "Size":[100,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": true }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_rewind_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "Func": {
+                "Name": "MovieViewerRewind",
+                "Param": "10"
+              }
+            }
+          ]
+        }
+      ]
+    },
+
+    {
+      "Comment":"seekbar large /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////",
+      "Name": "genericwindow_seekbar_large",
+      "Show": false,
+      "Z": 10,
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "movie_time_base",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,235],
+          "Size":[60,530],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/movie/movie_time_base_po.png"
+          }
+        },
+        {
+          "Name": "VideoPlayerCurrentTime",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,125],
+          "Size":[160,45],
+          "Rotate":-90.0,
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamText": {
+            "FontSize": 35,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "01:23:45"
+          }
+        },
+        {
+          "Name": "VideoPlayerTotalTime",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,330],
+          "Size":[160,45],
+          "Rotate":-90.0,
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LT",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamText": {
+            "FontSize": 35,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "01:23:45"
+          }
+        },
+        {
+          "Name": "movie_btn_play",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,0],
+          "Size":[140,140],
+          "Rotate":-90.0,
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LM",
+          "Toggle": [
+            { "Name": "Toggle_movie_playing","State": false },
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_play_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "Toggle_movie_playing"
+              }
+            },
+            {
+              "Func": {
+                "Name": "MovieViewerPlayPauseToggle"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "movie_btn_stop",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,0],
+          "Size":[140,140],
+          "Rotate":-90.0,
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LM",
+          "Toggle": [
+            { "Name": "Toggle_movie_playing","State": true },
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_stop_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "String": {
+                "Name": "ToggleChange",
+                "Value": "Toggle_movie_playing"
+              }
+            },
+            {
+              "Func": {
+                "Name": "MovieViewerPlayPauseToggle"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "movie_btn_forward",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,175],
+          "Size":[140,140],
+          "Rotate":-90.0,
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_forward_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "Func": {
+                "Name": "MovieViewerForward",
+                "Param": "10"
+              }
+            }
+          ]
+        },
+        {
+          "Name": "movie_btn_rewind",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[80,-175],
+          "Size":[140,140],
+          "Rotate":-90.0,
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "LM",
+          "Toggle": [
+            { "Name": "Toggle_GenericWindow_Middle_Large","State": false }
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/movie/movie_btn_rewind_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {
+              "Func": {
+                "Name": "MovieViewerRewind",
+                "Param": "10"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

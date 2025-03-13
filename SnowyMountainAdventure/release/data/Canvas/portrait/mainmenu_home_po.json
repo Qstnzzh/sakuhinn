@@ -1,0 +1,804 @@
+{
+  "Version": 0,
+  "Z": 1,
+  "Scripts": [
+    "Canvas/HeliScript/MainMenu/MainMenu/MainMenuController.hs",
+
+    "Canvas/HeliScript/helApi.hs",
+    "Canvas/HeliScript/helConfig.hs",
+    "Canvas/HeliScript/helFunc.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "mainmenu_home",
+      "Show": false,
+      "Z": 0,
+      "Components":[
+        "MainMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "popup_background",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[8000,8000],
+          "Z": -1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/popup_background.png"
+          },
+          "GUIAction": [
+            {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+            {"Func" : {"Name" : "CloseAllLayer"}},
+            {"SetShowLayer" : {"Name" : "HUD","Show" : true}}
+          ]
+        },
+        {
+          "Name": "mainmenu_HeliodorSDKVersion",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-90,-45],
+          "Size":[180,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "RB",
+          "ParamText": {
+            "FontSize": 24,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": ""
+          }
+        },
+        {
+          "Name": "menu_contents_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,450],
+          "Size":[2050,2050],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_contents_base_po.png"
+          }
+        },
+        {
+          "Name": "menu_base",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-830],
+          "Size":[2050,512],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_base_po.png"
+          }
+        },
+        {
+          "Name": "menu_status_login",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-340,-930],
+          "Size":[240,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Login_Logout", "State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/menu_status_login_po.png"
+          }
+        },
+        {
+          "Name": "menu_status_logout",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-340,-930],
+          "Size":[240,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Login_Logout", "State":true}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/menu_status_logout_po.png"
+          }
+        },
+        {
+          "Name": "menu_avatar_icon",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-540,-900],
+          "Size":[136,136],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_icon_none.png"
+          }
+        },
+        {
+          "Name": "menu_user_name_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-290,-870],
+          "Size":[360,60],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamText": {
+            "FontSize": 23,
+            "FontFamily": "BIZUDPGothic",
+            "Alignment":"LM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "Me"
+          }
+        },
+        {
+          "Name": "menu_btn_myroom",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-900],
+          "Size":[120,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Login_Logout", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_btn_myroom_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "menu_btn_myroom_disabled",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-900],
+          "Size":[120,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "Toggle":[
+              {"Name":"Toggle_MainMenu_Login_Logout", "State":true}
+            ],
+            "FileName": "gui2023/menu/menu_btn_myroom_disabled_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "menu_btn_mypage",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,-900],
+          "Size":[480,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_btn_mypage_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Event_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_World_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Community_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Setting_On_Off"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_world_tab","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_community_base","Show" : false}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_base","Show" : true}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "menu_tab_avatar_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-520,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Avatar_On_Off", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_avatar_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Event_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_World_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Community_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Setting_On_Off"}},
+
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MyPage_Avatar_Preset_My"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_world_tab","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_community_base","Show" : false}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_base","Show" : true}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "menu_tab_avatar_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-520,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Avatar_On_Off", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_avatar_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "menu_tab_event_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-340,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Event_On_Off", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_event_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Event_On_Off"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Event_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_World_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Community_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Setting_On_Off"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_world_tab","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_community_base","Show" : false}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_base","Show" : false}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "menu_tab_event_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-340,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Event_On_Off", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_event_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "menu_tab_world_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-160,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_World_On_Off", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_world_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Event_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_World_On_Off"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_World_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Community_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Setting_On_Off"}},
+            
+            {"SetShowLayer" : {"Name" : "mainmenu_world_tab","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_community_base","Show" : false}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_base","Show" : false}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "menu_tab_world_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-160,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_World_On_Off", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_world_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "menu_tab_community_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[20,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Community_On_Off", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_community_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Event_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_World_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Community_On_Off"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Community_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Setting_On_Off"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_world_tab","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_community_base","Show" : true}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_base","Show" : false}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "menu_tab_community_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[20,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Community_On_Off", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_community_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "menu_tab_setting_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[520,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Setting_On_Off", "State":true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_setting_off_po.png"
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Event_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_World_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Community_On_Off"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Setting_On_Off"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MainMenu_Setting_On_Off"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_world_tab","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_community_base","Show" : false}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_base","Show" : false}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Profile"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_Avatar"}},
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MainMenu_MyRoom"}},
+
+            {"SetShowLayer" : {"Name" : "mainmenu_mypage_avatar_base","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_base","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_sound","Show" : true}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_camera","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_system","Show" : false}},
+            {"SetShowLayer" : {"Name" : "mainmenu_setting_help","Show" : false}},
+
+            {"String":{"Name":"ToggleDefault","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleChange","Value":"SettingSoundShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingCameraShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingSystemShow"}},
+            {"String":{"Name":"ToggleDefault","Value":"SettingHelpShow"}}
+          ]
+        },
+        {
+          "Name": "menu_tab_start_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[340,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_start_off_po.png"
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "mainmenu_start_dialog","Show" : true}}
+          ]
+        },
+        {
+          "Name": "menu_tab_setting_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[520,-710],
+          "Size":[240,240],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Setting_On_Off", "State":false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/menu_tab_setting_on_po.png"
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[550,-900],
+          "Size":[100,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+            
+            {"Func" : {"Name" : "CloseAllLayer"}},
+            {"SetShowLayer" : {"Name" : "HUD","Show" : true}}
+          ]
+        },
+        
+        {
+          "Name": "menu_commingsoon_Event",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,225],
+          "Size":[1024,128],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name":"Toggle_MainMenu_Event_On_Off", "State":false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/menu_coming_soon_po.png"
+          }
+        }
+      ]
+    },
+
+    {
+      "Name": "mainmenu_start_dialog",
+      "Show": false,
+      "Z": 10,
+      "Components":[
+        "MainMenuController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "popup_background",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[8000,8000],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/popup_background.png"
+          }
+        },
+        {
+          "Name": "common_dialog_bg",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[1500,750],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/common/common_dialog_bg.png"
+          }
+        },
+        {
+          "Name": "common_btn_cancel",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-230,200],
+          "Size":[512,128],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_cancel_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[398, 128]
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "mainmenu_start_dialog","Show" : false}}
+          ]
+        },
+        {
+          "Name": "start_btn_return",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[230,200],
+          "Size":[512,128],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/start/start_btn_return_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[398, 128]
+          },
+          "GUIAction": [
+            {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+            
+            {"SetShowLayer" : {"Name" : "mainmenu_start_dialog","Show" : false}},
+            {"Func" : {"Name" : "CloseAllLayer"}},
+            {"SetShowLayer" : {"Name" : "HUD","Show" : true}},
+            {"Func" : {"Name" : "WarpToStartPos"}}
+          ]
+        },
+        {
+          "Name": "common_btn_close",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[440,-200],
+          "Size":[100,100],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_close.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"SetShowLayer" : {"Name" : "mainmenu_start_dialog","Show" : false}}
+          ]
+        },
+        {
+          "Name": "start_txt",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,-20],
+          "Size":[1024,128],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/start/start_txt_po.png"
+          }
+        }
+      ]
+    }
+  ]
+}

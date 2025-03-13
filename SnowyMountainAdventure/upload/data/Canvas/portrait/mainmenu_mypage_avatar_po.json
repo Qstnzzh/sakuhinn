@@ -1,0 +1,952 @@
+{
+  "Version": 1,
+  "Z": 1,
+  "Scripts": [
+    "Canvas/HeliScript/helFunc.hs",
+    "Canvas/HeliScript/helApi.hs",
+    
+    "Canvas/HeliScript/MyAvatar/MyAvatarData.hs",
+    "Canvas/HeliScript/MyAvatar/MyAvatarModel.hs",
+    "Canvas/HeliScript/MyAvatar/MyAvatarView.hs",
+    "Canvas/HeliScript/MyAvatar/MyAvatarViewModel.hs",
+    "Canvas/HeliScript/MyAvatar/MyAvatarController.hs"
+  ],
+  "Layout": [
+    {
+      "Name": "mainmenu_mypage_avatar_base",
+      "Show": false,
+      "Z": 0,
+      "Components": [
+        "MyAvatarModel",
+        "MyAvatarViewModel",
+        "MyAvatarController"
+      ],
+      "Gui": [
+        {
+          "Name": "mypage_btn_myavatar_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-450,-400],
+          "Size":[480,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_myavatar_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[293, 120]
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MyPage_Avatar_Preset_My"}}
+          ]
+        },
+        {
+          "Name": "mypage_btn_myavatar_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-450,-400],
+          "Size":[480,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_myavatar_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[293, 120]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_btn_prestavatar_off",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-130,-400],
+          "Size":[480,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_prestavatar_off_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[293, 120]
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MyPage_Avatar_Preset_My"}},
+            {"String":{"Name":"ToggleChange","Value":"Toggle_MyPage_Avatar_Preset_My"}}
+          ]
+        },
+        {
+          "Name": "mypage_btn_prestavatar_on",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Pos":[-130,-400],
+          "Size":[480,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_prestavatar_on_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": "",
+            "ClickAreaSize":[293, 120]
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "mypage_btn_add_avatar",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[450,-400],
+          "Size":[480,120],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true},
+            {"Name": "Toggle_MyAvatarLoginButton","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_add_avatar_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "config_myavatar_select",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,890],
+          "Size":[400,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true},
+            {"Name": "Toggle_MyAvatarLoginButton","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_confirm_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MyPage_Avatar_Preset_My"}},
+            {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+            
+            {"Func" : {"Name" : "CloseAllLayer"}},
+            {"SetShowLayer" : {"Name" : "HUD","Show" : true}}
+          ]
+        },
+        {
+          "Name": "config_presetavatar_select",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,890],
+          "Size":[400,100],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": false}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_confirm_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+            {"String":{"Name":"ToggleDefault","Value":"Toggle_MyPage_Avatar_Preset_My"}},
+            {"Flag" : {"Name" : "ConfigClosedFlag","Enable":false}},
+            
+            {"Func" : {"Name" : "CloseAllLayer"}},
+            {"Func" : {"Name" : "AvatarSelectDone"}},
+            {"SetShowLayer" : {"Name" : "HUD","Show" : true}}
+          ]
+        },
+        {
+          "Name": "MyAvatarSelectmark",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-330,-320],
+          "Size":[100,100],
+          "Z": 8,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true},
+            {"Name": "Toggle_Show_MyAvatarSelectmark", "State": false}
+          ],
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_select_icon_po.png"
+          }
+        },
+        {
+          "Name": "mypage_world_txt_myatatar",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[1024,32],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/world_txt_myatatar.png"
+          },
+          "Toggle": [
+            {"Name": "Toggle_Use_MyAvatar","State": false},
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true},
+            {"Name": "Toggle_MyAvatarLoginButton","State": true}
+          ]
+        },
+        {
+          "Name": "page_text",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,670],
+          "Size":[70,70],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true},
+            {"Name": "Toggle_MyAvatarLoginButton","State": true}
+          ],
+          "ParamText": {
+            "FontSize": 30,
+            "Alignment":"CM",
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "0"
+          }
+        },
+        {
+          "Name": "page_back",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-120,670],
+          "Size":[70,70],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true},
+            {"Name": "Toggle_MyAvatarLoginButton","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_before_page.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        },
+        {
+          "Name": "page_next",
+          "Type": "button",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[120,670],
+          "Size":[70,70],
+          "Z": 1,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle":[
+            {"Name": "Toggle_MyPage_Avatar_Preset_My","State": true},
+            {"Name": "Toggle_MyAvatarLoginButton","State": true}
+          ],
+          "ParamButton": {
+            "FileName": "gui2023/common/common_btn_next_page.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "config_myavatar_account",
+      "Show": false,
+      "Z": 0,
+      "Components": [
+        "MyAvatarController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "popup_background",
+          "Type": "image",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,250],
+          "Size":[1230,1400],
+          "Z": 0,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/popup_background.png"
+          }
+        },
+        {
+          "Name": "config_vketaccount_login_textimage",
+          "Type": "image",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[0,0],
+          "Size":[1120,140],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamImage": {
+            "Uri": "gui2023/menu/mypage/mypage_txt_login_avatar_po.png"
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MyAvatarLoginButton",
+              "State": false
+            }
+          ]
+        },
+        {
+          "Name": "config_vketaccount_signup_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-200,300],
+          "Size":[320,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_signup_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MyAvatarLoginButton",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        },
+        {
+          "Name": "config_vketaccount_login_button",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[200,300],
+          "Size":[320,80],
+          "Z": 2,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "ParamButton": {
+            "FileName": "gui2023/menu/mypage/mypage_btn_login_po.png",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "Toggle": [
+            {
+              "Name": "Toggle_MyAvatarLoginButton",
+              "State": false
+            }
+          ],
+          "GUIAction": []
+        }
+      ]
+    },
+    {
+      "Name": "config_myavatar_List",
+      "Show": false,
+      "Z": 0,
+      "Components": [
+        "MyAvatarController"
+      ],
+      "AutoLoading":false,
+      "Gui": [
+        {
+          "Name": "MyAvatarButton0",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-450,-200],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_0", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName0",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-450,-75],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_0", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 20,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton1",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-150,-200],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_1", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName1",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-150,-75],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_1", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton2",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[150,-200],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_2", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName2",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[150,-75],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_2", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton3",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[450,-200],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_3", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName3",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[450,-75],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_3", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton4",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-450,120],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_4", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName4",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-450,245],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_4", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 20,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton5",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-150,120],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_5", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName5",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-150,245],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_5", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton6",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[150,120],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_6", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName6",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[150,245],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_6", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton7",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[450,120],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_7", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName7",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[450,245],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_7", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton8",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-450,440],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_8", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName8",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-450,565],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_8", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 20,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton9",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-150,440],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_9", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName9",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[-150,565],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_9", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton10",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[150,440],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_10", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName10",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[150,565],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_10", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        },
+        {
+          "Name": "MyAvatarButton11",
+          "Type": "button",
+          "Platform": "",
+          "Language": "_en",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[450,440],
+          "Size":[280,280],
+          "Z": 3,
+          "Pivot":[0.5,0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_11", "State": true}
+          ],
+          "ParamButton": {
+            "FileName": "",
+            "OnCursorFileName": "",
+            "DownFileName": ""
+          },
+          "GUIAction": [
+          ]
+        },
+        {
+          "Name": "MyAvatarName11",
+          "Type": "text",
+          "Platform": "",
+          "Language": "",
+          "Portrait": "",
+          "Show": true,
+          "Pos":[450,565],
+          "Size":[280,30],
+          "Z": 2,
+          "Pivot":[0.5,-0.5],
+          "Anchor": "CM",
+          "Toggle": [
+            {"Name": "Toggle_Show_MyAvatarButton_11", "State": true}
+          ],
+          "ParamText": {
+            "FontSize": 25,
+            "Color":[1.0,1.0,1.0,1.0],
+            "Text": "名前名前名前"
+          }
+        }
+      ]
+    }
+  ]
+}
